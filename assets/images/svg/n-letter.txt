@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" class="n-group" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="115px" height="121px" viewBox="0 0 115 121" enable-background="new 0 0 115 121" xml:space="preserve">
+<g class="n-bg">
+	<path class="n-top" fill="#FFFFFF" stroke="#FFFFFF" stroke-miterlimit="10" d="M86.5,5.5v82l-46.3-82H86.5z"/>
+	<path class="n-bottom" fill="#FFFFFF" stroke="#FFFFFF" stroke-miterlimit="10" d="M78.7,116.5L31.5,35v81.5H78.7z"/>
+	<path class="n-outer" fill="#FFFFFF" stroke="#FFFFFF" stroke-miterlimit="10" d="M0.5,0.5v120h114V0.5H0.5z M107.5,115.5H78.7H31.5
+		h-21V5.5h29.7h46.3h21V115.5z"/>
+</g>
+<path class="n-letter" stroke="#000000" stroke-miterlimit="10" d="M107.5,5.5v110H78.7L31.5,34v81.5h-21V5.5h29.7l46.3,82v-82
+	H107.5z"/>
+</svg>

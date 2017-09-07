@@ -1,0 +1,193 @@
+*Penta Bar*/
+/*---------------*/
+
+.penta-container{
+  width: 100%;
+  display:block;
+  margin:0;
+	padding:1em;
+	box-sizing:border-box;
+  background-color:#ffffff;
+	}
+.penta {
+	height: 121px;
+	width: 100%;
+	margin:0 auto;
+	padding:0;
+	box-sizing:border-box;
+  
+}
+
+
+
+ul.penta-ltr-list {
+	margin:0;
+	padding:0;
+	display: flex;
+}
+
+
+ul.penta-ltr-list li {
+  
+list-style:none;
+display:inline-block;
+  position: relative;
+    overflow:hidden;
+      transition: .2s;
+	height: 100%;
+}
+
+
+
+
+
+/*ul.penta-ltr-list li:hover:before {
+  transform: scale(1.3);
+}*/
+
+ul.penta-ltr-list li:nth-child(1):before,
+ul.penta-ltr-list li:nth-child(2):before,
+ul.penta-ltr-list li:nth-child(3):before,
+ul.penta-ltr-list li:nth-child(4):before,
+ul.penta-ltr-list li:nth-child(5):before {
+  content: '';
+  position: absolute;
+	top:0;
+	left:0;
+  background-color:#000;
+  z-index:-1;
+  overflow:hidden;
+	transition: .3s;  
+  }
+
+ul.penta-ltr-list li:nth-child(1):before {
+  background-image: url("http://bestanimations.com/Books/writing/fingers-typing-old-typewriter-writing-inspiration-close-up-animated-gif.gif");
+  background-position: -10 -10;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 110%;
+	height: 110%;
+
+}
+ul.penta-ltr-list li:nth-child(2):before {
+background-image: url("https://media.giphy.com/media/3oz8xur099boo4N9aU/giphy.gif");
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+	height: 100%;
+}
+
+ul.penta-ltr-list li:nth-child(3):before {
+background-image: url("http://www.xanthihotels.com/wp-content/uploads/2016/04/espresso-drink.gif");
+  background-position: 50% 36%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+	height: 100%;
+}
+
+ul.penta-ltr-list li:nth-child(4):before {
+background-image: url("http://www.xanthihotels.com/wp-content/uploads/2016/04/espresso-drink.gif");
+  background-position: 50% 36%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+}
+ul.penta-ltr-list li:nth-child(5):before {
+background-image: url("http://www.xanthihotels.com/wp-content/uploads/2016/04/espresso-drink.gif");
+  background-position: 50% 36%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+}
+
+ul.penta-ltr-list li  *.a-upper,
+ul.penta-ltr-list li  *.a-lower,
+ul.penta-ltr-list li  *.t-left,
+ul.penta-ltr-list li  *.t-right,
+ul.penta-ltr-list li  *.n-top,
+ul.penta-ltr-list li  *.n-bottom,
+ul.penta-ltr-list li  *.e-top,
+ul.penta-ltr-list li  *.e-bottom,
+ul.penta-ltr-list li  *.p-inner{
+opacity:1.0;
+fill:#ffffff;
+transition:all .3s linear 0s; 
+-webkit-transition: all .3s linear 0s;
+}
+
+ul.penta-ltr-list li:hover  *.a-upper,
+ul.penta-ltr-list li:hover  *.a-lower,
+ul.penta-ltr-list li:hover  *.t-left,
+ul.penta-ltr-list li:hover  *.t-right,
+ul.penta-ltr-list li:hover  *.n-top,
+ul.penta-ltr-list li:hover  *.n-bottom,
+ul.penta-ltr-list li:hover  *.e-top,
+ul.penta-ltr-list li:hover  *.e-bottom,
+ul.penta-ltr-list li:hover  *.p-inner{
+fill:#ffffff;
+opacity:0.75;
+}
+
+ul.penta-ltr-list li:hover  *.p-inner{
+  transform-origin: center;
+  transform: scale(.5,.5);}
+  
+ul.penta-ltr-list li:hover  *.e-top{
+  transform-origin: bottom;
+  transform: translate(-1px,0px) scale(1.0,0.6); }
+
+
+ul.penta-ltr-list li:hover  *.n-top{
+  transform-origin: top;  
+ transform: translate(0px,-40px);}
+ul.penta-ltr-list li:hover  *.n-bottom{
+  transform-origin:bottom;
+ transform: translate(0px,40px);}
+ 
+ul.penta-ltr-list li:hover  *.t-left{
+  transform-origin: left;  
+ transform: translate(-15px,0px);}
+ul.penta-ltr-list li:hover  *.t-right{
+  transform-origin:right;
+ transform: translate(15px,0px);} 
+ 
+ul.penta-ltr-list li:hover  *.a-upper{
+  transform-origin: bottom;
+  perspective: 200px;
+ transform: scale(.7,.7) translate(0px,-7px);}
+ul.penta-ltr-list li:hover  *.t-right{
+  transform-origin:right;
+ transform: translate(15px,0px);}  
+
+ul.penta-ltr-list li *.a-letter,
+ul.penta-ltr-list li *.t-letter,
+ul.penta-ltr-list li *.n-letter,
+ul.penta-ltr-list li *.e-letter,
+ul.penta-ltr-list li *.p-letter{
+fill:none;
+stroke:#000000;
+stroke-width:0px;
+  transition:all .2s linear  0s; 
+	-webkit-transition: all .2s linear 0s;
+}
+
+
+
+
+
+ul.penta-ltr-list li:nth-child(2) a:before,
+ul.penta-ltr-list li:nth-child(3) a:before,
+ul.penta-ltr-list li:nth-child(4) a:before,
+ul.penta-ltr-list li:nth-child(5) a:before,
+ul.penta-ltr-list li:nth-child(6) a:before,
+ul.penta-ltr-list li:nth-child(1) a:hover,
+ul.penta-ltr-list li:nth-child(2) a:hover,
+ul.penta-ltr-list li:nth-child(3) a:hover,
+ul.penta-ltr-list li:nth-child(4) a:hover,
+ul.penta-ltr-list li:nth-child(5) a:hover,
+ul.penta-ltr-list li:nth-child(6) a:hover{
+	background: #000; 

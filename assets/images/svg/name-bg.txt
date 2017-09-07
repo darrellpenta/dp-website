@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" class="penta" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="480px" height="120px" viewBox="0 0 480 120" enable-background="new 0 0 480 120" xml:space="preserve">
+<g class="a-group">
+	<path class="a-letter" stroke="#000000" stroke-miterlimit="10" d="M453.2,115.5l-8-26h-40.1l-8,26h-25.1l38.8-110h28.5l39,110
+		H453.2z M439.7,69.5c-7.4-23-11.5-37.2-12.4-40.3c-0.9-3.1-1.6-5.5-2-7.3c-1.7,6.4-6.4,22.7-14.2,47.7H439.7z"/>
+	<path class="a-bg" fill="#FFFFFF" stroke="#FFFFFF" stroke-miterlimit="10" d="M370.5,0.5v120h110V0.5H370.5z M453.2,115.5l-8-26
+		h-40.1l-8,26h-25.1l38.8-110h28.5l39,110H453.2z M427.2,29.2c0.9,3.1,5.1,17.3,12.4,40.3H411c7.8-25,12.6-41.2,14.2-47.7
+		C425.6,23.7,426.3,26.1,427.2,29.2z"/>
+</g>
+<g class="t-group">
+	<path class="t-letter" stroke="#000000" stroke-miterlimit="10" d="M339.5,115.5h-23v-91h-30v-19h83v19h-30V115.5z"/>
+	<path class="t-bg" fill="#FFFFFF" stroke="#FFFFFF" stroke-miterlimit="10" d="M277.5,0.5v120h94V0.5H277.5z M369.5,24.5h-30v91
+		h-23v-91h-30v-19h83V24.5z"/>
+</g>
+<g class="n-group">
+	<path class="n-letter" stroke="#000000" stroke-miterlimit="10" d="M272.5,5.5v110h-28.8L196.5,34v81.5h-21V5.5h29.7l46.3,82v-82
+		H272.5z"/>
+	<path class="n-bg" fill="#FFFFFF" stroke="#FFFFFF" stroke-miterlimit="10" d="M165.5,0.5v120h114V0.5H165.5z M272.5,115.5h-28.8
+		L196.5,34v81.5h-21V5.5h29.7l46.3,82v-82h21V115.5z"/>
+</g>
+<g class="e-group">
+	<path class="e-letter" stroke="#000000" stroke-miterlimit="10" d="M156.5,115.5h-63V5.5h63v19h-40v24h37v19h-37v29h40V115.5z"/>
+	<path class="e-bg" fill="#FFFFFF" stroke="#FFFFFF" stroke-miterlimit="10" d="M84.5,0.5v120h82V0.5H84.5z M156.5,24.5h-40v24h37
+		v19h-37v29h40v19h-63V5.5h63V24.5z"/>
+</g>
+<g class="p-group">
+	<path class="p-letter" stroke="#000000" stroke-miterlimit="10" d="M79.8,39.4c0,11.8-3.7,21.2-11.1,27.4
+		c-7.4,6.3-17.9,9.7-31.5,9.7H26.5v39h-23V5.5H39c13.3,0,23.5,2.7,30.4,8.4C76.3,19.6,79.8,28,79.8,39.4z M26.5,57.5h8.3
+		c7.2,0,12.5-1.8,16.1-4.6c3.6-2.8,5.3-7.1,5.3-12.5c0-5.5-1.5-9.4-4.5-12c-3-2.6-7.7-3.8-14-3.8H26.5V57.5z"/>
+	<path class="p-bg" fill="#FFFFFF" stroke="#FFFFFF" stroke-miterlimit="10" d="M56.2,40.4c0,5.4-1.8,9.7-5.3,12.5
+		c-3.6,2.8-8.9,4.6-16.1,4.6h-8.3v-33h11.2c6.4,0,11,1.2,14,3.8C54.8,30.9,56.2,34.9,56.2,40.4z M85.5,0.5v120h-86V0.5H85.5z
+		 M79.8,39.4c0-11.4-3.5-19.7-10.4-25.5C62.4,8.2,52.3,5.5,39,5.5H3.5v110h23v-39h10.6c13.6,0,24.1-3.4,31.5-9.7
+		C76.1,60.5,79.8,51.2,79.8,39.4z"/>
+</g>
+</svg>

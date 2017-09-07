@@ -1,0 +1,18 @@
+<div class="dp-name">
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 15.0.2, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" class="penta" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="488px" height="120px" viewBox="0 0 488 120" enable-background="new 0 0 488 120" xml:space="preserve">
+<path class="letter-a" stroke="#000000" stroke-width="2" stroke-miterlimit="10" d="M456.5,114l-7.8-26h-39l-7.8,26h-24.5L415.3,6H443
+	L481,114H456.5z M443.3,69c-7.2-23-11.2-36.1-12.1-39.2c-0.9-3-1.5-5.4-1.9-7.2C427.7,28.9,423,44,415.4,69H443.3z"/>
+<path class="letter-t" stroke="#000000" stroke-width="2" stroke-miterlimit="10" d="M351,114h-23V25h-29V6h81v19h-29V114z"/>
+<path class="letter-n" stroke="#000000" stroke-width="2" stroke-miterlimit="10" d="M282,114h-28.6L208,32.9c0,13.8,0,24.2,0,30.3V114
+	h-21V6h28.9L262,86.8v0.1c0-13.9,0-23.9,0-29.6V6h20V114z"/>
+<path class="letter-e" stroke="#000000" stroke-width="2" stroke-miterlimit="10" d="M165,114h-62V6h62v19h-39v24h36v18h-36v28h39V114z
+	"/>
+<path class="letter-p" stroke="#000000" stroke-width="2" stroke-miterlimit="10" d="M83.1,39.9c0,11.5-3.6,20.1-10.8,26.2
+	C65,72.2,54.8,75,41.5,75H32v39H9V6h34.3c13,0,22.9,3,29.6,8.6C79.7,20.2,83.1,28.8,83.1,39.9z M32,57h7.3c7,0,12.2-1.4,15.7-4.2
+	c3.5-2.8,5.2-6.8,5.2-12.1c0-5.3-1.5-9.3-4.4-11.9c-2.9-2.5-7.5-3.9-13.7-3.9H32V57z"/>
+</svg>
+</div>

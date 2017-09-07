@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" class="a-group" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="111px" height="121px" viewBox="0 0 111 121" enable-background="new 0 0 111 121" xml:space="preserve">
+<path class="a-letter" stroke="#000000" stroke-miterlimit="10" d="M83.2,115.5l-8-26H35.2l-8,26H2.1l38.8-110h28.5l39,110H83.2z
+	 M69.7,69.5c-7.4-23-11.5-37.2-12.4-40.3c-0.9-3.1-1.6-5.5-2-7.3c-1.7,6.4-6.4,22.7-14.2,47.7H69.7z"/>
+<g class="a-bg">
+	<path class="a-upper" fill="#FFFFFF" stroke="#FFFFFF" stroke-miterlimit="10" d="M57.2,29.2c0.9,3.1,5.1,17.3,12.4,40.3H41
+		c7.8-25,12.6-41.2,14.2-47.7C55.6,23.7,56.3,26.1,57.2,29.2z"/>
+	<path class="a-lower" fill="#FFFFFF" stroke="#FFFFFF" stroke-miterlimit="10" d="M83.2,115.5l-8-26H35.2l-8,26H83.2z"/>
+	<path class="a-outer" fill="#FFFFFF" stroke="#FFFFFF" stroke-miterlimit="10" d="M0.5,0.5v120h110V0.5H0.5z M83.2,115.5h-56H2.1
+		l38.8-110h28.5l39,110H83.2z"/>
+</g>
+</svg>
