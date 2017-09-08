@@ -102,6 +102,16 @@ a img{
 	flex-direction: column;
 }
 
+.f-irow{
+	   display: -ms-inline-flexbox;
+    display: -webkit-inline-flex;
+    display: inline-flex;
+	-ms-flex-direction: row;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	flex-direction: row;
+	-webkit-box-direction: normal;
+	-moz-box-direction: normal;}
 .f-icol{
 	   display: -ms-inline-flexbox;
     display: -webkit-inline-flex;

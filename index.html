@@ -23,6 +23,7 @@
 <link rel="stylesheet" type="text/css" href="css/global.css">
 <link rel="stylesheet" type="text/css" href="css/portrait.css">
 <link rel="stylesheet" type="text/css" href="css/navigation.css">
+<link rel="stylesheet" type="text/css" href="css/original-navigation.css">
 <link rel="stylesheet" type="text/css" href="css/media-qry.css">
 <style>
 
@@ -33,7 +34,9 @@
 /*---  Top  ---------------*/
 /* Section with social media buttons and logo-home button */
 /* -----------------------*/
-
+#window{
+	max-width:1600px;
+	margin:0 auto;}
 .p1 {
  font-size:.98rem;
 width: 97.5%;
@@ -395,7 +398,7 @@ bottom:-145%
 <body>
 
 <div class="wrapper full-bef">
-
+<div id="window">
 <div class="f-row nowrap f-btw p1"> <!--Start Top Bar -->
 <div  class="f-row ctr-mid tl-nav">
 <input id="logo-check" type="checkbox">
@@ -449,60 +452,50 @@ bottom:-145%
   <a href="https://www.linkedin.com/in/darrellpenta/" title="LinkedIn" target="_blank" class="smn-btn f-ch">
     <div class="smn-out">
       <div class="smn-in f-row ctr-mid">
-        <div class="smn front linked-fr f-ch f-row ctr-mid"><i class="fa fa-linkedin" aria-hidden="true"></i></div>
-        <div class="smn left linked-s">&nbsp;</div>
-        <div class="smn bot">&nbsp;</div>
+        <div class="smn front linked linked-fr f-ch f-row"><i class="fa fa-linkedin f-ch" aria-hidden="true"></i></div>
+        <div class="smn left linked linked-lf f-ch">&nbsp;</div>
+        <div class="smn bot f-ch">&nbsp;</div>
       </div>
     </div>
     </a> 
   <a href="https://plus.google.com/+DarrellPenta" title="Google+" target="_blank" class="smn-btn f-ch">
     <div class="smn-out">
       <div class="smn-in f-row ctr-mid">
-        <div class="smn front goog-fr f-ch f-row ctr-mid"><i class="fa fa-google-plus-official" aria-hidden="true"></i></div>
-        <div class=" smn left goog-s">&nbsp;</div>
-        <div class="smn bot">&nbsp;</div>
+        <div class="smn front goog goog-fr f-ch f-row"><i class="fa fa-google-plus-official f-ch" aria-hidden="true"></i></div>
+        <div class=" smn left goog goog-lf f-ch"></div>
+        <div class="smn bot f-ch"></div>
       </div>
     </div>
     </a> 
   <a href="http://facebook.com/darrellpenta" title="Facebook" target="_blank" class="smn-btn f-ch">
     <div class="smn-out">
       <div class="smn-in f-row ctr-mid">
-        <div class="smn front facebk-fr f-ch f-row ctr-mid"><i class="fa fa-facebook" aria-hidden="true"></i></div>
-        <div class="smn left facebk-s f-ch f-row ctr-mid">&nbsp;</div>
-        <div class="smn bot">&nbsp;</div>
+        <div class="smn front facebk facebk-fr f-ch f-row"><i class="fa fa-facebook f-ch" aria-hidden="true"></i></div>
+        <div class="smn left facebk facebk-lf f-ch"></div>
+        <div class="smn bot"></div>
       </div>
     </div>
     </a> 
   <a href="http://www.github.com/darrellpenta" title="GitHub" target="_blank" class="smn-btn f-ch">
     <div class="smn-out">
       <div class="smn-in f-row ctr-mid">
-        <div class="smn front git-fr f-ch f-row ctr-mid"><i class="fa fa-github-alt" aria-hidden="true"></i></div>
-        <div class="smn left git-s">&nbsp;</div>
-        <div class="smn bot">&nbsp;</div>
+        <div class="smn front git git-fr f-ch f-row"><i class="fa fa-github-alt f-ch" aria-hidden="true"></i></div>
+        <div class="smn left git git-lf f-ch">;</div>
+        <div class="smn bot f-ch"></div>
       </div>
     </div>
     </a> 
   <a href="http://twitter.com/BLINGUISTICS" title="@BLINGUISTICS" target="_blank" class="smn-btn f-ch">
     <div class="smn-out">
       <div class="smn-in f-row ctr-mid">
-        <div class="smn front tweet-fr f-ch f-row ctr-mid"><i class="fa fa-twitter" aria-hidden="true"></i></div>
-        <div class="smn left tweet-s">&nbsp;</div>
-        <div class="smn bot">&nbsp;</div>
+        <div class="smn front tweet tweet-fr f-ch f-row"><i class="fa fa-twitter f-ch" aria-hidden="true"></i></div>
+        <div class="smn left tweet tweet-lf f-ch"></div>
+        <div class="smn bot f-ch"></div>
       </div>
     </div>
     </a> 
-    <!--
-  <a href="mailto:darrellpenta@gmail.com" title="Email" target="_blank" class="smn-btn f-ch">
-    <div class="smn-out">
-      <div class="smn-in">
-        <div class="smn front email-fr"><i class="fa fa-envelope-o" aria-hidden="true"></i></div>
-        <div class="smn left email-s"></div>
-        <div class="smn bot"></div>
-      </div>
-    </div>
-    </a> -->
-    </div>
 </div><!--End Social Media Buttons-->
+</div>
 
 <div class="f-row nowrap f-dist main-section">
 	<div class="f-ch f-icol top-mid main-leftcol">
@@ -635,9 +628,10 @@ bottom:-145%
 </div>
 </div>
 </div>
-
-    
 </div>
+</div>
+</body>
+</html>
 
 <!--<div class="f-ch f-row nowrap some">
   <nav class="f-row nowrap">
@@ -662,9 +656,8 @@ bottom:-145%
 </div>
 </div>
 </div>-->
-</div>
-</body>
-</html>
+
+
 <!--
 div[class*="some"] > div:first-child {
 	height:8em;
@@ -727,5 +720,176 @@ div[class*="stripes"] > ul li:nth-child(4) {
 div[class*="stripes"] > ul li:last-child {
 	background-color:#ccd5dd;
 }
+
+-->
+<!--
+div[class*="some"] > div:first-child {
+	height:8em;
+	line-height:8em;
+	position:relative;
+	overflow:hidden;
+	margin:0;
+	padding:0;
+	font-size:1rem;
+	z-index:1;
+	width:8em;
+}
+div[class*="some"] > div:last-child {
+	margin:0;
+	padding-left:.75em;
+	font-size:1rem;
+	width:auto;
+	height:auto;
+	width:75%;
+}
+div[class*="stripes"] > ul {
+	min-width:100%;
+	list-style-type:none;
+	margin:0;
+	padding:0;
+}
+div[class*="stripes"] > ul li {
+	margin:0;
+	padding:0;
+	height:7.9em;
+	line-height:7.9em;
+	min-width:20%;
+}
+div[class*="stripes"]:after {
+	content:'';
+	width:125%;
+	height:125%;
+	display:block;
+	background-color:transparent;
+	position:absolute;
+	left:-1.95em;
+	bottom:-1.95em;
+	z-index:4;
+	border-left:2em solid #fff;
+	border-bottom:2em solid #fff;
+	border-radius:0 0 0 50%;
+}
+div[class*="stripes"] > ul li:first-child {
+	background-color:#2ca1db;
+}
+div[class*="stripes"] > ul li:nth-child(2) {
+	background-color:#203c85;
+}
+div[class*="stripes"] > ul li:nth-child(3) {
+	background-color:#f44323;
+}
+div[class*="stripes"] > ul li:nth-child(4) {
+	background-color:#F2E2D1;
+}
+div[class*="stripes"] > ul li:last-child {
+	background-color:#ccd5dd;
+}
+
+/*Main Navigation*/
+/*----------------*/
+nav > ul {
+	list-style-type: none;
+	border:1px solid #CC3;
+	width:100%;
+	margin:auto;
+}
+nav > ul li {
+	width: 7.75em;
+	height: auto;
+	padding:0.5em;
+	margin:auto;
+}
+nav a {
+	display:block;
+	text-decoration:none;
+ margin:0 .2rem;
+	color:#000;
+}
+/*Main navigation button style*/
+
+.effect {
+	text-align: center;
+	display: inline-block;
+	position: relative;
+	text-decoration: none;
+	color:#fcfdff;
+	border: 1px solid black;
+	font-family: 'Noto sans', sans-serif;
+	font-size: 1.2rem;
+	line-height: 2.5rem;
+	margin:0 auto;
+	padding:0;
+	width: 100%;
+	height: auto;
+	overflow: hidden;
+	}
+/*.dp-navigation	> li:nth-child(1) a {
+	text-align: center;
+	display: inline-block;
+	position: relative;
+	padding: 0;
+	margin:0 .25rem;
+	width: 100%;
+	min-width: 7.25rem;
+}*/
+
+.effect.eff {
+	-webkit-transition: all 0.2s linear 0s;
+	transition: all 0.2s linear 0s;
+}
+.effect.eff:before {
+	position: absolute;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	top: 100%;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	font-size: 1.25em;
+	-webkit-transition: all 0.2s linear 0s;
+	transition: all 0.2s linear 0s;
+}
+.effect.eff:hover {
+	text-indent: -9999px;
+}
+.effect.eff:hover:before {
+	top: 0;
+	text-indent: 0;
+	color: #FFF;
+}
+.effect.eff.about:before {
+	content: "\f2bd";
+	font-family: FontAwesome;
+	/*background-color:#6671CA;*/
+	background-color:#333;
+}
+.effect.eff.work:before {
+	content: "\f115";
+	font-family: FontAwesome;
+	/*background-color:#74b9e8;*/
+	background-color:#333;
+}
+.effect.eff.resources:before {
+	content: "\f126";
+	font-family: FontAwesome;
+	/*background-color:#540005*/
+	background-color:#333;
+}
+.effect.eff.contact:before {
+	content: "\f1d9";
+	font-family: FontAwesome;
+	/*background-color:#999;
+*/
+background-color:#333;
+}
+
 
 -->
