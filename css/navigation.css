@@ -41,7 +41,6 @@ box-sizing:border-box;
    -webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	transition:all .3s ease-in-out .05s;
-	border:0;
 	}
 
 .smn-out,.smn-in,.smn-in > div{
@@ -71,44 +70,29 @@ a[class~="smn-btn"] {
 	margin:.4em auto;
 	position:relative;
 	z-index:1;
-	padding:0;
 	display:inline-block;
 }
 
 .smn-in{
 	position:relative;
   backface-visibility: visible;
-  perspective: 333px;
+  perspective: 420px;
   transform-style: preserve-3d;
   -webkit-backface-visibility: visible;
-  -webkit-perspective: 333px;
+  -webkit-perspective: 420px;
   -webkit-transform-style: preserve-3d;	
-    perspective-origin: 29% 39%;
-  -webkit-perspective-origin: 29% 39%; 
-   -moz-transform-origin:top left;
-	-webkit-transform-origin:top left;
-	-o-transform-origin:top left;
-	-ms-transform-origin:top left;
-	transform-origin: top left;
-
+    perspective-origin: 50% 50%;
+  -webkit-perspective-origin: 50% 50%; 
   }
 
  .smn-in:hover {
-/*backface-visibility: visible;
-  perspective: 300px;
+  perspective: 420px;
   transform-style: preserve-3d;
   -webkit-backface-visibility: visible;
-  -webkit-perspective: 300px;
+  -webkit-perspective: 420px;
   -webkit-transform-style: preserve-3d;	
-    perspective-origin: top left;
-  -webkit-perspective-origin: top left;	*/
-	/*position: relative;
-	transition:all .3s ease-in-out .05s;*/
-	
-/*  -webkit-perspective: 250px;
-	perspective: 250px;
--webkit-perspective-origin: 47% 71%;
-	perspective-origin: 47% 71%;*/
+    perspective-origin: 50% 50%;
+  -webkit-perspective-origin: 50% 50%; 
 }
 
 .smn-in  > div {
@@ -239,6 +223,11 @@ a:link div[class^="smn-in"] div[class~="front"]{
 }
 
 a:link div[class^="smn-in"] {
+	   -moz-transform-origin:top left;
+	-webkit-transform-origin:top left;
+	-o-transform-origin:top left;
+	-ms-transform-origin:top left;
+	transform-origin: top left;
 	transition:all .3s ease-in-out .05s;
 	-moz-transform: scale3d(1.0,1.0,1.0) rotate3d(0,0,0) trnslate3d(0,0,0);
 	-moz-transform: scale(1.0,1.0) scaleZ(1.0) rotateX(0) rotateY(0) rotateZ(0) translateX(0) translateY(0) translateZ(0);
@@ -273,16 +262,16 @@ a:hover div[class^="smn-in"],  a:active div[class^="smn-in"], a:focus div[class^
 	-ms-transform-origin: center left;
 	-o-transform-origin: center left;
 	transform-origin: center left;
-	-webkit-transform: scale3d(1.175,1.175,1.175) translate3d(0,0,0) rotate3d(14deg, 22deg,10deg);
-	-webkit-transform:  scale(1.15,1.15) scaleZ(1.15) rotateX(14deg)  rotateY(22deg) rotateZ(10deg) translateX(0) translateY(0) translateZ(2.2em);
-	-moz-transform: scale3d(1.175,1.175,1.175) translate3d(0,0,0) rotate3d(14deg, 22deg,10deg);
-	-moz-transform:  scale(1.15,1.15) scaleZ(1.15) rotateX(14deg)  rotateY(22deg) rotateZ(10deg) translateX(0) translateY(0) translateZ(2.2em);
-	-ms-transform: scale3d(1.175,1.175,1.175) translate3d(0,0,0) rotate3d(14deg, 22deg,10deg);
-	-ms-transform:  scale(1.15,1.15) scaleZ(1.15) rotateX(14deg)  rotateY(22deg) rotateZ(10deg) translateX(0) translateY(0) translateZ(2.2em);
-	-o-transform: scale3d(1.175,1.175,1.175) translate3d(0,0,0) rotate3d(14deg, 22deg,10deg);
-	-o-transform: scale(1.15,1.15) scaleZ(1.15) rotateX(14deg)  rotateY(22deg) rotateZ(10deg) translateX(0) translateY(0) translateZ(2.2em) ;
-	transform: scale3d(1.175,1.175,1.175) translate3d(0,0,0) rotate3d(14deg, 22deg,10deg);
-	transform:  scale(1.15,1.15) scaleZ(1.15) rotateX(14deg)  rotateY(22deg) rotateZ(10deg) translateX(0) translateY(0) translateZ(2.2em) ;
+	-webkit-transform: scale3d(1.0,1.0,1.0) translate3d(0,0,0) rotate3d(14deg, 18deg,10deg);
+	-webkit-transform:  scale(1.0,1.0) scaleZ(1.0) rotateX(14deg)  rotateY(18deg) rotateZ(10deg) translateX(0) translateY(0) translateZ(2.2em);
+	-moz-transform: scale3d(1.0,1.0,1.0) translate3d(0,0,0) rotate3d(14deg, 18deg,10deg);
+	-moz-transform:  scale(1.0,1.0) scaleZ(1.0) rotateX(14deg)  rotateY(18deg) rotateZ(10deg) translateX(0) translateY(0) translateZ(2.2em);
+	-ms-transform: scale3d(1.0,1.0,1.0) translate3d(0,0,0) rotate3d(14deg, 18deg,10deg);
+	-ms-transform:  scale(1.0,1.0) scaleZ(1.0) rotateX(14deg)  rotateY(18deg) rotateZ(10deg) translateX(0) translateY(0) translateZ(2.2em);
+	-o-transform: scale3d(1.0,1.0,1.0) translate3d(0,0,0) rotate3d(14deg, 18deg,10deg);
+	-o-transform: scale(1.0,1.0) scaleZ(1.0) rotateX(14deg)  rotateY(18deg) rotateZ(10deg) translateX(0) translateY(0) translateZ(2.2em) ;
+	transform: scale3d(1.0,1.0,1.0) translate3d(0,0,0) rotate3d(14deg, 18deg,10deg);
+	transform:  scale(1.0,1.0) scaleZ(1.0) rotateX(14deg)  rotateY(18deg) rotateZ(10deg) translateX(0) translateY(0) translateZ(2.2em) ;
 	z-index:1;
 }
 
