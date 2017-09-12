@@ -71,6 +71,7 @@ html, div, section, header, footer, nav, div > * {
 
 a {
 	outline: 0;
+	text-decoration:none;
 }
 
 a img{
@@ -136,6 +137,26 @@ a img{
 	-ms-flex-pack: justify;
 	justify-content: space-between;
 }
+
+.f-align-stretch {
+	-webkit-align-content: stretch;
+	-ms-flex-line-pack: stretch;
+	align-content: stretch;
+	-webkit-align-items: stretch;
+	-ms-flex-align: stretch;
+	align-items: stretch;
+}
+.ctr-dist{
+	-webkit-justify-content: space-around;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    -webkit-align-content: center;
+    -ms-flex-line-pack: center;
+    align-content: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;}
+	
 .ctr-mid {
 	-webkit-align-content: center;
 	-ms-flex-line-pack: center;
@@ -153,14 +174,7 @@ a img{
 	-ms-flex-align: center;
 	align-items: center;
 }
-.f-align-stretch {
-	-webkit-align-content: stretch;
-	-ms-flex-line-pack: stretch;
-	align-content: stretch;
-	-webkit-align-items: stretch;
-	-ms-flex-align: stretch;
-	align-items: stretch;
-}
+
 .ctr-right {
 	-webkit-box-pack: end;
 	-moz-box-pack: end;
