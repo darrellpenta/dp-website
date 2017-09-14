@@ -167,12 +167,8 @@ a img{
 	-webkit-justify-content: center;
 	-ms-flex-pack: center;
 	justify-content: center;
-	-webkit-align-content: center;
-	-ms-flex-line-pack: center;
-	align-content: center;
-	-webkit-align-items: center;
-	-ms-flex-align: center;
-	align-items: center;
+
+	
 }
 
 .ctr-right {
@@ -329,16 +325,8 @@ div[class*="adj-aft"]::after{
 
 /*---  Wrapper ------------*/
 /* -----------------------*/
-.wrapper{
-	width:100%;
-	height:100%;
-	padding:0;
-	margin:0;
-	position:relative;
-	box-sizing:border-box;
-	background-color:transparent;
-}
 
+/*
 .wrapper:before{
  background-color:rgba(109,106,117,0.17);
  background-image: 
@@ -352,7 +340,7 @@ div[class*="adj-aft"]::after{
 -moz-box-shadow: inset -4px 0px 74px 1px rgba(0,0,0,0.54);
 box-shadow: inset -4px 0px 74px 1px rgba(0,0,0,0.54);
 z-index:-5;
-	}
+	}*/
 
 /*---  Fonts  -------------*/
 /* -----------------------*/
@@ -395,4 +383,125 @@ h4{
 	font-size:0;
 }
 	
+	
+
+
+/* * * * * * * * * * * * * * * * * */
+/* Sections*/
+/****************************/
+
+/*---  Top  ---------------*/
+/* Section with social media buttons and logo-home button */
+/* -----------------------*/
+
+.p1 {
+ font-size:.98rem;
+width: 97.5%;
+ padding:.25rem;
+ margin:.5rem;
+position:relative;
+border:1px solid #F60;
+}
+
+.p1:before{
+content:'';
+width:500px;
+height:500px;
+display:block;
+position:absolute;
+top:-200px;
+left:-200px;
+border-radius:50%;
+background-color:#666;
+	}
+.c1 {
+	
+	}
+	
+.c2 {
+	max-width:40%;
+}
+
+
+/* * * * * * * * * * * * * * * * * */
+/* Main Section */
+/****************************/
+.main-section, 
+.main-section > div{
+margin:0 auto;
+}
+.main-section {
+	width:97.5%;
+	min-height:500px;
+	padding:0;
+	font-size:1rem;
+	-webkit-backface-visibility:hidden;
+}
+.main-section > div{
+	padding:1em;
+	height:auto;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-transform: translate3d(0,0,0);
+	        transform: translate3d(0,0,0);
+	-webkit-backface-visibility:hidden;
+	} 
+
+div[class*="rightcol-content"] > * {
+	margin:.75em 0;
+	}
+
+div[class$="leftcol"] > div:first-child{
+	-webkit-transform:rotate(-4deg) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+	transform:rotate(-4deg) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+}
+
+
+.main-section > div:last-child {
+	min-width:min-width:30em;
+	width:100%;
+	padding:2em;
+}
+div[class*="penta"] h1,
+div[class*="penta"] h2{
+color:#000;	
+}
+
+div[class*="penta"] > div {
+	width:100%;
+	margin:0;
+	padding:0;
+	height:auto;
+	position:relative;
+}
+div[class*="penta"] >div:first-child {
+	height:2em;
+	line-height:2em;
+	padding-left:.75em;
+}
+div[class*="penta"] >div:last-child {
+	transform:translateY(-.5em);
+	height:7em;
+	line-height:7em;
+}
+div[class*="penta"] > div:last-child::after {
+	content:"Penta";
+	background: url(https://subtlepatterns.com/patterns/crossed_stripes.png) repeat;
+	background-image: -webkit-linear-gradient(right top, transparent 0%, transparent 25%, #000 25%, #000 50%, transparent 50%, transparent 75%, #000 75%);
+	position:absolute;
+	top:0.3125rem;
+	left:0.3125rem;
+	background-size: 0.25rem 0.25rem;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	z-index: -5;
+	display:block;
+	font-family: 'Noto Sans', sans-serif;
+	font-size: 8em;
+	font-weight: 700;
+	letter-spacing: -0.125rem;
+	text-decoration: none;
+	text-transform: 	capitalize;
+	text-shadow: none;
+}
 	
