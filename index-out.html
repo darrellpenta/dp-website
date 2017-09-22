@@ -14,719 +14,726 @@
 <meta name="zipcode" content="02110">
 <meta name="country" content="USA">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="format-detection" content="telephone=no">
 <link rel="stylesheet" href="https://use.fontawesome.com/04d82f9725.css">
-<link href="https://fonts.googleapis.com/css?family=Noto+Sans:400,700" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Quicksand:400,500" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Merriweather:300,400" rel="stylesheet">
 <script src="https://use.fontawesome.com/42ce42b384.js"></script>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
-
+<link rel="stylesheet" type="text/css" href="css/minimal.css">
 <link rel="stylesheet" type="text/css" href="css/global.css">
 <link rel="stylesheet" type="text/css" href="css/portrait.css">
+<link rel="stylesheet" type="text/css" href="css/navigation.css">
 <link rel="stylesheet" type="text/css" href="css/media-qry.css">
 <style>
+/*Fallback for inline-svg*/
+@namespace svg "http://www.w3.org/2000/svg";
 
-/* * * * * * * * * * * * * * * * * */
-/* Sections*/
-/****************************/
-
-/*---  Top  ---------------*/
-/* Section with social media buttons and logo-home button */
-/* -----------------------*/
-
-.p1 {
- font-size:.98rem;
-width: 97.5%;
- padding:.25rem;
- margin:.5rem;
-position:relative;
+.w-fallback {
+  display: none;
+  visibility: hidden;
 }
 
-.c1 {
-	
-	}
-	
-.c2 {
-	max-width:40%;
+svg|g.w-fallback {
+  display: inline;
+  visibility: visible;
 }
 
-
-/* * * * * * * * * * * * * * * * * */
-/* Main Section */
-/****************************/
-
-.main-section {
-	width:97.5%;
-	min-height:500px;
-	margin:0 auto;
-	padding:0;
-	font-size:1rem;
-	-webkit-backface-visibility:hidden;
-}
-.main-section > div{
-	padding:1em;
-	margin:0 auto;
-	height:auto;
-	-webkit-font-smoothing: antialiased;
+svg, g, path{
+	    box-sizing: border-box;
+		-webkit-backface-visibility: hidden;
+		        backface-visibility: hidden;
+				-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	-webkit-transform: translate3d(0,0,0);
 	        transform: translate3d(0,0,0);
-	-webkit-backface-visibility:hidden;
-	} 
-
-div[class*="rightcol-content"] > * {
-	margin:.75em 0;
-	}
-
-div[class$="leftcol"] > div:first-child{
-	-webkit-transform:rotate(-4deg) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-	transform:rotate(-4deg) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+		}	
+.load-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+  animation-name: load-out;
+  animation-duration:1.2s;
+ animation-iteration-count: 1;
+ animation-direction: normal; /* or: normal */
+ animation-timing-function: linear; /* or: ease, ease-in, ease-in-out, linear, cubic-bezier(x1, y1, x2, y2) */
+ animation-fill-mode: forwards; /* or: backwards, both, none */
+ animation-delay: 9s;
+    -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-backface-visibility: visible;
+          backface-visibility: visible;
+}
+@keyframes load-out {
+  0% {
+   width:100%;
+    height:100%;
+    display: block;
+  }
+  99% {
+   width:0;
+   height:0;
+    display: block;
+  }
+  100% {
+   width:0;
+   height:0;
+    display: none;
+  }
+}
+.loading {
+  z-index: 1001;
+}
+.loaded {
+  z-index: -1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
 }
 
-
-.main-section > div:last-child {
-	min-width:min-width:30em;
-	width:100%;
-	padding:2em;
+.main-box {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+  -webkit-align-items: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
 }
-div[class*="penta"] h1,
-div[class*="penta"] h2{
-color:#000;	
+.row-container {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+  -webkit-align-items: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  width: 100%;
+  height: auto;
 }
-
-div[class*="penta"] > div {
-	width:100%;
-	margin:0;
-	padding:0;
-	height:auto;
-	position:relative;
-}
-div[class*="penta"] >div:first-child {
-	height:2em;
-	line-height:2em;
-	padding-left:.75em;
-}
-div[class*="penta"] >div:last-child {
-	transform:translateY(-.5em);
-	height:7em;
-	line-height:7em;
-}
-div[class*="penta"] > div:last-child::after {
-	content:"Penta";
-	background: url(https://subtlepatterns.com/patterns/crossed_stripes.png) repeat;
-	background-image: -webkit-linear-gradient(right top, transparent 0%, transparent 25%, #000 25%, #000 50%, transparent 50%, transparent 75%, #000 75%);
-	position:absolute;
-	top:0.3125rem;
-	left:0.3125rem;
-	background-size: 0.25rem 0.25rem;
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
-	z-index: -5;
-	display:block;
-	font-family: 'Noto Sans', sans-serif;
-	font-size: 8em;
-	font-weight: 700;
-	letter-spacing: -0.125rem;
-	text-decoration: none;
-	text-transform: 	capitalize;
-	text-shadow: none;
+.ld-spacer {
+  background-color: #009923;
 }
 
-
-
-/* * * * * * * * * * * * * * * * * */
-/* Social Media Squares*/
-/****************************/
-
-
-[class*="smn"] {
-padding:0;
-margin:0;
-box-sizing:border-box;
-text-decoration:none;
+.r1, .r3 {
+  -webkit-order: 0;
+  -ms-flex-order: 0;
+  order: 0;
+  -webkit-flex: 1 8 auto;
+  -ms-flex: 1 8 auto;
+  flex: 1 8 auto;
+  -webkit-align-self: stretch;
+  -ms-flex-item-align: stretch;
+  align-self: auto;
+  background-color: #cF9;
+  height: auto;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: auto;
 }
-.smn-btn {
-	max-width:2.5em;
-	max-height:2.5em;
-	padding:.25em;
-	position:relative;
-	z-index:1;
+.r2 {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-order: 0;
+  -ms-flex-order: 0;
+  order: 0;
+  -webkit-flex: 3 0 auto;
+  -ms-flex: 3 0 auto;
+  flex: 3 0 auto;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+  padding: 0;
+  width: 50%;
+  height: 0;
+  padding-bottom: 50%;
+  position: relative;
+  overflow: hidden;
 }
-.smn-out {
-	width:2em;
-	max-width:2em;
-	height:2em;
-	max-height:2em;
-	perspective: 200px;
-	perspective-origin: 40% 20%;
-	-webkit-backface-visibility:hidden;
+
+.r2 > div:nth-child(1) {
+  position: absolute;
+  min-width: 100%;
+  width: 100%;
+  height: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: transparent;
+  box-sizing: border-box;
+  border-radius: 50%;
 }
-.smn-in {
-	width:2em;
-	max-width:2em;
-	height:2em;
-	max-height:2em;
-	position: relative;
-	-webkit-transform-style: preserve-3d;
-	-moz-transform-style: preserve-3d;
-	-ms-transform-style: preserve-3d;
-	transform-style: preserve-3d;
-	transition:all .3s ease-in-out .05s;
+
+.r2 > div:nth-child(1):before {
+  width: 100%;
+  height: 100%;
+  content: '';
+  display: block;
+  background-color: transparent;
+  position: inherit;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  z-index: -1;
+  border-radius: 50%;
+  border: 500px solid #990000;
 }
-.smn-in > div {
+
+.loaded {
+  padding-bottom: 50px;
+}
+
+/*=======================
+Content container
+========================*/
+.wrapper{
 	width:100%;
 	height:100%;
 	margin:0;
 	padding:0;
-	display:block;
-	text-decoration:none;
-	position: absolute;
-	text-align:center;
-	vertical-align:middle;
-	top:0;
-	left:0;
-}
-
-.fa {
-	width:2em;
-	margin:auto;
-	padding:0;
-	font-size:1.4	em;
-}
-.left {
-	transform:translateX(0) rotateY(270deg);
-	transform-origin: left center;
-}
-.bot {
-	transform: translateY(0) rotateX(-90deg);
-	transform-origin: bottom center;
-	background-color:#999;
-	-webkit-box-shadow: inset -1em 0 .24em .24em rgba(0,0,0,0.49);
-	-moz-box-shadow: inset -1em 0 .64em .24em rgba(0,0,0,0.49);
-	box-shadow: inset -1em 0 .64em .24em rgba(0,0,0,0.49);
-}
-.front {
-	transform:translateZ(2em);
-	transform-origin: center center;
+	box-sizing:border-box;
 	background-color:#fff;
-	border-width:.12em;
-	border-style:solid;
-}
-a:link div[class*="smn-in"] {
-	transition:all .3s ease-in-out .05s;
-	transform: translateZ(0) rotateZ(0) rotateY(0) rotateX(0);
-}
-a:visited div[class*="smn-in"]{
-	transition:all .3s ease-in-out .05s;
-	transform:translateZ(0) rotateY(0deg) rotateZ(10deg) rotateX(0deg);
-	z-index:1;
-	}
-
- a:hover div[class*="smn-in"], a:active div[class*="smn-in"], a:focus div[class*="smn-in"] {
-	transition:all .3s ease-in-out .05s;
-	transform:translateZ(1em) rotateY(16deg) rotateZ(10deg) rotateX(10deg);
-	z-index:1;
-}
-a.smn-btn:link:after {
-	content:'';
-	width:90%;
-	margin:0;
-	padding:0;
-	right:-.2em;
-	bottom:-.2em;
-	position:absolute;
-	display:inline-block;
-	z-index:-1;
-	border-radius:20%;
-	box-shadow: -.5em .24em 1em .24em rgba(0,0,0,0.4);
-	transform: scale(0.0, 0.0);
-	transition:all .3s ease-in-out .05s;
-}
-a.smn-btn:hover:after {
-	transition:all .3s ease-in-out .05s;
-	transform: scale(1.1, 1.1);
-}
-div[class$="s"] {
--webkit-box-shadow: inset 0 -.5rem .8rem 0 rgba(0,0,0,0.49);
--moz-box-shadow: inset 0 -.5rem .8rem 0 rgba(0,0,0,0.49);
-box-shadow: inset 0 -.5rem .8rem 0 rgba(0,0,0,0.49);
-}
-div[class$="-fr"] {
-	padding:0;
-	margin:0;
-	text-align: center;
-	line-height:2em;
-	vertical-align:middle;
-	display:flex;
-}
-.linked-fr {
-	color:#007bb6;
-	border-color:#007bb6;
-}
-.linked-s {
-	background-color:#007bb6;
-}
-.tweet-fr {
-	color:#00aced;
-	border-color:#00aced;
-}
-.tweet-s {
-	background-color: #00aced;
-}
-.git-fr {
-	color:#000;
-	border-color:#000;
-	}
-.git-s {
-	background-color: #000;
-}
-.facebk-fr {
-	color: #3b5998;
-	border-color: #3b5998;
-}
-.facebk-s {
-	background-color: rgba(59,89,152,1);
-}
-.goog-fr {
-	color: #dd4b39;
-	border-color: #dd4b39;
-}
-.goog-s {
-	background-color:#dd4b39;
-}
-.email-fr {
-	color: #B1D86D;
-	border-color: #B1D86D;
-}
-.email-s {
-	background-color:#B1D86D;
+	
 }
 
-/*Main Navigation*/
-/*----------------*/
-nav > ul {
-	list-style-type: none;
-	border:1px solid #CC3;
+.loader{
+	background-color:#990000;
+	min-width:275px;
 	width:100%;
-	margin:auto;
-}
-nav > ul li {
-	width: 7.75em;
-	height: auto;
-	padding:0.5em;
-	margin:auto;
-}
-nav a {
-	display:block;
-	text-decoration:none;
- margin:0 .2rem;
-	color:#000;
-}
-/*Main navigation button style*/
+	height:100%;
+	min-height:450px;
+	padding-bottom:100%;
+	    z-index: 999;
+	box-sizing:border-box;
+	overflow:hidden;
+transition:transform;
+trasition-delay:3s;
+transition-duration:2s;
+transform: translateX(0) translateY(-100%) translateZ(999);
 
-.effect {
-	text-align: center;
-	display: inline-block;
-	position: relative;
-	text-decoration: none;
-	color:#fcfdff;
-	border: 1px solid black;
-	font-family: 'Noto sans', sans-serif;
-	font-size: 1.2rem;
-	line-height: 2.5rem;
-	margin:0 auto;
-	padding:0;
-	width: 100%;
-	height: auto;
-	overflow: hidden;/*background-color: rgba(0, 0, 0, 0.25);
-*/}
-/*.dp-navigation	> li:nth-child(1) a {
-	text-align: center;
-	display: inline-block;
-	position: relative;
-	padding: 0;
-	margin:0 .25rem;
-	width: 100%;
-	min-width: 7.25rem;
-}*/
-
-.effect.eff {
-	-webkit-transition: all 0.2s linear 0s;
-	transition: all 0.2s linear 0s;
-}
-.effect.eff:before {
-	position: absolute;
-	display: -webkit-box;
-	display: -ms-flexbox;
-	display: flex;
-	-webkit-box-align: center;
-	-ms-flex-align: center;
-	align-items: center;
-	-webkit-box-pack: center;
-	-ms-flex-pack: center;
-	justify-content: center;
-	top: 100%;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	text-align: center;
-	font-size: 1.25em;
-	-webkit-transition: all 0.2s linear 0s;
-	transition: all 0.2s linear 0s;
-}
-.effect.eff:hover {
-	text-indent: -9999px;
-}
-.effect.eff:hover:before {
-	top: 0;
-	text-indent: 0;
-	color: #FFF;
-}
-.effect.eff.about:before {
-	content: "\f2bd";
-	font-family: FontAwesome;
-	/*background-color:#6671CA;*/
-	background-color:#333;
-}
-.effect.eff.work:before {
-	content: "\f115";
-	font-family: FontAwesome;
-	/*background-color:#74b9e8;*/
-	background-color:#333;
-}
-.effect.eff.resources:before {
-	content: "\f126";
-	font-family: FontAwesome;
-	/*background-color:#540005*/
-	background-color:#333;
-}
-.effect.eff.contact:before {
-	content: "\f1d9";
-	font-family: FontAwesome;
-	/*background-color:#999;
-*/
-background-color:#333;
-}
-
-
-
-/* * * * * * * * * * * * * * * * * */
-/*Radal Menu*/
-/****************************/
-#logo-check { display: none; }
-
-.main,
-.container {
-  margin: auto;
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-}
-
-.main {
-  background-color: #B81365;
-  box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.35);
-  cursor: pointer;
-  z-index: 50;
-}
-
-.main:hover { background-color: #cf1572; }
-
-.main:active {
-  box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.35), inset 1px 2px 2px rgba(0, 0, 0, 0.35);
-  background-color: #a11158;
-}
-
-.main .title {
-  margin: auto;
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 80px;
-  font-size: 3em;
-  line-height: 80px;
-  text-align: center;
-  color: #fafafa;
-}
-
-.container { z-index: 10; }
-
-.plate {
-  margin: auto;
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  width: 50px;
-  height: 50px;
-  opacity: 0;
-  border-radius: 50%;
-  box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.35);
-  -webkit-transition: all 0.4s ease-in;
-  -moz-transition: all 0.4s ease-in;
-  transition: all 0.4s ease-in;
-}
-
-.plate i {
-  width: 100%;
-  font-size: 2em;
-  line-height: 53px;
-  text-align: center;
-  color: #333;
-}
-
-.plate:hover i { color: #111; }
-
-.plate:nth-of-type(1) {
-  background-color: rgba(109, 231, 200, 0.3);
-  -webkit-transition-delay: 0s;
-  -moz-transition-delay: 0s;
-  transition-delay: 0s;
-}
-
-.plate:nth-of-type(2) {
-  background-color: rgba(243, 156, 80, 0.1);
-  -webkit-transition-delay: 0.1s;
-  -moz-transition-delay: 0.1s;
-  transition-delay: 0.1s;
-}
-
-.plate:nth-of-type(3) {
-  background-color: rgba(247, 80, 173, 0.1);
-  -webkit-transition-delay: 0.2s;
-  -moz-transition-delay: 0.2s;
-  transition-delay: 0.2s;
-}
-
-.plate:nth-of-type(4) {
-  background-color: rgba(80, 128, 136, 0.5);
-  -webkit-transition-delay: 0.3s;
-  -moz-transition-delay: 0.3s;
-  transition-delay: 0.3s;
-}
-
-.plate:nth-of-type(5) {
-  background-color: rgba(191, 95, 80, 0.9);
-  -webkit-transition-delay: 0.4s;
-  -moz-transition-delay: 0.4s;
-  transition-delay: 0.4s;
-}
-
-.plate:nth-of-type(6) {
-  background-color: rgba(101, 128, 216, 0.7);
-  -webkit-transition-delay: 0.5s;
-  -moz-transition-delay: 0.5s;
-  transition-delay: 0.5s;
-}
-
-.plate:nth-of-type(7) {
-  background-color: rgba(210, 80, 80, 0.2);
-  -webkit-transition-delay: 0.6s;
-  -moz-transition-delay: 0.6s;
-  transition-delay: 0.6s;
-}
-
-.plate:nth-of-type(8) {
-  background-color: rgba(114, 89, 202, 0.9);
-  -webkit-transition-delay: 0.7s;
-  -moz-transition-delay: 0.7s;
-  transition-delay: 0.7s;
-}
-
-#check:checked ~ .main + .container .plate { opacity: 1; }
-
-#check:checked ~ .main + .container .plate:nth-of-type(1) { top: -180%; }
-
-#check:checked ~ .main + .container .plate:nth-of-type(2) {
-  top: -130%;
-  right: -130%;
-}
-
-#check:checked ~ .main + .container .plate:nth-of-type(3) { right: -180%; }
-
-#check:checked ~ .main + .container .plate:nth-of-type(4) {
-  right: -130%;
-  bottom: -130%;
-}
-
-#check:checked ~ .main + .container .plate:nth-of-type(5) { bottom: -180%; }
-
-#check:checked ~ .main + .container .plate:nth-of-type(6) {
-  bottom: -130%;
-  left: -130%;
-}
-
-#check:checked ~ .main + .container .plate:nth-of-type(7) { left: -180%; }
-
-#check:checked ~ .main + .container .plate:nth-of-type(8) {
-  top: -130%;
-  left: -130%;
-}
-
-.hb::after{
-content:"\f0c9";
-font-family: "FontAwesome";
-position:inherit;
-right:-1em;
-top:0;
-background-color:#46ACDC;
-border:.08em solid #2D6C8C;
+	}
+@keyframes load-me{
+	0%{
+		display:block;
+		transform: translateX(-20px) translateY(0) translateZ(999);
+		}
+	99%{
+		display:block;
+		transform: translateX(0) translateY(0) translateZ(999);
+		}	
+	100%{
+		display:none;
+		transform: translateX(0) translateY(-100%) translateZ(999);
+		}		
+	}
+.loader:after{
+content:'';	
+width:100%;
+max-width:450px;
+min-height:450px;
+display:inline-block;
+position:absolute;
+top:50%;
+left:40%;
+z-index:1000;
 border-radius:50%;
-box-shadow:inset -.4em -.4em .8em .1em rgba(255,255,255,0.3);
-width:2.2em;
-height:2.2em;
-line-height:2em;
-padding:0;
-margin:0 auto;
-z-index:99;
-text-align:center;
 box-sizing:border-box;
+background-color:transparent;
+box-shadow:inset 9px 0px 0px 20px rgba(204,51,102,1), -10px 0px 0px 33px #fff;
+transform: translateX(-40%) translateY(-50%) translateZ(1000em);
+}
+
+
+
+.loader:before{
+content:'';	
+width:125%;
+max-width:500px;
+min-height:500px;
+display:block;
+position:absolute;
+top:50%;
+left:40%;
+z-index:10;
+border-radius:50%;
+box-sizing:border-box;
+box-shadow:0px 0px 0px 120px rgba(204,51,102,1);
+transform:translateX(-40%) translateY(-50%) translateZ(0);
+outline:solid 1000px #C36;
+background-color:transparent;
 	}
 	
+
 	
-.lab-main,
-.nav-container {
-  margin: auto;
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-border-radius:50%;
-	width:6.24em;
-	max-width:6.24em;
-	height:6.24em;
-	min-height:6.24em;
-  border-radius: 50%;
+/*=======================
+Inline SVG
+-- Container (parent,child setup)
+========================*/
+
+.svg-col{
+display:block;
+position:absolute;
+z-index:100;
+height:391px;
+top:50%;
+left:45%;
+box-sizing:border-box;
+	overflow:hidden;	
+-webkit-animation-duration:3s; 
+animation-duration:3s;
+width:293px;
+	min-width:293px;
+		transform:translateX(-45%) translateY(-50%) translateZ(-1000em) scale(1.0,1.0);
+
+	}
+
+	
+/* DP initials
+========================*/
+.letter-d, .letter-p{
+	fill:#666;
+	stroke:#999;
+	}
+	
+.dp-initials{
+	min-width:275px;
+	height:auto;
+	display:block;
+position:absolute;
+z-index:1000;
+top:50%;
+left:50%;
+transform:translateX(-50%) translateY(-50%) translateZ(1000em) scale(1.0,1.0);
+	border-radius:50%;
+	-webkit-animation-duration:3s; 
+animation-duration:3s;
+-webkit-animation-direction:normal; 
+animation-direction:normal;  
+-webkit-animation-fill-mode: forwards; 
+animation-fill-mode: forwards; 
+-webkit-animation-iteration-count: 1; 
+animation-iteration-count: 1; 
+-webkit-animation-timing-function:linear;
+animation-timing-function:linear;
+-webkit-animation-name:dp-load;
+animation-name:dp-load;
 }	
 
-.tl-nav{
-	background-color:#990000;
-	border-radius:50% 0 50% 50%;
-	width:6.5em;
-	max-width:6.5em;
-	height:6.24em;
-	min-height:6.24em;
-	margin: 2em;
-	position:relative;
+
+@keyframes dp-load{
+	0%{
+		opacity:1.0;
+			}
+	
+		100%{
+	opacity:0.0;
 	}
-.nav-container > div {
-	background-color:#cecece;
-	border-radius:50%;
-	width:5.24em;
-	max-width:5.24em;
-	min-height:5.24em;
-	line-height:5.24em;
-	margin:auto;
-	padding:0em;
 	}	
 	
-
-
-.lab-main {
- background-color:#fff;
-	border:.2em solid #000;
-  box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.35);
-  cursor: pointer;
-  z-index: 50;
-}
-
-.tl-nav:hover  nav-container > div{
-	background-color:#6D6A75;
-	box-shadow:inset -.4em -.4em .3em .3em rgba(250,250,250, .5);
-	}	
-
-.tl-nav:active  nav-container > div{ {
-  box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.35), inset 1px 2px 2px rgba(0, 0, 0, 0.35);
-  background-color: #a11158;
-}
-
-.radmenu-pop {
-display:block;
-position:inherit;
-right:0;
-top:0;
-background-color:#46ACDC;
-border:.08em solid #2D6C8C;
-border-radius:50%;
-width:2.2em;
-height:2.2em;
-line-height:2em;
-padding:0;
-margin:0;
-text-align:center;
-}
-
-.container { z-index: 10; }	
-@media screen and (max-width:58.5em) {
+/* Portraits
+========================*/
+div[class*="box"] {
+	padding:0;
+	margin:0;
+	width:100%;
+	height: 100%;
+	min-height:200px;
+	position:absolute;
+	top:10;
+	left:0;
+	overflow:visible;
+	-webkit-overflow:visible;
+	transform:rotateX(0) rotateY(10deg) rotateZ(1deg);
+	transform-origin:left;
 	
-.dpicon{
-	font-size:.68rem;}	
+	
+}
+
+div[class*="box"] > svg {
+	width:100%;
+	height:100%;
+	position:relative;
+	z-index:99;
+	overflow:visible;
+	-webkit-overflow:visible;
+
 	}	
+
+
+/*=======================
+Path Animation
+========================*/
+
+/* - - - - - - - - - - - - - - - - - - - -
+Ketframe specs
+/* - - - - - - - - - - - - - - - - - - - -*/
+
+@-webkit-keyframes bl-draw {
+0%{
+stroke-width:2;
+}
+50%{
+fill-opacity:0;
+stroke:#000;
+stroke-dashoffset:0;
+}
+ 100%{
+fill-opacity:0.85}
+}
+
+@keyframes bl-draw {
+0%{
+stroke-width:2;
+}
+50%{
+fill-opacity:0;
+stroke:#000;
+stroke-dashoffset:0;
+}
+100%{
+fill-opacity:.85;}
+}
+
+@-webkit-keyframes g85-draw {
+0%{
+stroke-width:2;
+}
+50%{
+fill-opacity:0;
+stroke:#4D4D4D;
+stroke-dashoffset:0;
+}
+100%{
+fill-opacity:.85;	}
+}
+
+
+@keyframes g85-draw {
+0%{
+stroke-width:2;
+}
+50%{
+fill-opacity:0;
+stroke:#4D4D4D;
+stroke-dashoffset:0;
+}
+100%{
+fill-opacity:.85;	}
+}
+
+
+@-webkit-keyframes g75-draw {
+0%{
+stroke-width:2;
+}
+50%{
+fill-opacity:0;
+stroke:#999;
+stroke-dashoffset:0;
+}
+100%{
+fill-opacity:.85;	}
+}
+
+
+@keyframes g75-draw {
+0%{
+stroke-width:2;
+}
+50%{
+fill-opacity:0;
+stroke:#999;
+stroke-dashoffset:0;
+}
+100%{
+fill-opacity:.85;	}
+}
+
+@-webkit-keyframes g65-draw {
+0%{
+stroke-width:2;
+}
+50%{
+fill-opacity:0;
+stroke:#B3B3B3;
+stroke-dashoffset:0;
+}
+
+100%{
+fill-opacity:.85;
+	}
+}
+
+@keyframes g65-draw {
+0%{
+stroke-width:2;
+}
+50%{
+fill-opacity:0;
+stroke:#B3B3B3;
+stroke-dashoffset:0;
+}
+
+100%{
+fill-opacity:.85;
+	}
+}
+
+@-webkit-keyframes g60-draw {
+0%{
+stroke-width:2;
+}
+50%{
+fill-opacity:0;
+stroke:#CCC;
+stroke-dashoffset:0;
+}
+100%{
+fill-opacity:.85;
+	}
+}
+
+@keyframes g60-draw {
+0%{
+stroke-width:2;
+}
+50%{
+fill-opacity:0;
+stroke:#CCC;
+stroke-dashoffset:0;
+}
+100%{
+fill-opacity:.85;
+	}
+}
+
+@-webkit-keyframes g50-draw {
+0%{
+stroke-width:2;
+}
+50%{
+fill-opacity:0;
+stroke:#F2F2F2;
+stroke-dashoffset:0;
+}
+100%{
+fill-opacity:.85;
+	}
+}
+
+@keyframes g50-draw {
+0%{
+stroke-width:2;
+}
+50%{
+fill-opacity:0;
+stroke:#F2F2F2;
+stroke-dashoffset:0;
+}
+100%{
+fill-opacity:.85;
+	}
+}
+
+/* - - - - - - - - - - - - - - - - - - - -
+Black paths
+/* - - - - - - - - - - - - - - - - - - - -*/
+
+g[class~="bl-paths"] > path[class*="ppath"]{ 
+fill:#000; 
+-webkit-animation-name:bl-draw;
+animation-name:bl-draw;
+} 
+
+
+/* - - - - - - - - - - - - - - - - - - - -
+Grey (85%) paths
+/* - - - - - - - - - - - - - - - - - - - -*/
+
+
+g[class~="g85-paths"] > path[class*="ppath"]{ 
+fill:#4D4D4D; 
+-webkit-animation-name:g85-draw;
+animation-name:g85-draw;
+} 
+
+
+/* - - - - - - - - - - - - - - - - - - - -
+Grey (75%) paths 
+/* - - - - - - - - - - - - - - - - - - - -*/
+
+g[class~="g75-paths"] > path[class*="ppath"]{ 
+fill:#999; 
+-webkit-animation-name:g75-draw;
+animation-name:g75-draw;
+} 
+
+
+/* - - - - - - - - - - - - - - - - - - - -
+Gray (65%) paths 
+/* - - - - - - - - - - - - - - - - - - - -*/
+
+g[class~="g65-paths"] > path[class*="ppath"]{ 
+fill:#B3B3B3; 
+-webkit-animation-name:g65-draw;
+animation-name:g65-draw;
+} 
+
+
+
+/* - - - - - - - - - - - - - - - - - - - -
+ Gray (60%) paths
+/* - - - - - - - - - - - - - - - - - - - -*/
+
+g[class~="g60-paths"] > path[class*="ppath"]{ 
+fill:#CCC; 
+-webkit-animation-name:g60-draw;
+animation-name:g60-draw;
+} 
+
+
+/* - - - - - - - - - - - - - - - - - - - -
+Gray 50%
+/* - - - - - - - - - - - - - - - - - - - -*/
+
+g[class~="g50-paths"] > path[class*="ppath"]{ 
+fill:#F2F2F2; 
+-webkit-animation-name:g50-draw;
+animation-name:g50-draw;
+} 
+
+
+/* - - - - - - - - - - - - - - - - - - - -
+All paths (main animation)
+/* - - - - - - - - - - - - - - - - - - - -*/
+g[class*="paths"] > path[class*="ppath"]{ 
+stroke:#fff; 
+fill-opacity:0;
+-webkit-animation-direction:linear; 
+animation-direction:linear; 
+-webkit-animation-duration:6s; 
+animation-duration:6s; 
+-webkit-animation-delay:2s; 
+      animation-delay:2s;
+-webkit-animation-fill-mode: forwards; 
+animation-fill-mode: forwards; 
+-webkit-animation-iteration-count: 1; 
+animation-iteration-count: 1; 
+-webkit-animation-timing-function:ease-in; 
+animation-timing-function:ease-in; 
+
+}
+
+
+/*
+.svg-col  path[class*="p1"],
+.svg-col  path[class*="p2"],
+.svg-col  path[class*="p3"],
+.svg-col  path[class*="p4"],
+.svg-col  path[class*="p5"]
+{
+transition: transform 9s ease-in 9s;
+perspective-origin: 50%, 50%;
+transform-origin: 50% 50%;
+}
+
+
+/* - - - - - - - - - - - - - - - - - - - -
+Paths (Hover animation)
+/* - - - - - - - - - - - - - - - - - - - -
+
+
+	
+.svg-col path[class*="p1"]{
+        transform: perspective(1000px) scale3d(55, 55, 13) translate(10%, 10%) rotate(165deg) translateX(999em);
+}
+
+.svg-col  path[class*="p2"] {
+        transform: perspective(1000px) scale3d(57, 57, 13) translate(10%, 10%) rotate(-45deg) translateX(999em); 
+}
+
+.svg-col  path[class*="p3"]{	
+	
+        transform: perspective(1000px) scale3d(55, 55, 20) translate(12%, 15%) rotate(-230deg) translateX(999em);
+}
+
+.svg-col  path[class*="p4"]{
+        transform: perspective(1000px) scale3d(52, 52, 12) translate(10%, 10%) rotate(190deg) translateX(999em);}
+
+.svg-col  path[class*="p5"]{
+
+        transform: perspective(1000px) scale3d(59, 59, 18) translate(20%, 40%) rotate(-90deg) translateX(999em);
+
+}
+*/
+	
+
 </style>
 </head>
 
 <body>
 
-
-<div class="container hb">
-  <a class="plate" href="#">
-    <i class="fa fa-tumblr"></i>
-  </a>
-  <a class="plate" href="#">
-    <i class="fa fa-pinterest"></i>
-  </a>
-  <a class="plate" href="#">
-    <i class="fa fa-instagram"></i>
-  </a>
-  <a class="plate" href="h#">
-    <i class="fa fa-linkedin"></i>
-  </a>
-  <a class="plate" href="#">
-    <i class="fa fa-github"></i>
-  </a>
-  <a class="plate" href="#" target="_top">
-    <i class="fa fa-google-plus"></i>
-  </a>
-  <a class="plate" href="#" target="_top">
-    <i class="fa fa-facebook"></i>
-  </a>
-  <a class="plate" href="#">
-    <i class="fa fa-twitter"></i>
-  </a>
-</div>
-<div class="wrapper full-bef">
-
-<div class="f-row nowrap f-btw p1"> <!--Start Top Bar -->
-<div  class="f-row tl-nav">
-<input id="logo-check" type="checkbox">
-<label class="lab-main f-row top-right" for="logo-check">
-  <div class="radmenu-pop">
-    <i class="fa fa-bars"></i>
-  </div>
-</label>
-<div class="f-row ctr-mid  nav-container"><div></div></div>
-
-</div>
-<div class="f-ch-start c1 f-row dpicon">
-<div class="icon-holder">
-<svg viewBox="0 0 78 78" preserveAspectRatio="xMinYMin meet" >
-<path class="letter-p" fill="#FFFFFF" stroke="#FFFFFF" stroke-miterlimit="10" d="M44.8,77.5v-28H45c0.7,1,1.6,2.7,2.6,3.6
+<div class="load-wrapper">
+<div class="loading">
+<div class="main-box">
+  <div class="ld-spacer" style="width:100%;height:0;padding:0;padding-top:10%;"></div>
+  <div class="row-container">
+  <div class="row r1"><div></div></div>
+  <div class="row r2" >
+    <div><div class="dp-initials">  <svg class="letters"  viewBox="0 0 78 78" preserveAspectRatio="xMinYMin meet">
+ <!--[if gt IE 8]><!-->
+  <switch>
+<g class="dp-letters w-fallback">
+<path class="letter-p"  stroke-linejoin="round" stroke-miterlimit="10" d="M44.8,77.5v-28H45c0.7,1,1.6,2.7,2.6,3.6
 	s2.2,1.9,3.4,2.5c1.2,0.6,2.5,1.1,3.8,1.4c1.3,0.3,2.6,0.5,3.9,0.5c2.6,0,5-0.4,7.3-1.3c2.2-0.9,4.1-2.1,5.7-3.7
 	c1.6-1.6,2.8-3.5,3.7-5.7s1.4-4.6,1.4-7.2c0-2.6-0.5-5-1.4-7.2s-2.1-4.1-3.7-5.7c-1.6-1.6-3.5-2.8-5.7-3.7c-2.2-0.9-4.6-1.3-7.3-1.3
 	c-1.3,0-2.6,0.1-3.9,0.4c-1.3,0.3-2.6,0.7-3.8,1.3c-1.2,0.6-2.3,0.8-3.4,1.7s-1.9,1.6-2.6,2.6h-0.2v-6h-4v56H44.8z M45.5,34
 	c0.7-1.7,1.8-3.2,3-4.4c1.3-1.3,2.8-2.3,4.5-3c1.7-0.7,3.6-1.1,5.6-1.1c2.1,0,3.9,0.4,5.6,1.1c1.7,0.7,3.1,1.7,4.3,3
 	c1.2,1.3,2.1,2.7,2.7,4.4c0.6,1.7,0.9,3.5,0.9,5.4s-0.3,3.7-0.9,5.4c-0.6,1.7-1.5,3.2-2.7,4.4c-1.2,1.3-2.6,2.3-4.3,3
 	s-3.6,1.1-5.6,1.1c-2,0-3.9-0.4-5.6-1.1s-3.2-1.7-4.5-3c-1.3-1.3-2.3-2.7-3-4.4c-0.7-1.7-1.1-3.5-1.1-5.4S44.8,35.7,45.5,34z"/>
-<path class="letter-d" fill="#FFFFFF" stroke="#FFFFFF" stroke-miterlimit="10" d="M32.8,0.5v28H33c-0.7-1-1.6-2.6-2.6-3.4
+<path class="letter-d"  stroke-linejoin="round" stroke-miterlimit="10" d="M32.8,0.5v28H33c-0.7-1-1.6-2.6-2.6-3.4
 	c-1-0.9-2.2-1.8-3.4-2.4c-1.2-0.6-2.5-1-3.8-1.3c-1.3-0.3-2.6-0.4-3.9-0.4c-2.6,0-5,0.4-7.3,1.3c-2.2,0.9-4.1,2.1-5.7,3.7
 	c-1.6,1.6-2.8,3.5-3.7,5.7c-0.9,2.2-1.4,4.6-1.4,7.2c0,2.6,0.5,5,1.4,7.2s2.1,4.1,3.7,5.7c1.6,1.6,3.5,2.8,5.7,3.7
 	c2.2,0.9,4.6,1.3,7.3,1.3c1.3,0,2.6-0.1,3.9-0.4c1.3-0.3,2.6-0.7,3.8-1.3c1.2-0.6,2.3-1,3.4-1.9s1.9-1.8,2.6-2.8h-0.2v6h4v-56H32.8z
@@ -734,79 +741,14 @@ text-align:center;
 	c-1.7-0.7-3.1-1.7-4.3-3c-1.2-1.3-2.1-2.7-2.7-4.4c-0.6-1.7-0.9-3.5-0.9-5.4s0.3-3.7,0.9-5.4c0.6-1.7,1.5-3.2,2.7-4.4
 	c1.2-1.3,2.6-2.3,4.3-3c1.7-0.7,3.6-1.1,5.6-1.1c2,0,3.9,0.4,5.6,1.1c1.7,0.7,3.2,1.7,4.5,3c1.3,1.3,2.3,2.7,3,4.4
 	c0.7,1.7,1.1,3.5,1.1,5.4S33.2,42.6,32.5,44.3z"/>
+	</g>
+	<foreignObject width="0"> <!--<![endif]--> 
+          <img src="assets/images/png/dp-letters.png" alt="Fallback SVG for dp">
+          </foreignObject>
+          </switch>
 </svg>
 </div>
-</div>
-  <div class="f-ch c2 f-row f-dist soc-nav"> <!--Start Social Media Buttonts-->
-  <a href="https://www.linkedin.com/in/darrellpenta/" title="LinkedIn" target="_blank" class="smn-btn f-ch">
-    <div class="smn-out">
-      <div class="smn-in">
-        <div class="smn front linked-fr"><i class="fa fa-linkedin" aria-hidden="true"></i></div>
-        <div class="smn left linked-s"></div>
-        <div class="smn bot"></div>
-      </div>
-    </div>
-    </a> 
-  <a href="https://plus.google.com/+DarrellPenta" title="Google+" target="_blank" class="smn-btn f-ch">
-    <div class="smn-out">
-      <div class="smn-in">
-        <div class="smn front goog-fr"><i class="fa fa-google-plus-official" aria-hidden="true"></i></div>
-        <div class=" smn left goog-s"></div>
-        <div class="smn bot"></div>
-      </div>
-    </div>
-    </a> 
-  <a href="http://facebook.com/darrell.penta" title="Facebook" target="_blank" class="smn-btn f-ch">
-    <div class="smn-out">
-      <div class="smn-in">
-        <div class="smn front facebk-fr"><i class="fa fa-facebook" aria-hidden="true"></i></div>
-        <div class="smn left facebk-s"></div>
-        <div class="smn bot"></div>
-      </div>
-    </div>
-    </a> 
-  <a href="www.github.com/darrellpenta" title="GitHub" target="_blank" class="smn-btn f-ch">
-    <div class="smn-out">
-      <div class="smn-in">
-        <div class="smn front git-fr"><i class="fa fa-github-alt"aria-hidden="true"></i></div>
-        <div class="smn left git-s"></div>
-        <div class="smn bot"></div>
-      </div>
-    </div>
-    </a> 
-  <a href="https://twitter.com/BLINGUISTICS" title="@BLINGUISTICS" target="_blank" class="smn-btn f-ch">
-    <div class="smn-out">
-      <div class="smn-in">
-        <div class="smn front tweet-fr"><i class="fa fa-twitter" aria-hidden="true"></i></div>
-        <div class="smn left tweet-s"></div>
-        <div class="smn bot"></div>
-      </div>
-    </div>
-    </a> 
-  <a href="mailto:darrellpenta@gmail.com" title="Email" target="_blank" class="smn-btn f-ch">
-    <div class="smn-out">
-      <div class="smn-in">
-        <div class="smn front email-fr"><i class="fa fa-envelope-o" aria-hidden="true"></i></div>
-        <div class="smn left email-s"></div>
-        <div class="smn bot"></div>
-      </div>
-    </div>
-    </a> 
-    </div>
-</div><!--End Social Media Buttons-->
-
-<div class="f-row nowrap f-dist main-section">
-	<div class="f-ch f-icol top-mid main-leftcol">
-		<div class="f-ch f-icol top-mid penta">
-         	<div class="f-ch">
-    			<h2>Dr. Darrell J. <span class="hide">Penta</span></h2>
-  	   		</div>
-  		    	<div class="f-ch">
-    			<h1>Penta</h1>
-  			</div>
-		</div>
-  <div class="svg-col"> 
-      
+      <!--End DP initials-->
       <div class="gray50-box"><!--Begin g50-->
         <svg class="portrait-gray50"  viewBox="0 0 469 765" preserveAspectRatio="xMinYMin meet"> 
           <!--[if gt IE 8]><!-->
@@ -820,7 +762,7 @@ text-align:center;
 
 </g>
 <foreignObject width="0"> <!--<![endif]--> 
-          <img src="assets/images/png/g50-paths.png" alt="Fallback SVG for Portrait">
+          <img src="assets/images/png/gray50-paths.png" alt="Fallback SVG for Portrait">
           </foreignObject>
           </switch>
         </svg>
@@ -838,7 +780,7 @@ text-align:center;
 
 </g>
 <foreignObject width="0"> <!--<![endif]--> 
-          <img src="assets/images/png/g60-paths.png" alt="Fallback SVG for Portrait">
+          <img src="assets/images/png/gray60-paths.png" alt="Fallback SVG for Portrait">
           </foreignObject>
           </switch>
         </svg>
@@ -856,7 +798,7 @@ text-align:center;
 
 </g>
 <foreignObject width="0"> <!--<![endif]--> 
-          <img src="assets/images/png/g65-paths.png" alt="Fallback SVG for Portrait">
+          <img src="assets/images/png/gray65-paths.png" alt="Fallback SVG for Portrait">
           </foreignObject>
           </switch>
         </svg>
@@ -873,7 +815,7 @@ text-align:center;
 <path class="ppath-p5" stroke-dashoffset="792" stroke-dasharray="792" d="M317.3 645.8c4.7-2.8 32.1-25.4 34.7-27.8 -3.4 12.9-35.7 36.8-52.2 45 -2.8 3-23.4 8.3-28.6 8C237 669 181 644 146 595c-3.5-4.9-28.5-34-34-42l-28-75c0 0 41.3 45.9 38.9 51.9 -7.7 19.7 30 26 36.2 38.8 -1.8 38.9 42.5 60.1 33.9 54.3 -3-2-2.9-25.7 0-20 3 6 21.1 18.5 23 22 5.8 16.3 19.6 22.4 22 23 11.2 3 25 8.2 37 8C283.8 655.8 311.4 649.5 317.3 645.8z"/>
 </g>
 <foreignObject width="0"> <!--<![endif]--> 
-          <img src="assets/images/png/g75-paths.png" alt="Fallback SVG for Portrait">
+          <img src="assets/images/png/gray75-paths.png" alt="Fallback SVG for Portrait">
           </foreignObject>
           </switch>
         </svg>
@@ -890,7 +832,7 @@ text-align:center;
 <path class="ppath-p1" stroke-dashoffset="1051" stroke-dasharray="1051" d="M107.1 684.4c-0.1 18.7 13.7 39.1 13.7 39.1l-5.2 7.8c-0.5-1.5-3.3-3.8-12.4-7C95 716 97 685 97 685c15-103 14.7-38 14.7-38S107.2 665.7 107.1 684.4zM105.1 587.8c0.9-9.9 2.4-41.7 2.9-41.8 3-35-25.3-79.5-31-68.9 -1.9 3.5-3.9 15-7.7 17.6 -5.1 3.4-21.2 9.5-24.8-28.6 -0.9-2.1-1.9-4.8-2.9-3.3 0.1 18.1 6.6 33.2 11.8 35.3 7 2.9 16.9 6.1 25.7-10.5 0.8-0.1 1.6-3 2.9-0.9 3.3 5.7 17.9 36.2 18.3 39.8 2.4 19-1.4 42.9-3.8 66.8 -2.5 24.7-3.7 49.4-7.4 69.1 -2.9 10-5.4 28.7-10.9 37 -5.5 8.3 15 20.6 15.2 16.6 -2.3-6.5-0.2-29 0.8-43.9C95.3 654.6 101 630.8 105.1 587.8zM32 421.5c0 0-23-32.5-14-55.5 -0.2-1.6-12 1-0.5 32.7 0.7 5.1 14 45.6 19.5 51.8 1.5-0.2-3.1-10.6-3.1-10.6L32 421.5z"/>
 </g>
 <foreignObject width="0"> <!--<![endif]--> 
-          <img src="assets/images/png/g85-paths.png" alt="Fallback SVG for Portrait">
+          <img src="assets/images/png/gray85-paths.png" alt="Fallback SVG for Portrait">
           </foreignObject>
           </switch>
         </svg>
@@ -912,10 +854,155 @@ text-align:center;
           </foreignObject>
           </switch>
         </svg>
-      </div><!--End bl-->
-      
- 
-    </div> 
+      </div><!--End bl--></div>
+  </div>
+  <div class="row r3"></div> 
+  </div>
+    <div class="ld-spacer" style="width:100%;height:0;padding:0;padding-top:10%;"></div>
+</div>
+</div>
+  
+</div>
+<div class="loaded">
+<div class="wr_window">
+<div class="f-row nowrap f-btw p1 load-content"> <!--Start Top Bar -->
+ <div  class="rad-nav f-row ctr-mid">
+<input id="logo-check" type="checkbox">
+<label class="rad-label f-row ctr-mid" for="logo-check">
+    <div class="rad-tog toggler f-row ctr-mid">
+    <span class="r-toggle tbar f-row ctr-mid"><i class="fa fa-bars"></i>
+      </span>
+    <span class="r-toggle tbar f-row ctr-mid"><i class="fa fa-times"></i></span>
+  </div>
+  <div class="hover-tog toggler f-row ctr-mid">
+    <span class="h-toggle tbar f-row ctr-mid"><i class="fa fa-bars"></i>
+      </span>
+    <span class="h-toggle tbar f-row ctr-mid"><i class="fa fa-times"></i></span>
+  </div>
+  
+</label>
+  <div class="rad-cont f-row ctr-mid">
+    <div class="rad-inside f-row ctr-mid">
+      <svg viewBox="0 0 78 78" preserveAspectRatio="xMinYMin meet" class="dp">
+<path class="letter-p" stroke-linejoin="miter" stroke-miterlimit="10" d="M44.8,77.5v-28H45c0.7,1,1.6,2.7,2.6,3.6 s2.2,1.9,3.4,2.5c1.2,0.6,2.5,1.1,3.8,1.4c1.3,0.3,2.6,0.5,3.9,0.5c2.6,0,5-0.4,7.3-1.3c2.2-0.9,4.1-2.1,5.7-3.7
+	c1.6-1.6,2.8-3.5,3.7-5.7s1.4-4.6,1.4-7.2c0-2.6-0.5-5-1.4-7.2s-2.1-4.1-3.7-5.7c-1.6-1.6-3.5-2.8-5.7-3.7c-2.2-0.9-4.6-1.3-7.3-1.3
+	c-1.3,0-2.6,0.1-3.9,0.4c-1.3,0.3-2.6,0.7-3.8,1.3c-1.2,0.6-2.3,0.8-3.4,1.7s-1.9,1.6-2.6,2.6h-0.2v-6h-4v56H44.8z M45.5,34
+	c0.7-1.7,1.8-3.2,3-4.4c1.3-1.3,2.8-2.3,4.5-3c1.7-0.7,3.6-1.1,5.6-1.1c2.1,0,3.9,0.4,5.6,1.1c1.7,0.7,3.1,1.7,4.3,3
+	c1.2,1.3,2.1,2.7,2.7,4.4c0.6,1.7,0.9,3.5,0.9,5.4s-0.3,3.7-0.9,5.4c-0.6,1.7-1.5,3.2-2.7,4.4c-1.2,1.3-2.6,2.3-4.3,3
+	s-3.6,1.1-5.6,1.1c-2,0-3.9-0.4-5.6-1.1s-3.2-1.7-4.5-3c-1.3-1.3-2.3-2.7-3-4.4c-0.7-1.7-1.1-3.5-1.1-5.4S44.8,35.7,45.5,34z"/>
+<path class="letter-d" stroke-linejoin="miter" stroke-miterlimit="10" d="M32.8,0.5v28H33c-0.7-1-1.6-2.6-2.6-3.4
+	c-1-0.9-2.2-1.8-3.4-2.4c-1.2-0.6-2.5-1-3.8-1.3c-1.3-0.3-2.6-0.4-3.9-0.4c-2.6,0-5,0.4-7.3,1.3c-2.2,0.9-4.1,2.1-5.7,3.7
+	c-1.6,1.6-2.8,3.5-3.7,5.7c-0.9,2.2-1.4,4.6-1.4,7.2c0,2.6,0.5,5,1.4,7.2s2.1,4.1,3.7,5.7c1.6,1.6,3.5,2.8,5.7,3.7
+	c2.2,0.9,4.6,1.3,7.3,1.3c1.3,0,2.6-0.1,3.9-0.4c1.3-0.3,2.6-0.7,3.8-1.3c1.2-0.6,2.3-1,3.4-1.9s1.9-1.8,2.6-2.8h-0.2v6h4v-56H32.8z
+	 M32.5,44.3c-0.7,1.7-1.8,3.2-3,4.4c-1.3,1.3-2.8,2.3-4.5,3c-1.7,0.7-3.6,1.1-5.6,1.1c-2.1,0-3.9-0.4-5.6-1.1
+	c-1.7-0.7-3.1-1.7-4.3-3c-1.2-1.3-2.1-2.7-2.7-4.4c-0.6-1.7-0.9-3.5-0.9-5.4s0.3-3.7,0.9-5.4c0.6-1.7,1.5-3.2,2.7-4.4
+	c1.2-1.3,2.6-2.3,4.3-3c1.7-0.7,3.6-1.1,5.6-1.1c2,0,3.9,0.4,5.6,1.1c1.7,0.7,3.2,1.7,4.5,3c1.3,1.3,2.3,2.7,3,4.4
+	c0.7,1.7,1.1,3.5,1.1,5.4S33.2,42.6,32.5,44.3z"/>
+</svg>
+ <div class="fly-out">     
+       <a class="rad-circ dp-home f-row ctr-mid"  href="http://www.darrelljpenta.com/index"  title="dp: Home" target="_blank">
+    <span class="ispan f-row ctr-mid"><i class="fa fa-home" aria-hidden="true"></i></span>
+  </a>
+   <a class="rad-circ dp-email  f-row ctr-mid"  href="mailto:darrellpenta@gmail.com" title="Email" target="_blank">
+    <span class="ispan f-row ctr-mid"><i class="fa fa-envelope-open-o" aria-hidden="true"></i></span>
+  </a>
+      <a href="tel:+123456789" title="Call" itemtype="http://schema.org/Person" itemprop="telephone" class="rad-circ dp-phone f-row ctr-mid" description="Call" >
+         <span class="ispan f-row ctr-mid"><i class="fa fa-phone" aria-hidden="true"></i></span></a> 
+
+  <a class="rad-circ linked mob f-row ctr-mid" href="http://www.linkedin.com/in/darrellpenta/" title="LinkedIn" target="_blank" >
+    <span class="ispan f-row ctr-mid"><i class="fa fa-linkedin" aria-hidden="true"></i></span></a> 
+  <a  class="rad-circ goog mob f-row ctr-mid" href="http://plus.google.com/+DarrellPenta" title="Google+" target="_blank">
+<span class="ispan f-row ctr-mid"><i class="fa fa-google-plus-official" aria-hidden="true"></i></span></a> 
+  <a  class="rad-circ facebk mob f-row ctr-mid" href="http://facebook.com/darrellpenta" title="Facebook" target="_blank">
+   <span class="ispan f-row ctr-mid"><i class="fa fa-facebook-f" aria-hidden="true"></i></span></a> 
+  <a class="rad-circ tweet mob f-row ctr-mid"  href="http://twitter.com/BLINGUISTICS" title="@BLINGUISTICS" target="_blank">
+  <span class="ispan f-row ctr-mid"><i class="fa fa-twitter" aria-hidden="true"></i></span></a>
+      </div>
+    </div>
+  </div>
+	
+</div>
+  <!--Start Social Media Buttonts-->
+  <div class="f-ch c2 soc-nav f-row ctr-dist">
+<a href="https://www.linkedin.com/in/darrellpenta/" title="LinkedIn" target="_blank" class="smn-btn">
+	<div class="smn-out">
+		<div class="smn-in">
+<div class="smn front linked linked-fr"><span class="f-col nowrap ctr-mid"><i class="fa fa-linkedin" aria-hidden="true"></i></span></div>
+<div class="smn back"></div>
+<div class="smn top"></div>
+<div class="smn bot"></div>
+<div class="smn left linked linked-lft"></div>
+<div class="smn right"></div>
+</div><!--end smn-in-->
+</div><!--end smn-out-->
+</a>
+
+<a href="https://plus.google.com/+DarrellPenta" title="Google+" target="_blank" class="smn-btn">
+	<div class="smn-out">
+		<div class="smn-in">
+<div class="smn front goog goog-fr"><span class="f-col nowrap ctr-mid"><i class="fa fa-google-plus-official" aria-hidden="true"></i></span></div>
+<div class="smn back"></div>
+<div class="smn top"></div>
+<div class="smn bot"></div>
+<div class="smn left goog goog-lft"></div>
+<div class="smn right"></div>
+</div><!--end smn-in-->
+</div><!--end smn-out-->
+</a>
+
+ <a href="http://facebook.com/darrellpenta" title="Facebook" target="_blank" class="smn-btn">
+	<div class="smn-out">
+		<div class="smn-in">
+<div class="smn front facebk facebk-fr"><span class="f-col nowrap ctr-mid"><i class="fa fa-facebook" aria-hidden="true"></i></span></div>
+<div class="smn back"></div>
+<div class="smn top"></div>
+<div class="smn bot"></div>
+<div class="smn left facebk facebk-lft"></div>
+<div class="smn right"></div>
+</div><!--end smn-in-->
+</div><!--end smn-out-->
+</a>
+
+  <a href="http://www.github.com/darrellpenta" title="GitHub" target="_blank" class="smn-btn">
+ 	<div class="smn-out">
+		<div class="smn-in">
+<div class="smn front git git-fr"><span class="f-col nowrap ctr-mid"><i class="fa fa-github-alt" aria-hidden="true"></i></span></div>
+<div class="smn back"></div>
+<div class="smn top"></div>
+<div class="smn bot"></div>
+<div class="smn left git git-lft"></div>
+<div class="smn right"></div>
+</div><!--end smn-in-->
+</div><!--end smn-out-->
+</a>
+ <a href="http://twitter.com/BLINGUISTICS" title="@BLINGUISTICS" target="_blank" class="smn-btn">
+	<div class="smn-out">
+		<div class="smn-in">
+<div class="smn front tweet tweet-fr"><span class="f-col nowrap ctr-mid"><i class="fa fa-twitter" aria-hidden="true"></i></span></div>
+<div class="smn back"></div>
+<div class="smn top"></div>
+<div class="smn bot"></div>
+<div class="smn left tweet tweet-lft"></div>
+<div class="smn right"></div>
+</div><!--end smn-in-->
+</div><!--end smn-out-->
+</a>
+	</div>
+<!--End Social Media Buttons-->
+
+</div>
+
+<div class="f-row nowrap f-dist main-section load-content">
+	<div class="f-ch f-icol top-mid main-leftcol">
+		<div class="f-ch f-icol top-mid penta">
+         	<div class="f-ch">
+    			<h2>Dr. Darrell J. <span class="hide">Penta</span></h2>
+  	   		</div>
+  		 <div class="f-ch">
+    			<h1>Penta</h1>
+  			</div>
+		</div>
+
       </div>
 <div class="f-ch f-icol top-mid righttcol">
 <div class="f-ch f-icol top-left rightcol-content">
@@ -925,98 +1012,9 @@ text-align:center;
 <p>-DP</p>
 </div>
 </div>
-</div>
-
-    
-</div>
-
-<!--<div class="f-ch f-row nowrap some">
-  <nav class="f-row nowrap">
-    <ul class="f-ch f-row nowrap around">
-      <li class="f-ch f-row"><a href="www.darrelljpenta.com/index.html" title="dp-bio" target="_blank" class="effect eff about">bio</a></li>
-      <li class="f-ch f-row"><a href="www.darrelljpenta.com/about.html" title="dp-work" target="_blank" class="effect eff work">work</a></li>
-      <li class="f-ch f-row"><a href="www.darrelljpenta.com/extras.html" title="dp-extras" target="_blank" class="effect eff resources">extras</a></li>
-      <li class="f-ch f-row"><a href="www.darrelljpenta.com/contact.html" title="dp-contact" target="_blank" class="effect eff contact">contact</a></li>
-    </ul>
-  </nav>
-</div>
-<div class="f-ch f-row nowrap stretch stripes">
-  <ul class=" f-ch f-row nowrap stretch">
-    <li>
-    <li>
-    <li>
-    <li>
-    <li>
-  </ul>
-</div>
 
 </div>
 </div>
-</div>-->
 </div>
 </body>
 </html>
-<!--
-div[class*="some"] > div:first-child {
-	height:8em;
-	line-height:8em;
-	position:relative;
-	overflow:hidden;
-	margin:0;
-	padding:0;
-	font-size:1rem;
-	z-index:1;
-	width:8em;
-}
-div[class*="some"] > div:last-child {
-	margin:0;
-	padding-left:.75em;
-	font-size:1rem;
-	width:auto;
-	height:auto;
-	width:75%;
-}
-div[class*="stripes"] > ul {
-	min-width:100%;
-	list-style-type:none;
-	margin:0;
-	padding:0;
-}
-div[class*="stripes"] > ul li {
-	margin:0;
-	padding:0;
-	height:7.9em;
-	line-height:7.9em;
-	min-width:20%;
-}
-div[class*="stripes"]:after {
-	content:'';
-	width:125%;
-	height:125%;
-	display:block;
-	background-color:transparent;
-	position:absolute;
-	left:-1.95em;
-	bottom:-1.95em;
-	z-index:4;
-	border-left:2em solid #fff;
-	border-bottom:2em solid #fff;
-	border-radius:0 0 0 50%;
-}
-div[class*="stripes"] > ul li:first-child {
-	background-color:#2ca1db;
-}
-div[class*="stripes"] > ul li:nth-child(2) {
-	background-color:#203c85;
-}
-div[class*="stripes"] > ul li:nth-child(3) {
-	background-color:#f44323;
-}
-div[class*="stripes"] > ul li:nth-child(4) {
-	background-color:#F2E2D1;
-}
-div[class*="stripes"] > ul li:last-child {
-	background-color:#ccd5dd;
-}
-
--->

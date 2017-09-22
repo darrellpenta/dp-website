@@ -2,4 +2,6 @@
 *.ai
 *.webm
 *.m4v
-assets/ai/
+assets/images/ai/**
+assets/images/psd/**
+*.mp4
