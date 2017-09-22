@@ -486,7 +486,7 @@ div[class*="penta"] >div:last-child {
 }
 div[class*="penta"] > div:last-child::after {
 	content:"Penta";
-	background: url(https://subtlepatterns.com/patterns/crossed_stripes.png) repeat;
+	background: 	url(../assets/images/png/crossed_stripes.png) repeat;
 	background-image: -webkit-linear-gradient(right top, transparent 0%, transparent 25%, #000 25%, #000 50%, transparent 50%, transparent 75%, #000 75%);
 	position:absolute;
 	top:0.3125rem;
