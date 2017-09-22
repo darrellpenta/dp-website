@@ -21,113 +21,110 @@
 <script src="https://use.fontawesome.com/42ce42b384.js"></script>
 <script src="js/modernizr.min.js" type="text/javascript"></script>
 <link rel="stylesheet" href="css/normalize.min.css">
-<link rel="stylesheet" href="css/dp-global-style.css">
 <link rel="stylesheet" href="css/dp-navigation-style.css">
 
 <style>
+.f-col,.f-row{-webkit-box-direction:normal}.ctr_dist,.ctr_end,.ctr_mid{align-content:center}.f-row{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-ms-flex-direction:row;flex-direction:row}.f-col{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-ms-flex-direction:column;flex-direction:column}.wrap{-ms-flex-wrap:wrap;flex-wrap:wrap}.nowrap{-ms-flex-wrap:nowrap;flex-wrap:nowrap}.j_start{-webkit-justify-content:flex-start;-ms-flex-pack:start;justify-content:flex-start}.j_end{-webkit-justify-content:flex-end;-ms-flex-pack:end;justify-content:flex-end}.j_ctr{-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center}.j_btw{-webkit-justify-content:space-between;-ms-flex-pack:justify;justify-content:space-between}.j_rnd{-webkit-justify-content:space-around;-ms-flex-pack:distribute;justify-content:space-around}.a_start{-webkit-align-items:flex-start;-ms-flex-align:start;align-items:flex-start}.a_end{-webkit-align-items:flex-end;-ms-flex-align:end;align-items:flex-end}.a_ctr{-webkit-align-items:center;-ms-flex-align:center;align-items:center}.a_str{-webkit-align-items:stretch;-ms-flex-align:stretch;align-items:stretch}.ctr_mid{-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-ms-flex-line-pack:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center}.ctr_dist{-ms-flex-pack:distribute;justify-content:space-around;-ms-flex-line-pack:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center}.ctr_end{-webkit-box-pack:end;-ms-flex-pack:end;justify-content:flex-end;-ms-flex-line-pack:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;}
 
 @-webkit-keyframes load-out {
   0% {
-    -webkit-transform: translate(0, 0)
-      translateZ(0)
-      perspective(none)
-      rotateX(0)
-      rotateY(0)
-      rotateZ(0)
-      scale(1.0, 1.0);
-    transform: translate(0, 0)
-      translateZ(0)
-      perspective(none)
-      rotateX(0)
-      rotateY(0)
-      rotateZ(0)
-      scale(1.0, 1.0);
-    opacity: 1.0;
+    -webkit-transform: translate3d(0,0,0) perspective(none) rotateX(0) rotateY(0) rotateZ(0) scale(1.0, 1.0);	  
+	    -moz-transform: translate3d(0,0,0) perspective(none) rotateX(0) rotateY(0) rotateZ(0) scale(1.0, 1.0);	  
+      transform: translate3d(0,0,0) perspective(none) rotateX(0) rotateY(0) rotateZ(0) scale(1.0, 1.0);
+   opacity: 1.0;
   }
   100% {
-    -webkit-transform: translate(0, 0)
-      translateZ(0)
-      perspective(500)
-      rotateX(0)
-      rotateY(-90deg)
-      rotateZ(20deg)
-      scale(1.0, 1.0);
-    transform: translate(0, 0)
-      translateZ(0)
-      perspective(500)
-      rotateX(0)
-      rotateY(-90deg)
-      rotateZ(20deg)
-      scale(1.0, 1.0);
+    -webkit-transform:  translate3d(0,0,0) perspective(500px) rotateX(0) rotateY(-90deg) rotateZ(20deg) scale(1.0, 1.0);
+	-moz-transform:  translate3d(0,0,0) perspective(500px) rotateX(0) rotateY(-90deg) rotateZ(20deg) scale(1.0, 1.0);
+	  transform: translate3d(0,0,0) perspective(500px) rotateX(0) rotateY(-90deg) rotateZ(20deg) scale(1.0, 1.0);
     display: none;
     opacity: 1.0;
   }
 }
+
 
 @keyframes load-out {
   0% {
-    -webkit-transform: translate(0, 0)
-      translateZ(0)
-      perspective(none)
-      rotateX(0)
-      rotateY(0)
-      rotateZ(0)
-      scale(1.0, 1.0);
-    transform: translate(0, 0)
-      translateZ(0)
-      perspective(none)
-      rotateX(0)
-      rotateY(0)
-      rotateZ(0)
-      scale(1.0, 1.0);
+    -webkit-transform: translate3d(0,0,0) perspective(none) rotateX(0) rotateY(0) rotateZ(0) scale(1.0, 1.0);	  
+	    -moz-transform: translate3d(0,0,0) perspective(none) rotateX(0) rotateY(0) rotateZ(0) scale(1.0, 1.0);	  
+      transform: translate3d(0,0,0) perspective(none) rotateX(0) rotateY(0) rotateZ(0) scale(1.0, 1.0);
+   opacity: 1.0;
     opacity: 1.0;
   }
   100% {
-    -webkit-transform: translate(0, 0)
-      translateZ(0)
-      perspective(500)
-      rotateX(0)
-      rotateY(-90deg)
-      rotateZ(20deg)
-      scale(1.0, 1.0);
-    transform: translate(0, 0)
-      translateZ(0)
-      perspective(500)
-      rotateX(0)
-      rotateY(-90deg)
-      rotateZ(20deg)
-      scale(1.0, 1.0);
+   -webkit-transform:  translate3d(0,0,0) perspective(500px) rotateX(0) rotateY(-90deg) rotateZ(20deg) scale(1.0, 1.0);
+	-moz-transform:  translate3d(0,0,0) perspective(500px) rotateX(0) rotateY(-90deg) rotateZ(20deg) scale(1.0, 1.0);
+	  transform: translate3d(0,0,0) perspective(500px) rotateX(0) rotateY(-90deg) rotateZ(20deg) scale(1.0, 1.0);
     display: none;
     opacity: 1.0;
   }
 }
 
+
 .loading {
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height:100%;
+	z-index:1;
+	     -webkit-perspective-origin: top left;
+  -moz-perspective-origin: top left;
+       perspective-origin: top left;
   -webkit-transform-style: preserve-3d;
-  transform-style: preserve-3d;
-  -webkit-transform-origin: top left;
-  transform-origin: top left;
-  -webkit-perspective-origin: top left;
-  perspective-origin: top left;
-  -webkit-animation: load-out 1s ease-in 2s 1 forwards;
-  animation: load-out 1s ease-in 2s 1 forwards;
+  -moz-transform-style: preserve-3d;
+       transform-style: preserve-3d;
+  
 }
 
-.loaded, .loaded > div {
-  -webkit-animation: load-in 1.2s ease-in 3s 1 forwards;
-  animation: load-in 1.2s ease-in 3s 1 forwards;
-}
+.ld-cont{
+	position:absolute;
+	top:50%;
+	left:50%;
+	-webkit-transform:translate(-50%,-50%);
+	-moz-transform:translate(-50%,-50%);
+	transform:translate(-50%,-50%);
+	-webkit-transform-origin: top left;
+      -moz-transform-origin: top left;
+       transform-origin: top left;
+-webkit-animation-name:load-out;
+-moz-animation-name:load-out;
+animation-name:load-out;
+-webkit-animation-duration:1s;
+-moz-animation-duration:1s;
+        animation-duration:1s;
+-webkit-animation-delay:2s;
+-moz-animation-delay:2s;
+        animation-delay:2s;
+-webkit-animation-direction:normal;
+-moz-animation-direction:normal;
+        animation-direction:normal;
+ -webkit-animation-fill-mode: forwards;
+ -moz-animation-fill-mode: forwards;
+         animation-fill-mode: forwards;
+ -webkit-animation-iteration-count:1;
+ -moz-animation-iteration-count:1;
+         animation-iteration-count:1;
+ -webkit-animation-timing-function:ease-in;
+ -moz-animation-timing-function:ease-in;
+         animation-timing-function:ease-in;
+ -webkit-animation-play-state:running;
+ -moz-animation-play-state:running;
+         animation-play-state:running; 
+	 
+
+	}
 .ld-cont-left, .ld-cont-right {
   -webkit-box-flex: 1;
   -ms-flex: 1 3 25%;
-  flex: 1 3 25%;
+  -webkit-flex: 1 3 25%;
+          flex: 1 3 25%;
 }
 .ld-cont-mid {
   -webkit-box-flex: 3;
   -ms-flex: 3 0 50%;
-  flex: 3 0 50%;
+  -webkit-flex: 3 0 50%;
+          flex: 3 0 50%;
 }
 
 .ld-cont-mid:before, .ld-cont-mid:after {
@@ -139,9 +136,12 @@
 }
 
 .ld-cont-mid > div {
-  border-radius: 50%;
-  box-sizing: border-box;
-  box-shadow: inset -.05em .05em 0 .2em #a09898, .25em .45em 0 2.4em #fff;
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-box-shadow: inset -.05em .05em 0 .2em #a09898, .25em .45em 0 2.4em #fff;
+          box-shadow: inset -.05em .05em 0 .2em #a09898, .25em .45em 0 2.4em #fff;
 }
 
 .ld-cont-mid > div:after {
@@ -151,17 +151,23 @@
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
   width: 105%;
   height: 105%;
   z-index: 0;
-  border: 10em solid #0C0B30;
-  border-radius: 50%;
+  border: 13em solid #0C0B30;
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
 }
 
 /* DP initials
 ========================*/
 .dp-initials {
+	width:100%;
+	height:100%;
+	display:block;
+	position:absolute;
   top: 50%;
   left: 50%;
   -webkit-transform: translateX(-50%)
@@ -172,7 +178,8 @@
     translateY(-50%)
     translateZ(1000em)
     scale(1.0, 1.0);
-  border-radius: 50%;
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
   -webkit-animation: dp-load 1s linear 1 forwards;
   animation: dp-load 1s linear 1 forwards;
 }
@@ -182,13 +189,6 @@
   stroke: #999;
   stroke-width: 1.4;
   stroke-miterlimit: 1;
-}
-
-.initial-p {
-  -webkit-transform-origin: bottom right;
-  transform-origin: bottom right;
-  -webkit-transform: rotate(180deg) translate(-12%, 61%);
-  transform: rotate(180deg) translate(-12%, 61%);
 }
 
 @-webkit-keyframes dp-load {
@@ -237,7 +237,6 @@
   overflow: visible;
   -webkit-overflow: visible;
 }
-
 /*=======================
 Path Animation
 ========================*/
@@ -551,7 +550,7 @@ All paths (main animation)
 
 .bgvid {
   z-index: -100;
-  background: url(assets/images/dp-bg-poster-960x540.png) no-repeat;
+  background:	url(assets/images/bg/dp-bg-poster-960x540.png) no-repeat;
   background-size: cover;
 }
 .vid_over {
@@ -575,7 +574,9 @@ All paths (main animation)
 .fallback-name {
   display: none;
 }
-
+/*      <div class="ld-cont-mid f-col nowrap ctr_mid" style="height:100%;min-width:275px;width:100%;max-width:450px; position:relative; z-index:1; background-color:#fff">
+          <div style="width:70%;padding-top:70%;height:0;position:relative; z-index:1;">
+                      <div class="dp-initials" style="width:85%;height:85%;display:block;position:absolute;">*/
 
 </style>
   
@@ -583,12 +584,26 @@ All paths (main animation)
 </head>
 
 <body>
-  
-<div class="loading" style="position: fixed;top: 0;left: 0;width: 100%;height:100%;z-index:1;">
+
+<div class="loading" >
   <div class="ld-cont f-row nowrap ctr_mid" style="width:100%; height:100%; overflow:hidden; z-index:0;">
-        <div class="ld-cont-left f-col nowrap ctr_mid" style="height:100%; background-color:#0C0B30;"></div> 
-        <div class="ld-cont-mid f-col nowrap ctr_mid" style="height:100%;min-width:275px;width:100%;max-width:450px; position:relative; z-index:1; background-color:#fff">
-          <div style="width:70%;padding-top:70%;height:0;position:relative; z-index:1;">
+        <div class="ld-cont-left f-col nowrap ctr_mid" style="height:100%; width:100%; margin-left:auto; margin-right:auto;position:relative;background-color:#0C0B30;"></div> 
+        <div class="ld-cont-mid f-col nowrap ctr_mid " style="min-height:275px;height:100%;max-height:450px;min-width:275px;width:100%;max-width:450px; position:relative; z-index:1; background-color:#fff">
+          <div style="width:100%;padding-top:100%;position:inherit; z-index:1; background-color:#fff;margin:0 auto;">
+                      <div class="dp-initials"> 
+ <svg class="letters"  viewBox="0 0 80 80" preserveAspectRatio="xMinYMin meet">
+  <!--[if gt IE 8]><!-->
+  <switch>
+<g class="dp-letters w-fallback">
+  <path class="initial-d"  d="M34.5 1.5v28h.5c-.7-1-1.6-2.6-2.6-3.4-1-.9-2.2-1.8-3.4-2.4-1.2-.6-2.5-1-3.8-1.3-1.3-.3-2.6-.4-3.9-.4-2.6 0-5 .4-7.3 1.3-2.2.9-4.1 2.1-5.7 3.7-1.6 1.6-2.8 3.5-3.7 5.7-.9 2.2-1.4 4.6-1.4 7.2 0 2.6.5 5 1.4 7.2s2.1 4.1 3.7 5.7c1.6 1.6 3.5 2.8 5.7 3.7 2.2.9 4.6 1.3 7.3 1.3 1.3 0 2.6-.1 3.9-.4 1.3-.3 2.6-.7 3.8-1.3 1.2-.6 2.3-1 3.4-1.9s1.9-1.8 2.6-2.8h-.5v6h4v-56h-4zm0 43.8c-.7 1.7-1.8 3.2-3 4.4-1.3 1.3-2.8 2.3-4.5 3-1.7.7-3.6 1.1-5.6 1.1-2.1 0-3.9-.4-5.6-1.1-1.7-.7-3.1-1.7-4.3-3-1.2-1.3-2.1-2.7-2.7-4.4-.6-1.7-.9-3.5-.9-5.4s.3-3.7.9-5.4c.6-1.7 1.5-3.2 2.7-4.4 1.2-1.3 2.6-2.3 4.3-3 1.7-.7 3.6-1.1 5.6-1.1 2 0 3.9.4 5.6 1.1 1.7.7 3.2 1.7 4.5 3 1.3 1.3 2.3 2.7 3 4.4.7 1.7 1.1 3.5 1.1 5.4s-.4 3.7-1.1 5.4z"/>
+  <path class="initial-p" d="M45.5 77.5v-28h.5c.7 1 1.6 2.5 2.6 3.4s2.2 1.8 3.4 2.3c1.2.6 2.5 1 3.8 1.3s2.6.4 3.9.4c2.6 0 5-.4 7.3-1.3 2.2-.9 4.1-2.1 5.7-3.7 1.6-1.6 2.8-3.5 3.7-5.7s1.4-4.6 1.4-7.2c0-2.6-.5-5-1.4-7.2s-2.1-4.1-3.7-5.7c-1.6-1.6-3.5-2.8-5.7-3.7-2.2-.9-4.6-1.3-7.3-1.3-1.3 0-2.6.1-3.9.4-1.3.3-2.6.7-3.8 1.3-1.2.6-2.3 1.1-3.4 2s-1.9 1.9-2.6 2.9h-.5v-6h-4v56h4zm1-44c.7-1.7 1.8-3.2 3-4.4 1.3-1.3 2.8-2.3 4.5-3 1.7-.7 3.6-1.1 5.6-1.1 2.1 0 3.9.4 5.6 1.1 1.7.7 3.1 1.7 4.3 3 1.2 1.3 2.1 2.7 2.7 4.4.6 1.7.9 3.5.9 5.4s-.3 3.7-.9 5.4c-.6 1.7-1.5 3.2-2.7 4.4-1.2 1.3-2.6 2.3-4.3 3S61.8 53 59.7 53c-2 0-3.9-.4-5.6-1.1s-3.2-1.7-4.5-3c-1.3-1.3-2.3-2.7-3-4.4-.7-1.7-1.1-3.5-1.1-5.4s.3-3.9 1-5.6z"/>
+</g>
+	<foreignObject width="0"> <!--<![endif]--> 
+          <img src="assets/images/png/svg-backup/dp-icon-letters.png" alt="Fallback SVG for dp" width="78" height="78">
+          </foreignObject>
+          </switch>
+</svg>                    
+            </div><!--End DP initials-->
 <div class="dp-portrait" style="width:61.1%; height:100%;display:block;position:absolute;">
   <div class="gray50 pbox"><!--Begin g50-->
         <svg class="portrait-gray50"  viewBox="0 0 469 765" preserveAspectRatio="xMinYMin meet"> 
@@ -603,7 +618,7 @@ All paths (main animation)
 
 </g>
 <foreignObject width="0"> <!--<![endif]--> 
-          <img src="assets/images/png/gray50-paths.png" alt="Fallback SVG for Portrait">
+          <img src="assets/images/png/svg-backup/gray50-paths.png" alt="Fallback SVG for Portrait">
           </foreignObject>
           </switch>
         </svg>
@@ -621,7 +636,7 @@ All paths (main animation)
 
 </g>
 <foreignObject width="0"> <!--<![endif]--> 
-          <img src="assets/images/png/gray60-paths.png" alt="Fallback SVG for Portrait">
+          <img src="assets/images/png/svg-backup/gray60-paths.png" alt="Fallback SVG for Portrait">
           </foreignObject>
           </switch>
         </svg>
@@ -639,7 +654,7 @@ All paths (main animation)
 
 </g>
 <foreignObject width="0"> <!--<![endif]--> 
-          <img src="assets/images/png/gray65-paths.png" alt="Fallback SVG for Portrait">
+          <img src="assets/images/png/svg-backup/gray65-paths.png" alt="Fallback SVG for Portrait">
           </foreignObject>
           </switch>
         </svg>
@@ -656,7 +671,7 @@ All paths (main animation)
 <path class="p_part ppath-p5" stroke-dashoffset="792" stroke-dasharray="792" d="M317.3 645.8c4.7-2.8 32.1-25.4 34.7-27.8 -3.4 12.9-35.7 36.8-52.2 45 -2.8 3-23.4 8.3-28.6 8C237 669 181 644 146 595c-3.5-4.9-28.5-34-34-42l-28-75c0 0 41.3 45.9 38.9 51.9 -7.7 19.7 30 26 36.2 38.8 -1.8 38.9 42.5 60.1 33.9 54.3 -3-2-2.9-25.7 0-20 3 6 21.1 18.5 23 22 5.8 16.3 19.6 22.4 22 23 11.2 3 25 8.2 37 8C283.8 655.8 311.4 649.5 317.3 645.8z"/>
 </g>
 <foreignObject width="0"> <!--<![endif]--> 
-          <img src="assets/images/png/gray75-paths.png" alt="Fallback SVG for Portrait">
+          <img src="assets/images/png/svg-backup/gray75-paths.png" alt="Fallback SVG for Portrait">
           </foreignObject>
           </switch>
         </svg>
@@ -673,7 +688,7 @@ All paths (main animation)
 <path class="p_part ppath-p1" stroke-dashoffset="1051" stroke-dasharray="1051" d="M107.1 684.4c-0.1 18.7 13.7 39.1 13.7 39.1l-5.2 7.8c-0.5-1.5-3.3-3.8-12.4-7C95 716 97 685 97 685c15-103 14.7-38 14.7-38S107.2 665.7 107.1 684.4zM105.1 587.8c0.9-9.9 2.4-41.7 2.9-41.8 3-35-25.3-79.5-31-68.9 -1.9 3.5-3.9 15-7.7 17.6 -5.1 3.4-21.2 9.5-24.8-28.6 -0.9-2.1-1.9-4.8-2.9-3.3 0.1 18.1 6.6 33.2 11.8 35.3 7 2.9 16.9 6.1 25.7-10.5 0.8-0.1 1.6-3 2.9-0.9 3.3 5.7 17.9 36.2 18.3 39.8 2.4 19-1.4 42.9-3.8 66.8 -2.5 24.7-3.7 49.4-7.4 69.1 -2.9 10-5.4 28.7-10.9 37 -5.5 8.3 15 20.6 15.2 16.6 -2.3-6.5-0.2-29 0.8-43.9C95.3 654.6 101 630.8 105.1 587.8zM32 421.5c0 0-23-32.5-14-55.5 -0.2-1.6-12 1-0.5 32.7 0.7 5.1 14 45.6 19.5 51.8 1.5-0.2-3.1-10.6-3.1-10.6L32 421.5z"/>
 </g>
 <foreignObject width="0"> <!--<![endif]--> 
-          <img src="assets/images/png/gray85-paths.png" alt="Fallback SVG for Portrait">
+          <img src="assets/images/png/svg-backup/gray85-paths.png" alt="Fallback SVG for Portrait">
           </foreignObject>
           </switch>
         </svg>
@@ -691,7 +706,7 @@ All paths (main animation)
 
       </g>
 <foreignObject width="0"> <!--<![endif]--> 
-          <img src="assets/images/png/black-paths.png" alt="Fallback SVG for Portrait">
+          <img src="assets/images/png/svg-backup/black-paths.png" alt="Fallback SVG for Portrait">
           </foreignObject>
           </switch>
         </svg>
@@ -708,7 +723,7 @@ All paths (main animation)
 	document.createElement('video');
 </script>
 <![endif]-->
-<video playsinline autoplay muted loop poster="dp-bg-poster-960x540.png" class="bgvid dp_bg">
+<video playsinline autoplay muted loop poster="assets/images/bg/dp-bg-poster-960x540.png" class="bgvid dp_bg">
     <source	 src="assets/videos/dp-bg-clip-960x540.webm" type="video/webm">
     <source src="assets/videos/dp-bg-clip-960x540.mp4" type="video/mp4">
 </video>
@@ -783,7 +798,7 @@ All paths (main animation)
   <div class="dp-body f-col" style="width:100%;height:100%; ">
   <div class="f-row j_rnd a_start" style="width:100%; height:auto;">
  <div class="f-col wrap" style="width:35%; min-width:386px;padding:0;">
-<div class="f-row nowrap darrell" style="width:100%;height:3.5em;  padding:0;font-family: 'Libre Baskerville',Georgia, 'Times New Roman', Times, serif;color:#fff;box-sizing:border-box; border-top:2px solid #fff; border-bottom:2px solid #fff;">
+<div class="darrell f-row nowrap" style="width:100%;height:3.5em;  padding:0;font-family: 'Libre Baskerville',Georgia, 'Times New Roman', Times, serif;color:#fff;box-sizing:border-box; border-top:2px solid #fff; border-bottom:2px solid #fff;">
 	<div class="f-col j_ctr a_ctr dr">
 		<div style="font-size:2.25em;">Dr.</div>
 		<div style="font-size:.57em;"><i class="fa fa-circle" aria-hidden="true"></i>

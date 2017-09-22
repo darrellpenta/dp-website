@@ -346,8 +346,6 @@ a.smn-btn:visited .smn-in .front {
 }
 
 
-
-
 /* Show drop shadow on hover, active, focus*/
 a.smn-btn:hover .smn-out:before,
 a.smn-btn:active .smn-out:before {
