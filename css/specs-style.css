@@ -1,0 +1,73 @@
+@charset "UTF-8";
+/* CSS Document */
+
+
+/*Spec details      
+========================*/
+
+/*Spec ul
+/*---------------------------*/      
+.spec-item {
+width:100%;
+height:auto;
+margin:auto;
+padding:4px;
+list-style-type:none;
+}
+
+.spec-item li{
+	display:inline-flex;}
+/*Spec ul li
+/*---------------------------*/ 
+.spec-item li:nth-child(1) {
+background-color:#0C0B30;
+font-weight:bold;
+width:10%;
+min-width:30px;
+flex:1 1 auto;
+height:4em;
+padding:5px;
+-webkit-box-sizing:border-box;
+box-sizing:border-box;
+}
+.spec-item li:nth-child(2) {
+background-color:#fff;
+flex:0 1 auto;
+height:4em;
+width:80%;
+padding:5px;
+text-wrap:normal;
+-webkit-box-sizing:border-box;
+box-sizing:border-box;
+}
+
+/*Spec h1,h2,h3,p
+/*---------------------------*/ 
+.spec-item li:nth-child(1) h1{
+font-family: 'Libre Baskerville',Georgia, 'Times New Roman', Times, serif;
+color:#fff;
+font-size:1.6em;
+line-height:2em;
+}
+
+.spec-item li h2, .spec-item li h3,.spec-item li p
+{
+font-family: 'Noto Sans', Arial, Helvetica, sans-serif;
+color:#0C0B30;
+font-size:.9em;
+line-height:1em;
+}
+.spec-item li h2 {
+font-weight:bold;}
+.spec-item li h3 {
+font-style:normal;}
+.spec-item li p{
+font-weight:lighter;}
+.norm{
+font-style:normal;
+font-weight:normal;}
+.lighter{
+font-weight:lighter;}
+.obl{
+font-style:italic;
+font-style:oblique;}
