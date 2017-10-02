@@ -13,7 +13,7 @@
 <meta name="distribution" content="Global">
 <meta name="zipcode" content="02110">
 <meta name="country" content="USA">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">  
 <meta name="format-detection" content="telephone=no">
 <link rel="stylesheet" href="https://use.fontawesome.com/04d82f9725.css">
 <link href="https://fonts.googleapis.com/css?family=Quicksand:400" rel="stylesheet">
@@ -30,6 +30,9 @@
 Flexbox shortcuts
 ========================*/
 .f-col,.f-row{-webkit-box-direction:normal}.ctr_dist,.ctr_end,.ctr_mid{align-content:center}.f-row{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-ms-flex-direction:row;flex-direction:row}.f-col{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-ms-flex-direction:column;flex-direction:column}.wrap{-ms-flex-wrap:wrap;flex-wrap:wrap}.nowrap{-ms-flex-wrap:nowrap;flex-wrap:nowrap}.j_start{-webkit-justify-content:flex-start;-ms-flex-pack:start;justify-content:flex-start}.j_end{-webkit-justify-content:flex-end;-ms-flex-pack:end;justify-content:flex-end}.j_ctr{-webkit-box-pack:center;-ms-flex-pack:center;-webkit-justify-content:center;justify-content:center}.j_btw{-webkit-justify-content:space-between;-ms-flex-pack:justify;justify-content:space-between}.j_rnd{-webkit-justify-content:space-around;-ms-flex-pack:distribute;justify-content:space-around}.a_start{-webkit-align-items:flex-start;-ms-flex-align:start;align-items:flex-start}.a_end{-webkit-align-items:flex-end;-ms-flex-align:end;align-items:flex-end}.a_ctr{-webkit-align-items:center;-ms-flex-align:center;align-items:center}.a_str{-webkit-align-items:stretch;-ms-flex-align:stretch;align-items:stretch}.ctr_mid{-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-ms-flex-line-pack:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center}.ctr_dist{-ms-flex-pack:distribute;justify-content:space-around;-ms-flex-line-pack:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center}.ctr_end{-webkit-box-pack:end;-ms-flex-pack:end;justify-content:flex-end;-ms-flex-line-pack:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center}.as_end{ -webkit-align-self: flex-end;-ms-flex-item-align: end;align-self: flex-end;}
+.a_base{-webkit-align-items: baseline;
+    -ms-flex-align: baseline;
+    align-items: baseline;}
 
 /*========================
 Load screen transitions
@@ -115,7 +118,6 @@ SITE BACKGROUND
 @media (max-aspect-ratio: 16/9) {.video-container > #dp-vid {width: 600%; left: -100%;}}
 @supports (object-fit: cover) {.video-container > #dp-vid {top: 0;left: 0;width: 100%;height: 100%;object-fit: cover;}}
 
-.vid_over {position:inherit;content:'';width:100%;height:102%;display:block;top:0;right:0;bottom:0;left:0;margin:0;padding:0;-webkit-box-shadow: inset 4em -1.3em 8em 3.2em rgba(0,0,0,.41);-moz-box-shadow: inset 4em -1.3em 8em 3.2em rgba(0,0,0,.41);box-shadow: inset 4em -1.3em 8em 3.2em rgba(0,0,0,.41); z-index:-99;}
 
 
 /*========================
@@ -193,8 +195,8 @@ margin:0 auto;	}
 	-webkit-transform:translate(-50%,-50%);
 	transform:translate(-50%,-50%);
 	background-color: rgba(12,11,48,1);}	
-	
-@media (max-width:58.5em) {
+
+@media screen and (max-width:58.5em) {
   .ul_wrapper{
     -webkit-box-orient:vertical;
 -ms-flex-direction:column;
@@ -211,6 +213,7 @@ flex-direction:column;
     -webkit-box-align: center;
             align-items: center;
   }
+
   .ul_wrapper li{
     width:100%;
 	height:auto;
@@ -218,6 +221,8 @@ flex-direction:column;
         flex-basis:100%;
     margin:0 auto;
   }  
+
+  
  .head-logo {
 	-webkit-order: 2;
 	-ms-flex-order: 2;
@@ -246,6 +251,7 @@ flex-direction:column;
 	}
 }
 
+
 /*Logo 
 /*----------------------*/
 
@@ -266,16 +272,236 @@ flex-direction:column;
 /*========================
 BODY Specs
 ========================*/
+.navi, .navi > li{
+-webkit-box-sizing:border-box;
+box-sizing:border-box;
+}
 
-.first-row li,
-.navi li {-webkit-box-flex: 0;-webkit-flex: 0 0 auto; -ms-flex: 0 0 auto;flex: 0 0 auto;position:relative;width:48%;height:0;padding:0;padding-bottom:20%;margin:0 auto 2em auto;-webkit-box-sizing:border-box;box-sizing:border-box; background-color:rgba(255,255,255,0.7);outline: #0C0B30 solid 2px;outline-offset:-7px;}
+.navi {
+	list-style-type:none;
+	width:90%;
+	padding:0;
+	margin:1em auto;
+	height:auto;
+}
 
-.first-row li div,
-.navi ul li div {width:auto;height:auto;position:absolute;
+
+.navi > li {
+	-webkit-flex: 0 0 auto;
+	flex: 0 0 auto;
+	width:17%;
+	min-width:220px;
+	height:auto; 
+	padding:0;
+	margin:.75em auto;
+	position:relative;
+  -webkit-perspective:1000px;
+  perspective:1000px;
+  -webkit-backface-visibility:hidden;
+  }
+
+.navi li:after{
+	content:'';
+	display:bock;
+	width:0;
+	height:0;
+	position:absolute;
+	top:70%;
+	left:50%;
+	-webkit-transform:translate(-50%,-70%);
+	transform:translate(-50%,-70%);
+	z-index:1;
+	background-color:#fff;
+  -webkit-transform-origin:left;
+  transform-origin:left;
+   padding: 0 .15em; 
+	}
+
+ .navi > li a{
+	 width:90%;
+	 height:auto;
+	 padding: 0 .15em; 
+	 position:relative; 
+	 text-decoration:none; 
+ 	 white-space:nowrap;
+	   border:0.2em solid #0C0B30;
+	   background-color:#fff;
+}
+
+  .navi > li a p {
+	  font-family:'Noto Sans', Arial, Helvetica, sans-serif;
+	   color:#0C0B30; 
+	   font-size:.9em;	 
+	   line-height:.9em;
+	   font-weight:400;
+	   padding:0;
+	  } 
+.navi > li a h1{
+	font-family: 'Libre Baskerville',Georgia, 'Times New Roman', Times, serif;
+	color:#DC0009; 
+	 font-size:1.7em;
+	  line-height:1em;
+	 font-weight:700;
+	 padding:0;
+	 }
+
+.navi > li a:after, .navi > li a:before{
+	content:'';
+	position:absolute;
 	top:50%;
 	left:50%;
-	-webkit-transform:translate(-50%,-50%);
-	transform:translate(-50%,-50%);-webkit-box-sizing:border-box;box-sizing:border-box;font-family:'Noto Sans-400', Arial, Helvetica, sans-serif;  color:#0C0B30; font-size:1.2em;	}
+	display:block;
+	width:100%;
+	height:100%;
+	margin:0;
+	padding:0;
+	-webkit-box-sizing:inherit;
+	box-sizing:inherit;
+	background:#fff; 
+	background-origin:border-box;
+   -webkit-transform:translate(-45%,-35%);
+  transform:translate(-45%,-35%);
+ }
+
+.navi > li a:after{ background:	url(assets/images/png/svg-backup/stripe-pattern.png);
+  background-image: url(assets/images/svg/stripe-pattern.svg);
+ background-size:8px 8px ;
+ background-repeat:repeat;	
+  z-index:-1;
+  border:.15em solid #0C0B30;}
+  
+  .navi > li a:before{
+	  z-index:-2;
+	  background-color:#fff;
+	   -webkit-box-shadow:inset 0.55em 0.55em 0.55em -.2em #000;
+  box-shadow:inset 0.55em 0.55em 0.55em -.2em #000;
+
+	  }
+  
+ .navi li a:hover, .navi li a:active{
+    background-color:#0C0B30;
+  border-color:#a09898;}
+  
+.navi li a:hover h1, .navi li a:active h1 {
+  color:#fff;} 
+  .navi li a:hover p, .navi li a:active p{ 
+  color:#a09898;}
+  
+ .navi li:hover:after{
+	 width:60%;
+	 height:.2em;
+  -webkit-transform-origin:left;
+  transform-origin:left; } 
+  
+       .navi > li ,.navi li:after, .navi > li a	,  .navi > li a p,.navi > li a h1, .navi li a:hover, .navi li a:active,.navi li a:hover h1, .navi li a:active h1,.navi li a:hover p, .navi li a:active p, .navi li:hover:after{
+		   -webkit-transition:all .3s cubic-bezier(.5,.22,.02,.41);
+		   transition:all .3s cubic-bezier(.5,.22,.02,.41);} 
+/* Section Styles
+========================*/
+
+/* Section title
+------------------------------*/
+.section_title{
+	width:90%; height:auto; padding:0; margin:0 auto;
+}
+.section_title > p{
+	line-height:1em;}
+.section_title > p:nth-child(1){
+	 font-family:'Noto Sans', Arial, Helvetica, sans-serif;
+color:#0C0B30; 
+font-size:2.4em;	
+font-weight:400;	}
+
+.section_title > p:nth-child(2){
+font-family: 'Libre Baskerville', Baskerville, Georgia, 'Times New Roman', Times, serif;
+color:#DC0009; 
+font-size:3.8em; 
+font-weight:700;	}
+
+/* Team Section Style
+------------------------------*/
+ul.section_team {
+	width:94.5%; 
+	height:auto; 
+	padding:0; 
+	margin:0 auto;
+	list-style-type:none;}	
+
+.team_cont{
+	width:45.25%;
+	 -webkit-flex: 0 1 auto;
+    -ms-flex: 0 1 auto;
+    flex: 0 1 auto;
+	height:auto; 
+	margin:0;
+	padding:0;
+	border-top:4px solid #0C0B30;
+	}
+.team_inner{
+min-height:100%;
+height:auto;
+margin:0;
+padding:0;
+ -webkit-flex: 0 1 auto;
+    -ms-flex: 0 1 auto;
+    flex: 0 1 auto;}	
+.team_title{width:100%;height:auto;font-family:'Noto Sans',Helvetica, Arial, sans-serif; font-size:1.45em;line-height:1.25em;font-weight:700;padding:.25em;margin:0;}
+
+.team_photo{
+	width:100%;padding:0;padding-top:100%;height:0;margin:0;border:2px solid #0C0B30; position:relative;}
+.team_photo > div{
+width:100%; height:100%;position:absolute; top:0;left:0;background-size:cover;}
+.team_name{
+font-family: 'Libre Baskerville', Baskerville, Georgia, 'Times New Roman', Times, serif;
+color:#DC0009; 
+font-size:1.1em;
+line-height:1.5em;	
+padding:0 .25em;
+margin:0.25em 0;
+	}	
+.team_desc{
+	font-family:'Noto Sans',Helvetica, Arial, sans-serif;	
+	color:#0C0B30;
+	font-size:.8em;
+	line-height:1.25em;
+}
+
+.team_link{
+	padding: 1.5em .5em;
+	line-height:1.5em;
+}	
+
+.team_link a{
+font-family:'Noto Sans',Helvetica, Arial, sans-serif;	
+	color:#0C0B30;
+	font-size:.75em;
+	font-weight:700;
+	}	
+	
+.team_link a:hover, 
+.team_link a:active {
+	color:#DC0009; 
+	text-decoration:none;
+	}		
+.team_left{
+width:44.5%	}	
+.team_right{
+width:54.5%;	
+margin:0;
+padding: .75em;
+-webkit-box-sizing:border-box;
+border-box:border-box;	}	
+.team_right > div{
+	width:100%;
+	text-align:left;}
+		
+.ta_1{background-image:url(assets/images/png/main-page-potrait/dp_sq_400.png);}
+.tb_1{background-image:url(assets/images/png/main-page-potrait/dp_sq_400_alt1.png);}
+.tc_1{background-image:url(assets/images/png/main-page-potrait/dp_sq_400_alt2.png);}
+.td_1{background-image:url(assets/images/png/main-page-potrait/dp_sq_400_alt3.png);}
+.te_1{background-image:url(assets/images/png/main-page-potrait/sahna_sq_400.png);}
+.tf_1{background-image:url(assets/images/png/main-page-potrait/sahna_sq_400.png);}
+	
 </style>
 </head>
 <body>
@@ -435,27 +661,26 @@ BODY Specs
 				document.createElement('video');
 			</script>
 		<![endif]-->
-	<div class="video-container">
+	<!--<div class="video-container">
 		<video id="dp-vid" playsinline autoplay muted loop poster="assets/images/bg/dp-bg-poster-960x540.png"  >
 			<source src="assets/videos/dp-bg-clip-960x540.webm" type="video/webm" media="(orientation:landscape)">
 			<source src="assets/videos/dp-bg-clip-960x540.mp4" type="video/mp4" media="(orientation:landscape)">
 		</video>
 		
-		<!--end video -->
-		<div class="vid_over dp_bg"></div>
-	</div>
-	<!-- end novideo bg -->
-	<div class="load_in" style="padding:0; width:100%; height:100%;padding:0;margin:0;"> 
-		
+		<!--end video --
+	</div><!-- end video container -->
+	
+	<div class="load_in" style="padding:0; width:100%; height:100%;padding:0;padding-top:20px;">
+	
 		<!-- =====================================  --> 
 		<!-- START HEADER-->
 			<ul class="ul_wrapper">
 				<li class="head-logo f-row" >
 					<div class="f-col wrap" style="width:35%; min-width:386px;padding:0;">
-						<div class="darrell f-row nowrap" style="width:100%;height:3.6em;  padding:0;font-family: 'Libre Baskerville',Georgia, 'Times New Roman', Times, serif;box-sizing:border-box; ">
-							<div class="f-col j_ctr a_ctr dr">
-								<div style="font-size:2.25em; font-variant: small-caps; font-weight:bold; ">dr.</div>
-								<div style="font-size:.57em;"> <i class="fa fa-circle" aria-hidden="true"></i> </div>
+						<div class="darrell f-row nowrap" style="width:100%;height:3.6em;  padding:0;font-family: 'Libre Baskerville',Georgia, 'Times New Roman', Times, serif;box-sizing:border-box; font-weight:400; ">
+							<div class="f-col j_start a_ctr dr">
+								<div style="font-size:2.25em; line-height:1.1em;font-variant: small-caps; font-weight:bold; ">dr</div>
+								<div style="font-size:.57em;line-height:1.1em;"> <i class="fa fa-circle" aria-hidden="true"></i> </div>
 							</div>
 							<!-- end "Dr." column -->
 							<div class="darrell-sp">D</div>
@@ -547,50 +772,156 @@ BODY Specs
 			</ul>
 			<!--end header list--> 
 	<!-- END HEADER--> 
-		
+		</div>
 		<!-- =====================================  --> 
 		<!-- =====================================  --> 
 		
 		<!-- START BODY-->
 		<div style="width:100%; height:auto;padding:0;margin:0;-webkit-box-sizing: border-box; box-sizing: border-box;">
-		<ul class="test f-row wrap j_rnd a_start">
-		<li class="lcol"><div>YO!</div></li>
-		<li class="rcol"><div class="f-row j_rnd a_ctr" style="width:96%; height:auto; ">
-				<ul class="navi f-row wrap j_rnd a_ctr first-row" style="width:100%; margin:0; padding:0;list-style-type:none; ">
-					<li>
-						<div>Meet the Team</div>
+		<div style="width:100%; height:0;padding:0; padding-top:20%; margin:0;  margin-top:2em; "></div>
+
+				<ul class="navi f-row wrap j_rnd a_ctr" >
+					<li class="f-row nowrap j_ctr a_ctr">
+						<a href="#" class="f-row nowrap j_ctr a_base"><p>the&nbsp;</p><h1>Team</h1></a>
 					</li>
-					<li>
-						<div>Specs</div>
+							<li class="f-row nowrap j_ctr a_ctr">
+						<a href="#" class="f-row nowrap j_ctr a_base"><p>the&nbsp;</p><h1>Specs</h1></a>
 					</li>
-					<li>
-						<div>Extras</div>
+						<li class="f-row nowrap j_ctr a_ctr">
+						<a href="#" class="f-row nowrap j_ctr a_base"><p>the&nbsp;</p><h1>Extras</h1></a>
 					</li>
-					<li>
-						<div>Contact</div>
-					</li>
-				</ul></div></li>
-		</ul></div>
-		
-			
+					<li class="f-row nowrap j_ctr a_ctr">
+					<a href="#" class="f-row nowrap j_ctr a_ctr"><h1>Contact</h1></a
+					></li>
+				</ul>	
+				</div>			
 		<!--  END  BODY --> 
-		<div class="small-nav-holder" style="position: fixed;bottom: 0;right: 0;
-  margin: 0 2.5em 20px 0;z-index: 1000;-webkit-box-sizing: border-box;
-  box-sizing: border-box;">
+
+
+<!-- =====================================  --> 
+<!-- TEAM--> 
+<section style="width:100%; height:auto; padding:0; margin:0;  margin-top:1em;">
+<div class="section_title f-row j_ctr a_base">
+<p>the&nbsp;</p><p>Team</p></div>
+<!-- =====================================  --> 
+	
+<ul class="section_team f-row j_rnd a_ctr wrap">
+
+	<li class="team_cont f-row wrap">
+		<div class="team_title" >Behavioral Scientist</div>
+	<div class="team_inner team_left f-col" >
+				<div class="team_photo"><div class="ta_1"></div>
+				</div>
+	</div>
+	<div class="team_inner team_right f-col j_start a_ctr" >
+	<div class="team_name">Darrell J. Penta</div>
+	<div class-"team_desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi. </div>
+	<div class="team_link f-row j_end a_end"><a href="#">MORE</a></div>
+	</div>
+	</li>
+	<li class="team_cont f-row wrap">
+		<div class="team_title" >Communications Consultant</div>
+	<div class="team_inner team_left f-col" >
+		<div class="team_photo">
+			<div class="tb_1"></div>
+			</div>
+		</div>
+	<div class="team_inner team_right f-col j_ctr a_ctr" >
+	<div class="team_name">D. J. Penta</div>
+	<div class-"team_desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi. </div>
+	<div class="team_link f-row j_end a_end"><a href="#">MORE</a></div>
+	</div>
+	</li>
+</ul>	
+<ul class="section_team f-row j_rnd a_ctr wrap">
+	<li class="team_cont f-row wrap">
+	<div class="team_title" >UX Researcher</div>
+	<div class="team_inner team_left f-col" >
+			<div class="team_photo">
+			<div class="tc_1"></div>
+		</div>
+	</div>
+	<div class="team_inner team_right f-col j_ctr a_ctr" >
+	<div class="team_name">D. Jonathan Penta</div>
+	<div class-"team_desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi. </div>
+	<div class="team_link f-row j_end a_end"><a href="#">MORE</a></div>
+	</div>
+	</li>
+	<li class="team_cont f-row wrap">
+			<div class="team_title" >Web Designer &amp; Developer </div>
+	<div class="team_inner team_left f-col" >
+		<div class="team_photo">
+			<div class="td_1"></div>
+		</div>
+	</div>
+	<div class="team_inner team_right f-col j_ctr a_ctr" >
+	<div class="team_name">D. J. Penta, PhD</div>
+	<div class-"team_desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi. </div>
+	<div class="team_link f-row j_end a_end"><a href="#">MORE</a></div>
+	</div>
+	</li>
+</ul>
+<ul class="section_team f-row j_rnd a_ctr wrap">
+	<li class="team_cont f-row wrap">
+	<div class="team_title" >Head of Operations</div>
+	<div class="team_inner team_left f-col" >
+			<div class="team_photo">
+			<div class="te_1"></div>
+		</div>
+	</div>
+	<div class="team_inner team_right f-col j_ctr a_ctr" >
+	<div class="team_name">Jina Park Penta</div>
+	<div class-"team_desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi. </div>
+	<div class="team_link f-row j_end a_end"><a href="#">MORE</a></div>
+	</div>
+	</li>
+	<li class="team_cont f-row wrap">
+			<div class="team_title" >Team Mascot</div>
+	<div class="team_inner team_left f-col" >
+		<div class="team_photo">
+			<div class="tf_1"></div>
+		</div>
+	</div>
+	<div class="team_inner team_right f-col j_ctr a_ctr" >
+	<div class="team_name">Sahna</div>
+	<div class-"team_desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi. </div>
+	<div class="team_link f-row j_end a_end"><a href="#">MORE</a></div>
+	</div>
+	</li>
+</ul>
+
+</section>
+<!-- # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #    --> 
+
+
+<!-- =====================================  --> 
+<!-- =====================================  --> 
+<!-- SPECS--> 
+<section style="width:100%; height:auto; padding:0; margin:0;  margin-top:1em;">
+<div class="section_title f-row j_ctr a_base">
+<p>the&nbsp;</p><p>Specs</p></div>
+<!-- =====================================  --> 
+
+</section>
+<!-- # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #    --> 
+
+
+
+</div>
+</div>	<!--  END  BODY DIV -->
+</div> <!--end LOAD IN-->
+	</div><!--end LOADED content-->
+	<div class="small-nav-holder" style="position: fixed;bottom: 0;right: 0;margin: 0 2.2em 20px 0;z-index: 1100;-webkit-box-sizing: border-box;box-sizing: border-box;">
   <div class="rad-nav f-row j_ctr a_ctr">
     <input id="logo-check" type="checkbox">
     <label class="rad-label f-row j_ctr a_ctr" for="logo-check">
-      <div class="rad-tog toggler f-row j_ctr a_ctr">
-        <span class="tbar f-row"><i class="fa fa-bars"></i></span>
-    <span class=" tbar f-row"><i class="fa fa-times"></i></span>
+      <div class="toggler f-row j_ctr a_ctr">
+        <div class="tbar f-row"><i class="fa fa-bars"></i></div>
+    <div class=" tbar f-row"><i class="fa fa-times"></i></div>
     </div><!-- end rad-tog-->
-      <div class="hover-tog toggler f-row j_ctr a_ctr">
-        <span class="tbar"><i class="fa fa-bars"></i>
-      </span>
-        <span class="tbar"><i class="fa fa-times"></i></span> 
-        </div> <!-- end hover-tog -->
+    
 </label>
-    <!--end label-->
+   
     <div class="rad-cont f-row j_ctr a_ctr">
       <div class="rad-inside f-row j_ctr a_ctr">
         <svg viewBox="0 0 78 78" preserveAspectRatio="xMinYMin meet" class="sn_dp">
@@ -609,10 +940,26 @@ BODY Specs
 	c1.2-1.3,2.6-2.3,4.3-3c1.7-0.7,3.6-1.1,5.6-1.1c2,0,3.9,0.4,5.6,1.1c1.7,0.7,3.2,1.7,4.5,3c1.3,1.3,2.3,2.7,3,4.4
 	c0.7,1.7,1.1,3.5,1.1,5.4S33.2,42.6,32.5,44.3z"/>
 </svg>
-        <div class="fly-out f-row nowrap j_rnd a_ctr">
+
+       <div class="fly-out f-row nowrap j_rnd a_ctr">
           <a class="rad-circ dp-home f-row j_ctr a_ctr" href="http://www.darrelljpenta.com/index" title="dp: Home" target="_blank">
-            <div class="flyout-dp">
-              <p>dp</p>
+            <div class="flyout-dp f-row j_ctr a_ctr">
+                   <svg viewBox="0 0 78 78" preserveAspectRatio="xMinYMin meet" class="sn_sm_dp">
+<path class="sn_sm-p" stroke-miterlimit="10" d="M44.8,77.5v-28H45c0.7,1,1.6,2.7,2.6,3.6 s2.2,1.9,3.4,2.5c1.2,0.6,2.5,1.1,3.8,1.4c1.3,0.3,2.6,0.5,3.9,0.5c2.6,0,5-0.4,7.3-1.3c2.2-0.9,4.1-2.1,5.7-3.7
+	c1.6-1.6,2.8-3.5,3.7-5.7s1.4-4.6,1.4-7.2c0-2.6-0.5-5-1.4-7.2s-2.1-4.1-3.7-5.7c-1.6-1.6-3.5-2.8-5.7-3.7c-2.2-0.9-4.6-1.3-7.3-1.3
+	c-1.3,0-2.6,0.1-3.9,0.4c-1.3,0.3-2.6,0.7-3.8,1.3c-1.2,0.6-2.3,0.8-3.4,1.7s-1.9,1.6-2.6,2.6h-0.2v-6h-4v56H44.8z M45.5,34
+	c0.7-1.7,1.8-3.2,3-4.4c1.3-1.3,2.8-2.3,4.5-3c1.7-0.7,3.6-1.1,5.6-1.1c2.1,0,3.9,0.4,5.6,1.1c1.7,0.7,3.1,1.7,4.3,3
+	c1.2,1.3,2.1,2.7,2.7,4.4c0.6,1.7,0.9,3.5,0.9,5.4s-0.3,3.7-0.9,5.4c-0.6,1.7-1.5,3.2-2.7,4.4c-1.2,1.3-2.6,2.3-4.3,3
+	s-3.6,1.1-5.6,1.1c-2,0-3.9-0.4-5.6-1.1s-3.2-1.7-4.5-3c-1.3-1.3-2.3-2.7-3-4.4c-0.7-1.7-1.1-3.5-1.1-5.4S44.8,35.7,45.5,34z"/>
+<path class="sn_sm-d" stroke-miterlimit="10" d="M32.8,0.5v28H33c-0.7-1-1.6-2.6-2.6-3.4
+	c-1-0.9-2.2-1.8-3.4-2.4c-1.2-0.6-2.5-1-3.8-1.3c-1.3-0.3-2.6-0.4-3.9-0.4c-2.6,0-5,0.4-7.3,1.3c-2.2,0.9-4.1,2.1-5.7,3.7
+	c-1.6,1.6-2.8,3.5-3.7,5.7c-0.9,2.2-1.4,4.6-1.4,7.2c0,2.6,0.5,5,1.4,7.2s2.1,4.1,3.7,5.7c1.6,1.6,3.5,2.8,5.7,3.7
+	c2.2,0.9,4.6,1.3,7.3,1.3c1.3,0,2.6-0.1,3.9-0.4c1.3-0.3,2.6-0.7,3.8-1.3c1.2-0.6,2.3-1,3.4-1.9s1.9-1.8,2.6-2.8h-0.2v6h4v-56H32.8z
+	 M32.5,44.3c-0.7,1.7-1.8,3.2-3,4.4c-1.3,1.3-2.8,2.3-4.5,3c-1.7,0.7-3.6,1.1-5.6,1.1c-2.1,0-3.9-0.4-5.6-1.1
+	c-1.7-0.7-3.1-1.7-4.3-3c-1.2-1.3-2.1-2.7-2.7-4.4c-0.6-1.7-0.9-3.5-0.9-5.4s0.3-3.7,0.9-5.4c0.6-1.7,1.5-3.2,2.7-4.4
+	c1.2-1.3,2.6-2.3,4.3-3c1.7-0.7,3.6-1.1,5.6-1.1c2,0,3.9,0.4,5.6,1.1c1.7,0.7,3.2,1.7,4.5,3c1.3,1.3,2.3,2.7,3,4.4
+	c0.7,1.7,1.1,3.5,1.1,5.4S33.2,42.6,32.5,44.3z"/>
+</svg>
             </div>
           </a>
           <a class="rad-circ f-row j_ctr a_ctr" href="mailto:darrellpenta@gmail.com" title="Email" target="_blank">
@@ -623,28 +970,23 @@ BODY Specs
           <div class="fly-submenu f-col wrap j_start a_str">
             <div class="fs_menu f-row nowrap">
               <div class="fs_menu-holder f-row nowrap j_btw a_start">
-                <div><a href="#">HOME</a></div>
-                <div><a href="#">TEAM</a></div>
-                <div><a href="#">SPECS</a></div>
+                <div><a href="#">Home</a></div>
+                <div><a href="#">Team</a></div>
+                <div><a href="#">Specs</a></div>
               </div>
               <!--end fs-menu holder -->
             </div>
             <!-- end fs-menu-->
-          </div>
-          <!--end flyout submenut-->
-        </div>
-        <!--end flyout-->
-      </div>
-      <!--end rad-inside-->
-    </div>
-    <!-- end rad cont-->
-  </div>
-  <!--end  small nav holder-->
+          </div><!--end flyout submenut-->
+        </div><!--end flyout-->
+      </div><!--end rad-inside-->
+    </div><!-- end rad cont-->
+		<div class="tog-back"></div>
+  </div><!--end rad nav-->
+  
 	</div>
-	<!--  END  LOAD-IN CONTENT --> 
-</div>	
-</div>
-<!-- END LOADED CONTENT-->
+	
+<!--end  small nav holder-->
 </body>
 </html>
 <!--
