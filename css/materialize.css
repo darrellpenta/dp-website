@@ -424,7 +424,6 @@ ul:not(.browser-default) > li {
 
 a {
   color: #039be5;
-  text-decoration: none;
   -webkit-tap-highlight-color: transparent;
 }
 
@@ -812,7 +811,7 @@ td, th {
   border-radius: 2px;
 }
 .skills td, .skills th {
-  padding: 5px 5px;
+  padding: 15px 5px;
   display: table-cell;
   text-align: left;
   vertical-align: middle;
@@ -867,7 +866,7 @@ td, th {
   }
   table.responsive-table td {
     display: block;
-    min-height: 1.15em;
+    min-height: 1.25em;
     text-align: left;
   }
   table.responsive-table tr {

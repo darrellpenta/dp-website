@@ -59,6 +59,9 @@ Flexbox shortcuts
 .a_base{-webkit-align-items: baseline;
     -ms-flex-align: baseline;
     align-items: baseline;}
+.f-irow{   display: -ms-inline-flexbox;
+    display: -webkit-inline-flex;
+    display: inline-flex;}	
 
 /*========================
 Load screen transitions
@@ -326,22 +329,6 @@ box-sizing:border-box;
   -webkit-backface-visibility:hidden;
   }
 
-.navi li:after{
-	content:'';
-	display:bock;
-	width:0;
-	height:0;
-	position:absolute;
-	top:70%;
-	left:50%;
-	-webkit-transform:translate(-50%,-70%);
-	transform:translate(-50%,-70%);
-	z-index:1;
-	background-color:#fff;
-  -webkit-transform-origin:left;
-  transform-origin:left;
-   padding: 0 .15em; 
-	}
 
  .navi > li a{
 	 width:90%;
@@ -361,6 +348,8 @@ box-sizing:border-box;
 	   line-height:.9em;
 	   font-weight:400;
 	   padding:0;
+    -webkit-transition:all .3s cubic-bezier(.5,.22,.02,.41);
+		   transition:all .3s cubic-bezier(.5,.22,.02,.41);
 	  } 
 .navi > li a h1{
 	font-family: 'Libre Baskerville',Georgia, 'Times New Roman', Times, serif;
@@ -369,6 +358,10 @@ box-sizing:border-box;
 	  line-height:1em;
 	 font-weight:700;
 	 padding:0;
+	     -webkit-transform:scale(1,1);
+  transform:scale(1,1);
+	  -webkit-transition:all .3s cubic-bezier(.5,.22,.02,.41);
+		   transition:all .3s cubic-bezier(.5,.22,.02,.41);
 	 }
 
 .navi > li a:after, .navi > li a:before{
@@ -406,19 +399,20 @@ background:	url(assets/images/png/svg-backup/stripe-pattern.png);
 	  }
   
  .navi li a:hover, .navi li a:active{
-    background-color:#0C0B30;
-  border-color:#a09898;}
+}
   
 .navi li a:hover h1, .navi li a:active h1 {
-  color:#fff;} 
+  color:#0C0B30;
+  text-decoration:underline;
+    -webkit-transform:scale(1.1,1.1);
+  transform:scale(1.1,1.1);
+   -webkit-transition:all .3s cubic-bezier(.5,.22,.02,.41);
+		   transition:all .3s cubic-bezier(.5,.22,.02,.41);} 
   .navi li a:hover p, .navi li a:active p{ 
-  color:#a09898;}
-  
- .navi li:hover:after{
-	 width:60%;
-	 height:.2em;
-  -webkit-transform-origin:left;
-  transform-origin:left; } 
+  color:#0C0B30;
+      -webkit-transform:translateY(0) translateX(-.5em) ;
+  transform:tanslateY(0) translateX(-.5em);}
+
   
        .navi > li ,.navi li:after, .navi > li a	,  .navi > li a p,.navi > li a h1, .navi li a:hover, .navi li a:active,.navi li a:hover h1, .navi li a:active h1,.navi li a:hover p, .navi li a:active p, .navi li:hover:after{
 		   -webkit-transition:all .3s cubic-bezier(.5,.22,.02,.41);
@@ -512,16 +506,19 @@ width:100%;
     align-self: flex-end;
 }	
 
-.team_link a{
+.team_link a, .open_new a{
 font-family:'Noto Sans',Helvetica, Arial, sans-serif;	
 	color:#0C0B30;
 	font-size:.75em;
 	font-weight:700;
 	display:block;
+	text-transform:uppercase;
 	}	
 	
 .team_link a:hover, 
-.team_link a:active {
+.team_link a:active,
+.open_new a:hover, 
+.open_new a:active {
 	color:#DC0009; 
 	text-decoration:none;
 	}		
@@ -589,15 +586,21 @@ background:	url(assets/images/png/svg-backup/stripe-pattern.png);
 .skill_main{
 	min-height:1.7em;
 	line-height:1.7em;
+	margin:0;
+	margin-top:1.75em;
 }
 
-.skills  ul {
-	list-style-type:square!important;}	
-.skills span {
-	font-weight:bold;}		
-.ed_title >i, .ed_title > div{
+.skill_main:nth-child(1){
+	margin:0;
+	margin-top:.25em!important;}
+
+.ed_title >i, .ed_title > div, .open_new a, .open_new i{
 	color:#DC0009;}
-	
+.open_new{
+	width:150px;
+	height:auto;
+	padding:.4em;
+	border:1px solid #DC0009;}	
 		
 </style>
 </head>
@@ -914,7 +917,7 @@ background:	url(assets/images/png/svg-backup/stripe-pattern.png);
 	<ul class="team_stuff f-row wrap">
 	<li class="team_name">Darrell J. Penta</li>
 	<li class="team_desc">Darrell has more than five years of experience designing and conducting experiments to investigate complex human behaviors. </li>
-	<li class="team_link f-rowj_end a_end"><a href="#">MORE</a></li>
+	<li class="team_link f-row j_end a_end"><a href="#">MORE</a><i class="small material-icons">open_in_new</i></li>
 	</ul>
 	</div>
 	</li>
@@ -928,7 +931,7 @@ background:	url(assets/images/png/svg-backup/stripe-pattern.png);
 	<div class="team_inner team_right f-col nowrap j_ctr a_ctr" >
 	<div class="team_name">Darrell J. Penta</div>
 	<div class="team_desc">Darrell brings a passion for  </div>
-	<div class="team_link f-row j_end a_end"><a href="#">MORE</a></div>
+	<div class="team_link f-row j_end a_end"><a href="#">MORE</a><i class="small material-icons">open_in_new</i></div>
 	</div>
 	</li>
 </ul>	
@@ -943,7 +946,7 @@ background:	url(assets/images/png/svg-backup/stripe-pattern.png);
 	<div class="team_inner team_right f-col nowrap j_ctr a_ctr" >
 	<div class="team_name">Darrell J. Penta</div>
 	<div class="team_desc">Darrell's research has helped start-ups and established businesses improve user experiences.</div>
-	<div class="team_link f-row j_end a_end"><a href="#">MORE</a></div>
+	<div class="team_link f-row j_end a_end"><a href="#">MORE</a><i class="small material-icons">open_in_new</i></div>
 	</div>
 	</li>
 	<li class="team_cont f-row wrap">
@@ -956,7 +959,7 @@ background:	url(assets/images/png/svg-backup/stripe-pattern.png);
 	<div class="team_inner team_right f-col nowrap j_ctr a_ctr" >
 	<div class="team_name">Darrell J. Penta</div>
 	<div class="team_desc">Darrell likes using HTML/CSS to build websites like this one.</div>
-	<div class="team_link f-row j_end a_end"><a href="#">MORE</a></div>
+	<div class="team_link f-row j_end a_end"><a href="#">MORE</a><i class="small material-icons">open_in_new</i></div>
 	</div>
 	</li>
 </ul>
@@ -971,7 +974,7 @@ background:	url(assets/images/png/svg-backup/stripe-pattern.png);
 	<div class="team_inner team_right f-col nowrap j_ctr a_ctr" >
 	<div class="team_name">Jina Park Penta</div>
 	<div class="team_desc">Jieun "Jina" Park Penta joined the team in 2009 and ensures the  </div>
-	<div class="team_link f-row j_end a_end"><a href="#">MORE</a></div>
+	<div class="team_link f-row j_end a_end"><a href="#">MORE</a><i class="small material-icons">open_in_new</i></div>
 	</div>
 	</li>
 	<li class="team_cont f-row wrap">
@@ -984,7 +987,7 @@ background:	url(assets/images/png/svg-backup/stripe-pattern.png);
 	<div class="team_inner team_right f-col j_ctr a_ctr" >
 	<div class="team_name">Sahna the Puppy</div>
 	<div class="team_desc">Sahna really likes sleeping and eating. </div>
-	<div class="team_link f-row j_end a_end"><a href="#">MORE</a></div>
+	<div class="team_link f-row j_end a_end"><a href="#">MORE</a><i class="small material-icons">open_in_new</i></div>
 	</div>
 	</li>
 </ul>
@@ -1001,6 +1004,7 @@ background:	url(assets/images/png/svg-backup/stripe-pattern.png);
 <p>the&nbsp;</p><p>Specs</p></div>
 <!-- =====================================  --> 
 <div class="skills f-col" >
+<div class="open_new f-irow nowrap j_ctr a_ctr"><a href="full_specs.html">See the full specs</a><i class="small material-icons">open_in_new</i></div>
 	<div class="skill_main f-row nowrap a_ctr"><i class="medium material-icons">check</i><strong>Designing and conducting empirical studies to answer complex questions:</strong></div>
 		<div class="f-row wrap" style="width:80%; height:auto; margin:0 auto 0 3.5em;">
 		<div class="chip">Quantitative experiments<i class="close material-icons">close</i></div> 
@@ -1011,7 +1015,7 @@ background:	url(assets/images/png/svg-backup/stripe-pattern.png);
 	 	<div class="chip">Corpus-based research<i class="close material-icons">close</i></div>
 	</div>	
 		<div class="skill_main f-row nowrap a_ctr"><i class="medium material-icons">check</i><strong>Analyzing data to make inferences about causal and predictive relationships between variables:</strong></div>
-	<div class="f-row wrap" style="width:80%; height:auto; margin:1.2em auto 0 3.5em;">
+	<div class="f-row wrap" style="width:80%; height:auto; margin:0 auto 0 3.5em;">
 		<div class="chip">Linear regressions<i class="close material-icons">close</i></div>
 			<div class="chip">Non-linear regressions<i class="close material-icons">close</i></div>
 				<div class="chip">Multivariate analyses<i class="close material-icons">close</i></div>
@@ -1026,7 +1030,7 @@ background:	url(assets/images/png/svg-backup/stripe-pattern.png);
 	</div>
 	<div class="skill_main f-row nowrap a_ctr"><i class="medium material-icons">check</i><strong>Devising strategies for improving user/consumer experiences with web-based services and digital devices:</strong>
 	</div>
-	<div class="f-row wrap" style="width:80%; height:auto; margin:1.2em auto 0 3.5em;">
+	<div class="f-row wrap" style="width:80%; height:auto; margin:0 auto 0 3.5em;">
 		<div class="chip">Qualitative assessments<i class="close material-icons">close</i></div>
 		<div class="chip">Functionality, features, and interface designs<i class="close material-icons">close</i></div>
 		<div class="chip">Rapid iteration<i class="close material-icons">close</i></div> 
@@ -1035,7 +1039,7 @@ background:	url(assets/images/png/svg-backup/stripe-pattern.png);
 		<div class="chip">Usability and access issues<i class="close material-icons">close</i></div>
 	</div>
 	<div class="skill_main f-row nowrap a_ctr"><i class="medium material-icons">check</i><strong>Communicating effectively to diverse audiences:</strong></div>
-	<div class="f-row wrap" style="width:80%; height:auto; margin:1.2em auto 0 3.5em;">
+	<div class="f-row wrap" style="width:80%; height:auto; margin:0 auto 0 3.5em;">
 		<div class="chip">Explaining research to scientists/non-scientists<i class="close material-icons">close</i></div>
 			<div class="chip">Creating engaging narratives<i class="close material-icons">close</i> </div>
 			<div class="chip">Multimedia presentations<i class="close material-icons">close</i> </div>
