@@ -15,17 +15,43 @@
 <meta name="country" content="USA">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">  
 <meta name="format-detection" content="telephone=no">
+<link rel="apple-touch-icon" sizes="57x57" href="favicon/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="favicon/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="favicon/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="favicon/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="favicon/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="favicon/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="favicon/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="favicon/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="favicon/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+<link rel="manifest" href="favicon/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
 <link rel="stylesheet" href="https://use.fontawesome.com/04d82f9725.css">
 <link href="https://fonts.googleapis.com/css?family=Quicksand:400" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Libre+Baskerville:400,700" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Noto+Sans:400,700" rel="stylesheet">
+
 <script src="https://use.fontawesome.com/42ce42b384.js"></script>
 <script src="js/modernizr.min.js" type="text/javascript"></script>
+ <!--Import Google Icon Font-->
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!--Import materialize.css-->
+      <link type="text/css" rel="stylesheet" href="css/materialize.css"  media="screen,projection"/>
+
 <link rel="stylesheet" href="css/normalize.min.css" type="text/css">
 <link rel="stylesheet" href="css/dp-navigation-style.css" type="text/css">
 <link rel="stylesheet" href="css/media-qry.css" type="text/css">
 
 <style>
+body{
+	 font-family:'Noto Sans', Arial, Helvetica, sans-serif;
+color:#0C0B30; }
 /*========================
 Flexbox shortcuts
 ========================*/
@@ -363,7 +389,8 @@ box-sizing:border-box;
   transform:translate(-45%,-35%);
  }
 
-.navi > li a:after{ background:	url(assets/images/png/svg-backup/stripe-pattern.png);
+.navi > li a:after{ 
+background:	url(assets/images/png/svg-backup/stripe-pattern.png);
   background-image: url(assets/images/svg/stripe-pattern.svg);
  background-size:8px 8px ;
  background-repeat:repeat;	
@@ -426,14 +453,27 @@ ul.section_team {
 	padding:0; 
 	margin:0 auto;
 	list-style-type:none;}	
-
+ul.team_stuff{
+	width:90%;
+	height:auto;
+	padding:0;
+	margin:0;
+	list-style-type:none;
+	}
+	
+ul.team_stuff > li{
+	width:100%;
+	height:auto;}
+		
 .team_cont{
 	width:45.25%;
 	 -webkit-flex: 0 1 auto;
     -ms-flex: 0 1 auto;
     flex: 0 1 auto;
-	height:auto; 
+	min-height:200px;
+	height:auto;
 	margin:0;
+	margin-bottom:2em;
 	padding:0;
 	border-top:4px solid #0C0B30;
 	}
@@ -445,30 +485,31 @@ padding:0;
  -webkit-flex: 0 1 auto;
     -ms-flex: 0 1 auto;
     flex: 0 1 auto;}	
-.team_title{width:100%;height:auto;font-family:'Noto Sans',Helvetica, Arial, sans-serif; font-size:1.45em;line-height:1.25em;font-weight:700;padding:.25em;margin:0;}
+.team_title, .ed_title{width:100%;height:auto;font-family:'Noto Sans',Helvetica, Arial, sans-serif; font-size:1.45em;line-height:1.25em;font-weight:700;padding:.25em;margin:0;}
 
 .team_photo{
-	width:100%;padding:0;padding-top:100%;height:0;margin:0;border:2px solid #0C0B30; position:relative;}
+	width:100%;padding:0;padding-top:100%;height:0;margin:0;position:relative;}
 .team_photo > div{
-width:100%; height:100%;position:absolute; top:0;left:0;background-size:cover;}
+width:100%; height:100%;position:absolute; top:0;left:0;background-size:cover; border:2px solid #0C0B30; -webkit-box-shadow:inset 0 0 1px 1px #0C0B30; box-shadow:inset 0 0 1px 1px #0C0B30;}
 .team_name{
 font-family: 'Libre Baskerville', Baskerville, Georgia, 'Times New Roman', Times, serif;
 color:#DC0009; 
 font-size:1.1em;
 line-height:1.5em;	
-padding:0 .25em;
-margin:0.25em 0;
+width:100%;
 	}	
 .team_desc{
 	font-family:'Noto Sans',Helvetica, Arial, sans-serif;	
 	color:#0C0B30;
-	font-size:.8em;
+	font-size:.9em;
 	line-height:1.25em;
+	font-weight:400;
 }
 
 .team_link{
-	padding: 1.5em .5em;
 	line-height:1.5em;
+	 -webkit-align-self: flex-end; /* Safari 7.0+ */
+    align-self: flex-end;
 }	
 
 .team_link a{
@@ -476,6 +517,7 @@ font-family:'Noto Sans',Helvetica, Arial, sans-serif;
 	color:#0C0B30;
 	font-size:.75em;
 	font-weight:700;
+	display:block;
 	}	
 	
 .team_link a:hover, 
@@ -484,24 +526,79 @@ font-family:'Noto Sans',Helvetica, Arial, sans-serif;
 	text-decoration:none;
 	}		
 .team_left{
-width:44.5%	}	
+width:33%;	}	
 .team_right{
-width:54.5%;	
+width:62%;	
 margin:0;
-padding: .75em;
+padding: 0;
 -webkit-box-sizing:border-box;
-border-box:border-box;	}	
+box-sizing:border-box;	}	
 .team_right > div{
-	width:100%;
+	
+	 -webkit-flex: 1 1 auto;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;	
+	width:90%;
 	text-align:left;}
 		
 .ta_1{background-image:url(assets/images/png/main-page-potrait/dp_sq_400.png);}
 .tb_1{background-image:url(assets/images/png/main-page-potrait/dp_sq_400_alt1.png);}
 .tc_1{background-image:url(assets/images/png/main-page-potrait/dp_sq_400_alt2.png);}
 .td_1{background-image:url(assets/images/png/main-page-potrait/dp_sq_400_alt3.png);}
-.te_1{background-image:url(assets/images/png/main-page-potrait/sahna_sq_400.png);}
+.te_1{background-image:url(assets/images/png/main-page-potrait/jina_sq_400.png);}
 .tf_1{background-image:url(assets/images/png/main-page-potrait/sahna_sq_400.png);}
+
+
+.skills{
+	border:2px solid #0C0B30;
+	width:75%;
+	height:auto;
+	 margin:0 auto 2em auto;
+	 padding:1em;
+	 position:relative; 
+	 background-color:#fff;}
+
+.skills:before, .skills:after{	
+	content:'';
+	position:absolute;
+	top:50%;
+	left:50%;
+	display:block;
+	width:100%;
+	height:100%;
+	margin:0;
+	padding:0;
+	-webkit-box-sizing:inherit;
+	box-sizing:inherit;
+	background:#fff; 
+	background-origin:border-box;
+	 z-index:-1;
+	 -webkit-transform:translate(-47.5%,-47.5%);
+	 transform:translate(-47.5%,-47.5%);
+ }
+
+.skills:after{ 
+background:	url(assets/images/png/svg-backup/stripe-pattern.png);
+  background-image: url(assets/images/svg/stripe-pattern.svg);
+ background-size:8px 8px ;
+ background-repeat:repeat;	
+ 	   -webkit-box-shadow:inset 0.55em 0.55em 0.55em -.2em #000;
+  box-shadow:inset 0.55em 0.55em 0.55em -.2em #000;
+  border:.15em solid #0C0B30;}
+
+.skill_main{
+	min-height:1.7em;
+	line-height:1.7em;
+}
+
+.skills  ul {
+	list-style-type:square!important;}	
+.skills span {
+	font-weight:bold;}		
+.ed_title >i, .ed_title > div{
+	color:#DC0009;}
 	
+		
 </style>
 </head>
 <body>
@@ -782,10 +879,10 @@ border-box:border-box;	}
 
 				<ul class="navi f-row wrap j_rnd a_ctr" >
 					<li class="f-row nowrap j_ctr a_ctr">
-						<a href="#" class="f-row nowrap j_ctr a_base"><p>the&nbsp;</p><h1>Team</h1></a>
+						<a href="#team_intro" class="f-row nowrap j_ctr a_base"><p>the&nbsp;</p><h1>Team</h1></a>
 					</li>
 							<li class="f-row nowrap j_ctr a_ctr">
-						<a href="#" class="f-row nowrap j_ctr a_base"><p>the&nbsp;</p><h1>Specs</h1></a>
+						<a href="#specs_intro" class="f-row nowrap j_ctr a_base"><p>the&nbsp;</p><h1>Specs</h1></a>
 					</li>
 						<li class="f-row nowrap j_ctr a_ctr">
 						<a href="#" class="f-row nowrap j_ctr a_base"><p>the&nbsp;</p><h1>Extras</h1></a>
@@ -800,7 +897,7 @@ border-box:border-box;	}
 
 <!-- =====================================  --> 
 <!-- TEAM--> 
-<section style="width:100%; height:auto; padding:0; margin:0;  margin-top:1em;">
+<section id="team_intro" style="width:100%; height:auto; padding:0; margin:0;  margin-top:1em;">
 <div class="section_title f-row j_ctr a_base">
 <p>the&nbsp;</p><p>Team</p></div>
 <!-- =====================================  --> 
@@ -813,10 +910,12 @@ border-box:border-box;	}
 				<div class="team_photo"><div class="ta_1"></div>
 				</div>
 	</div>
-	<div class="team_inner team_right f-col j_start a_ctr" >
-	<div class="team_name">Darrell J. Penta</div>
-	<div class-"team_desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi. </div>
-	<div class="team_link f-row j_end a_end"><a href="#">MORE</a></div>
+	<div class="team_inner team_right f-col nowrap j_ctr a_ctr" >
+	<ul class="team_stuff f-row wrap">
+	<li class="team_name">Darrell J. Penta</li>
+	<li class="team_desc">Darrell has more than five years of experience designing and conducting experiments to investigate complex human behaviors. </li>
+	<li class="team_link f-rowj_end a_end"><a href="#">MORE</a></li>
+	</ul>
 	</div>
 	</li>
 	<li class="team_cont f-row wrap">
@@ -826,9 +925,9 @@ border-box:border-box;	}
 			<div class="tb_1"></div>
 			</div>
 		</div>
-	<div class="team_inner team_right f-col j_ctr a_ctr" >
-	<div class="team_name">D. J. Penta</div>
-	<div class-"team_desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi. </div>
+	<div class="team_inner team_right f-col nowrap j_ctr a_ctr" >
+	<div class="team_name">Darrell J. Penta</div>
+	<div class="team_desc">Darrell brings a passion for  </div>
 	<div class="team_link f-row j_end a_end"><a href="#">MORE</a></div>
 	</div>
 	</li>
@@ -841,37 +940,37 @@ border-box:border-box;	}
 			<div class="tc_1"></div>
 		</div>
 	</div>
-	<div class="team_inner team_right f-col j_ctr a_ctr" >
-	<div class="team_name">D. Jonathan Penta</div>
-	<div class-"team_desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi. </div>
+	<div class="team_inner team_right f-col nowrap j_ctr a_ctr" >
+	<div class="team_name">Darrell J. Penta</div>
+	<div class="team_desc">Darrell's research has helped start-ups and established businesses improve user experiences.</div>
 	<div class="team_link f-row j_end a_end"><a href="#">MORE</a></div>
 	</div>
 	</li>
 	<li class="team_cont f-row wrap">
-			<div class="team_title" >Web Designer &amp; Developer </div>
+			<div class="team_title" >HTML/CSS &amp; Developer </div>
 	<div class="team_inner team_left f-col" >
 		<div class="team_photo">
 			<div class="td_1"></div>
 		</div>
 	</div>
-	<div class="team_inner team_right f-col j_ctr a_ctr" >
-	<div class="team_name">D. J. Penta, PhD</div>
-	<div class-"team_desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi. </div>
+	<div class="team_inner team_right f-col nowrap j_ctr a_ctr" >
+	<div class="team_name">Darrell J. Penta</div>
+	<div class="team_desc">Darrell likes using HTML/CSS to build websites like this one.</div>
 	<div class="team_link f-row j_end a_end"><a href="#">MORE</a></div>
 	</div>
 	</li>
 </ul>
 <ul class="section_team f-row j_rnd a_ctr wrap">
 	<li class="team_cont f-row wrap">
-	<div class="team_title" >Head of Operations</div>
+	<div class="team_title" >Head of Operations, Talent Manager</div>
 	<div class="team_inner team_left f-col" >
 			<div class="team_photo">
 			<div class="te_1"></div>
 		</div>
 	</div>
-	<div class="team_inner team_right f-col j_ctr a_ctr" >
+	<div class="team_inner team_right f-col nowrap j_ctr a_ctr" >
 	<div class="team_name">Jina Park Penta</div>
-	<div class-"team_desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi. </div>
+	<div class="team_desc">Jieun "Jina" Park Penta joined the team in 2009 and ensures the  </div>
 	<div class="team_link f-row j_end a_end"><a href="#">MORE</a></div>
 	</div>
 	</li>
@@ -883,8 +982,8 @@ border-box:border-box;	}
 		</div>
 	</div>
 	<div class="team_inner team_right f-col j_ctr a_ctr" >
-	<div class="team_name">Sahna</div>
-	<div class-"team_desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi. </div>
+	<div class="team_name">Sahna the Puppy</div>
+	<div class="team_desc">Sahna really likes sleeping and eating. </div>
 	<div class="team_link f-row j_end a_end"><a href="#">MORE</a></div>
 	</div>
 	</li>
@@ -897,11 +996,94 @@ border-box:border-box;	}
 <!-- =====================================  --> 
 <!-- =====================================  --> 
 <!-- SPECS--> 
-<section style="width:100%; height:auto; padding:0; margin:0;  margin-top:1em;">
+<section  id="specs_intro" style="width:100%; height:auto; padding:0; margin:0;  margin-top:1em;">
 <div class="section_title f-row j_ctr a_base">
 <p>the&nbsp;</p><p>Specs</p></div>
 <!-- =====================================  --> 
+<div class="skills f-col" >
+	<div class="skill_main f-row nowrap a_ctr"><i class="medium material-icons">check</i><strong>Designing and conducting empirical studies to answer complex questions:</strong></div>
+		<div class="f-row wrap" style="width:80%; height:auto; margin:0 auto 0 3.5em;">
+		<div class="chip">Quantitative experiments<i class="close material-icons">close</i></div> 
+		<div class="chip">Human-subjects research<i class="close material-icons">close</i></div>
+		<div class="chip"> Surveys<i class="close material-icons">close</i></div>
+		<div class="chip">Fieldwork<i class="close material-icons">close</i></div>
+	 	<div class="chip">Ethnographic interviews<i class="close material-icons">close</i></div>
+	 	<div class="chip">Corpus-based research<i class="close material-icons">close</i></div>
+	</div>	
+		<div class="skill_main f-row nowrap a_ctr"><i class="medium material-icons">check</i><strong>Analyzing data to make inferences about causal and predictive relationships between variables:</strong></div>
+	<div class="f-row wrap" style="width:80%; height:auto; margin:1.2em auto 0 3.5em;">
+		<div class="chip">Linear regressions<i class="close material-icons">close</i></div>
+			<div class="chip">Non-linear regressions<i class="close material-icons">close</i></div>
+				<div class="chip">Multivariate analyses<i class="close material-icons">close</i></div>
+			<div class="chip">Mixed-effect modeling<i class="close material-icons">close</i></div>
+			<div class="chip">Statistical testing<i class="close material-icons">close</i></div>
+				<div class="chip">ANOVAs<i class="close material-icons">close</i></div>
+					<div class="chip">T-tests<i class="close material-icons">close</i></div>
+					<div class="chip">Correlations<i class="close material-icons">close</i></div>
+	
+		<div class="chip">Descriptive summaries<i class="close material-icons">close</i></div>
+		<div class="chip">Data visualizations<i class="close material-icons">close</i></div>
+	</div>
+	<div class="skill_main f-row nowrap a_ctr"><i class="medium material-icons">check</i><strong>Devising strategies for improving user/consumer experiences with web-based services and digital devices:</strong>
+	</div>
+	<div class="f-row wrap" style="width:80%; height:auto; margin:1.2em auto 0 3.5em;">
+		<div class="chip">Qualitative assessments<i class="close material-icons">close</i></div>
+		<div class="chip">Functionality, features, and interface designs<i class="close material-icons">close</i></div>
+		<div class="chip">Rapid iteration<i class="close material-icons">close</i></div> 
+		<div class="chip">incorporating stakeholders' feedback<i class="close material-icons">close</i></div> 
+		<div class="chip">Working with developers &amp; designers<i class="close material-icons">close</i></div>
+		<div class="chip">Usability and access issues<i class="close material-icons">close</i></div>
+	</div>
+	<div class="skill_main f-row nowrap a_ctr"><i class="medium material-icons">check</i><strong>Communicating effectively to diverse audiences:</strong></div>
+	<div class="f-row wrap" style="width:80%; height:auto; margin:1.2em auto 0 3.5em;">
+		<div class="chip">Explaining research to scientists/non-scientists<i class="close material-icons">close</i></div>
+			<div class="chip">Creating engaging narratives<i class="close material-icons">close</i> </div>
+			<div class="chip">Multimedia presentations<i class="close material-icons">close</i> </div>
+		<div class="chip">Generating Print-/digital-media content<i class="close material-icons">close</i> </div>
+	</div>
+	<div class="skill_main f-row nowrap a_ctr"><i class="medium material-icons">check</i><strong>Improving workflow processes, collaborating with cross-functional teams, managing small groups, and meeting deadlines in fast-paced, high-pressure settings.</strong></div>
+</div> 
 
+	
+<div class="f-row ed_title a_ctr" style="width:85%; margin: 0 auto;"><i class="medium material-icons">school</i><div style="margin:0;margin-left:1em;">Education</div></div>
+<table class="bordered responsive-table" style="width:85%;margin:0 auto;">
+	<tr>
+		<th scope="col">Degree</th>
+		<th scope="col">Major</th>
+		<th scope="col">Specialization</th>
+		<th scope="col">Institution</th>
+	</tr>
+	<tr>
+		<td>PhD</td>
+		<td>Psychology</td>
+		<td>Language&nbsp;&amp; Cognition </td>
+		<td>Northeastern University</td>
+	</tr>
+	<tr>
+		<td>MS</td>
+		<td>Psychology</td>
+		<td>Language&nbsp;&amp; Cognition </td>
+		<td>Northeastern University</td>
+	</tr>
+	<tr>
+		<td>MA</td>
+		<td>Applied Linguistics</td>
+		<td>Corpus Linguistics, Pedagogy </td>
+		<td>University of Massachusetts Boston</td>
+	</tr>
+	<tr>
+		<td>BA</td>
+		<td>English, Psychology--Sociology</td>
+		<td>Literary Analysis, Creative Writing</td>
+		<td>University of Massachusetts Boston</td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td>Summer Semester</td>
+		<td>Poetics, British Literature</td>
+		<td>Trinity College</td>
+	</tr>
+</table>
 </section>
 <!-- # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #    --> 
 
@@ -913,11 +1095,11 @@ border-box:border-box;	}
 	</div><!--end LOADED content-->
 	<div class="small-nav-holder" style="position: fixed;bottom: 0;right: 0;margin: 0 2.2em 20px 0;z-index: 1100;-webkit-box-sizing: border-box;box-sizing: border-box;">
   <div class="rad-nav f-row j_ctr a_ctr">
-    <input id="logo-check" type="checkbox">
+    <input id="logo-check" type="checkbox" class="browser-default">
     <label class="rad-label f-row j_ctr a_ctr" for="logo-check">
       <div class="toggler f-row j_ctr a_ctr">
-        <div class="tbar f-row"><i class="fa fa-bars"></i></div>
-    <div class=" tbar f-row"><i class="fa fa-times"></i></div>
+        <div class="tbar f-row"><i class="small material-icons">menu</i></div>
+    <div class=" tbar f-row"><i class="small material-icons">close</i></div>
     </div><!-- end rad-tog-->
     
 </label>
@@ -963,10 +1145,10 @@ border-box:border-box;	}
             </div>
           </a>
           <a class="rad-circ f-row j_ctr a_ctr" href="mailto:darrellpenta@gmail.com" title="Email" target="_blank">
-            <span class="ispan"><i class="fa fa-envelope-open-o" aria-hidden="true"></i></span>
+            <span class="ispan"><i class="small material-icons">mail_outline</i></span>
           </a>
           <a href="tel:+123456789" title="Call" itemtype="http://schema.org/Person" itemprop="telephone" class="rad-circ f-row j_ctr a_ctr" description="Call" style="margin-right:30px;">
-            <span class="ispan"><i class="fa fa-phone" aria-hidden="true"></i></span></a>
+            <span class="ispan"><i class="small material-icons">phone</i></span></a>
           <div class="fly-submenu f-col wrap j_start a_str">
             <div class="fs_menu f-row nowrap">
               <div class="fs_menu-holder f-row nowrap j_btw a_start">
@@ -987,6 +1169,10 @@ border-box:border-box;	}
 	</div>
 	
 <!--end  small nav holder-->
+   <!--Import jQuery before materialize.js-->
+      <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+      <script type="text/javascript" src="js/materialize.js"></script>
+
 </body>
 </html>
 <!--
