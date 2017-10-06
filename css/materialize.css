@@ -3649,8 +3649,9 @@ button.btn-floating {
   display: inline-block;
   height: 32px;
   font-size: 13px;
-  font-weight: 500;
-  color: rgba(0, 0, 0, 0.6);
+  	font-family:'Noto Sans',Helvetica, Arial, sans-serif;	
+	color:#0C0B30;
+  font-weight: 700;
   line-height: 32px;
   padding: 0 12px;
   border-radius: 16px;
@@ -3670,7 +3671,7 @@ button.btn-floating {
 .chip .close {
   cursor: pointer;
   float: right;
-  font-size: 16px;
+  font-size: 12px;
   line-height: 32px;
   padding-left: 8px;
 }

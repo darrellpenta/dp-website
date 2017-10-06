@@ -225,60 +225,7 @@ margin:0 auto;	}
 	transform:translate(-50%,-50%);
 	background-color: rgba(12,11,48,1);}	
 
-@media screen and (max-width:58.5em) {
-  .ul_wrapper{
-    -webkit-box-orient:vertical;
--ms-flex-direction:column;
-flex-direction:column;
--ms-flex-wrap:wrap;
-	flex-wrap:wrap;
-    -ms-flex-pack: center;
-    -webkit-box-pack: center;
-	-webkit-justify-content:center;
-            justify-content: center;
-    -ms-flex-line-pack: stretch;
-    align-content: stretch;
-    -ms-flex-align: center;
-    -webkit-box-align: center;
-            align-items: center;
-  }
 
-  .ul_wrapper li{
-    width:100%;
-	height:auto;
-    -ms-flex-preferred-size:100%;
-        flex-basis:100%;
-    margin:0 auto;
-  }  
-
-  
- .head-logo {
-	-webkit-order: 2;
-	-ms-flex-order: 2;
-	order: 2;
-	    -ms-flex-pack: center;
-    -webkit-box-pack: center;
-	-webkit-justify-content:center;
-            justify-content: center;
-			padding:0;
-	padding-left:0;
-}
-
-.head-snav {
-	
-	-webkit-order: 1;
-	-ms-flex-order: 1;
-	order: 1;
-	font-size:20px;
-} 
-.soc-nav{
-	margin:1em auto;
-	    -ms-flex-pack: center;
-    -webkit-box-pack: center;
-	-webkit-justify-content:center;
-            justify-content: center;
-	}
-}
 
 
 /*Logo 
@@ -468,8 +415,15 @@ ul.team_stuff > li{
 	height:auto;
 	margin:0;
 	margin-bottom:2em;
-	padding:0;
-	border-top:4px solid #0C0B30;
+	padding:.75em;
+	border-top:.12em solid #0C0B30;
+	background-color:#e4e4e4;
+	-webkit-border-radius:2px;
+	border-radius:2px;
+	-webkit-box-shadow:.12em .12em .4em 0 rgba(0,0,0,0.33);
+	box-shadow:.12em .12em .4em 0 rgba(0,0,0,0.33);
+	font-size:1rem;
+	
 	}
 .team_inner{
 min-height:100%;
@@ -479,20 +433,21 @@ padding:0;
  -webkit-flex: 0 1 auto;
     -ms-flex: 0 1 auto;
     flex: 0 1 auto;}	
-.team_title, .ed_title{width:100%;height:auto;font-family:'Noto Sans',Helvetica, Arial, sans-serif; font-size:1.45em;line-height:1.25em;font-weight:700;padding:.25em;margin:0;}
+.team_title, .ed_title{width:100%;height:auto;font-family:'Noto Sans',Helvetica, Arial, sans-serif; font-size:1.45em;line-height:1.25em;font-weight:700;padding:0 .25em .25em .25em;margin:0;}
 
 .team_photo{
 	width:100%;padding:0;padding-top:100%;height:0;margin:0;position:relative;}
 .team_photo > div{
-width:100%; height:100%;position:absolute; top:0;left:0;background-size:cover; border:2px solid #0C0B30; -webkit-box-shadow:inset 0 0 1px 1px #0C0B30; box-shadow:inset 0 0 1px 1px #0C0B30;}
-.team_name{
+width:100%; height:100%;position:absolute; top:0;left:0;background-size:cover; border:2px solid #0C0B30; -webkit-box-shadow:inset 0 0 1px 1px #0C0B30; box-shadow:inset 0 0 1px 1px #0C0B30;-webkit-box-sizing:border-box;box-sizing:border-box;}
+span.team_name{
 font-family: 'Libre Baskerville', Baskerville, Georgia, 'Times New Roman', Times, serif;
 color:#DC0009; 
-font-size:1.1em;
-line-height:1.5em;	
+font-size:1em;
+line-height:1.25em;	
 width:100%;
 	}	
 .team_desc{
+	height:75%;
 	font-family:'Noto Sans',Helvetica, Arial, sans-serif;	
 	color:#0C0B30;
 	font-size:.9em;
@@ -500,7 +455,11 @@ width:100%;
 	font-weight:400;
 }
 
+.team_desc > p{
+	white-space:normal;}
+	
 .team_link{
+	height:25%;
 	line-height:1.5em;
 	 -webkit-align-self: flex-end; /* Safari 7.0+ */
     align-self: flex-end;
@@ -531,7 +490,6 @@ padding: 0;
 -webkit-box-sizing:border-box;
 box-sizing:border-box;	}	
 .team_right > div{
-	
 	 -webkit-flex: 1 1 auto;
     -ms-flex: 1 1 auto;
     flex: 1 1 auto;	
@@ -602,10 +560,15 @@ background:	url(assets/images/png/svg-backup/stripe-pattern.png);
 	padding:.4em;
 	border:1px solid #DC0009;}	
 		
+
+
+
 </style>
+
 </head>
 <body>
-<!-- START LOADING CONTENT -->
+
+<!-- START LOADING CONTENT -->	
 <div class="loading" >
 	<div class="ld-cont f-row nowrap ctr_mid" style="width:100%; height:100%; overflow:hidden; z-index:0;">
 		<div class="ld-cont-left f-col nowrap ctr_mid" style="height:100%; width:100%; margin-left:auto; margin-right:auto;position:relative;background-color:#0C0B30;"> </div>
@@ -753,6 +716,7 @@ background:	url(assets/images/png/svg-backup/stripe-pattern.png);
 <!-- =====================================  --> 
 <!-- =====================================  --> 
 
+					
 <!-- START LOADED CONTENT -->
 <div class="loaded" > 
 	
@@ -872,14 +836,13 @@ background:	url(assets/images/png/svg-backup/stripe-pattern.png);
 			</ul>
 			<!--end header list--> 
 	<!-- END HEADER--> 
-		</div>
 		<!-- =====================================  --> 
 		<!-- =====================================  --> 
 		
+				
+<section id="nav_section">		
 		<!-- START BODY-->
-		<div style="width:100%; height:auto;padding:0;margin:0;-webkit-box-sizing: border-box; box-sizing: border-box;">
-		<div style="width:100%; height:0;padding:0; padding-top:20%; margin:0;  margin-top:2em; "></div>
-
+		<div style="width:100%; height:auto;padding:0;margin:1em auto;-webkit-box-sizing: border-box; box-sizing: border-box;display:block;">
 				<ul class="navi f-row wrap j_rnd a_ctr" >
 					<li class="f-row nowrap j_ctr a_ctr">
 						<a href="#team_intro" class="f-row nowrap j_ctr a_base"><p>the&nbsp;</p><h1>Team</h1></a>
@@ -888,16 +851,16 @@ background:	url(assets/images/png/svg-backup/stripe-pattern.png);
 						<a href="#specs_intro" class="f-row nowrap j_ctr a_base"><p>the&nbsp;</p><h1>Specs</h1></a>
 					</li>
 						<li class="f-row nowrap j_ctr a_ctr">
-						<a href="#" class="f-row nowrap j_ctr a_base"><p>the&nbsp;</p><h1>Extras</h1></a>
+						<a href="#extras_intro" class="f-row nowrap j_ctr a_base"><p>the&nbsp;</p><h1>Extras</h1></a>
 					</li>
 					<li class="f-row nowrap j_ctr a_ctr">
-					<a href="#" class="f-row nowrap j_ctr a_ctr"><h1>Contact</h1></a
+					<a href="#contact" class="f-row nowrap j_ctr a_ctr"><h1>Contact</h1></a
 					></li>
 				</ul>	
 				</div>			
 		<!--  END  BODY --> 
 
-
+</section>
 <!-- =====================================  --> 
 <!-- TEAM--> 
 <section id="team_intro" style="width:100%; height:auto; padding:0; margin:0;  margin-top:1em;">
@@ -914,11 +877,8 @@ background:	url(assets/images/png/svg-backup/stripe-pattern.png);
 				</div>
 	</div>
 	<div class="team_inner team_right f-col nowrap j_ctr a_ctr" >
-	<ul class="team_stuff f-row wrap">
-	<li class="team_name">Darrell J. Penta</li>
-	<li class="team_desc">Darrell has more than five years of experience designing and conducting experiments to investigate complex human behaviors. </li>
-	<li class="team_link f-row j_end a_end"><a href="#">MORE</a><i class="small material-icons">open_in_new</i></li>
-	</ul>
+	<div class="team_desc f-col wrap j_ctr a_start truncate"><p> <span class="team_name">Darrell J. Penta</span> has 5+ years of experience designing and conducting experiments to learn more about complex human behaviors. </p></div>
+	<div class="team_link f-row j_end a_end"><a href="bio.html#darrell">MORE</a><i class="small material-icons">open_in_new</i></div>
 	</div>
 	</li>
 	<li class="team_cont f-row wrap">
@@ -929,9 +889,7 @@ background:	url(assets/images/png/svg-backup/stripe-pattern.png);
 			</div>
 		</div>
 	<div class="team_inner team_right f-col nowrap j_ctr a_ctr" >
-	<div class="team_name">Darrell J. Penta</div>
-	<div class="team_desc">Darrell brings a passion for  </div>
-	<div class="team_link f-row j_end a_end"><a href="#">MORE</a><i class="small material-icons">open_in_new</i></div>
+<div class="team_desc f-col nowrap j_ctr a_start truncate"><p><span class="team_name">Darrell J. Penta</span> combines linguistic theory, data science, and creativity to help individuals and organizations craft effective messages. </p></div><div class="team_link f-row j_end a_end"><a href="bio.html#darrell">MORE</a><i class="small material-icons">open_in_new</i></div>
 	</div>
 	</li>
 </ul>	
@@ -944,22 +902,19 @@ background:	url(assets/images/png/svg-backup/stripe-pattern.png);
 		</div>
 	</div>
 	<div class="team_inner team_right f-col nowrap j_ctr a_ctr" >
-	<div class="team_name">Darrell J. Penta</div>
-	<div class="team_desc">Darrell's research has helped start-ups and established businesses improve user experiences.</div>
-	<div class="team_link f-row j_end a_end"><a href="#">MORE</a><i class="small material-icons">open_in_new</i></div>
+	<div class="team_desc f-col nowrap j_ctr a_start truncate"><p><span class="team_name">Darrell J. Penta</span> conducts research on behalf of start-ups and established business to improve user experiences.</p></div>
+	<div class="team_link f-row j_end a_end"><a href="bio.html#darrell">MORE</a><i class="small material-icons">open_in_new</i></div>
 	</div>
 	</li>
 	<li class="team_cont f-row wrap">
-			<div class="team_title" >HTML/CSS &amp; Developer </div>
+			<div class="team_title" >HTML/CSS &amp; Creator </div>
 	<div class="team_inner team_left f-col" >
 		<div class="team_photo">
 			<div class="td_1"></div>
 		</div>
 	</div>
 	<div class="team_inner team_right f-col nowrap j_ctr a_ctr" >
-	<div class="team_name">Darrell J. Penta</div>
-	<div class="team_desc">Darrell likes using HTML/CSS to build websites like this one.</div>
-	<div class="team_link f-row j_end a_end"><a href="#">MORE</a><i class="small material-icons">open_in_new</i></div>
+	<div class="team_desc f-col nowrap j_ctr a_start truncate"><p><span class="team_name">Darrell J. Penta</span> uses HTML and CSS to create impressive websites. </p></div>	<div class="team_link f-row j_end a_end"><a href="bio.html#darrell">MORE</a><i class="small material-icons">open_in_new</i></div>
 	</div>
 	</li>
 </ul>
@@ -972,9 +927,7 @@ background:	url(assets/images/png/svg-backup/stripe-pattern.png);
 		</div>
 	</div>
 	<div class="team_inner team_right f-col nowrap j_ctr a_ctr" >
-	<div class="team_name">Jina Park Penta</div>
-	<div class="team_desc">Jieun "Jina" Park Penta joined the team in 2009 and ensures the  </div>
-	<div class="team_link f-row j_end a_end"><a href="#">MORE</a><i class="small material-icons">open_in_new</i></div>
+	<div class="team_desc  f-col nowrap j_ctr a_start truncate"><p>The magnificent <span class="team_name">Jieun "Jina" Park Penta</span> joined the team in 2009 and manages to keep Darrell Penta running smoothly. </p></div>	<div class="team_link f-row j_end a_end"><a href="bio.html#jina">MORE</a><i class="small material-icons">open_in_new</i></div>
 	</div>
 	</li>
 	<li class="team_cont f-row wrap">
@@ -985,9 +938,10 @@ background:	url(assets/images/png/svg-backup/stripe-pattern.png);
 		</div>
 	</div>
 	<div class="team_inner team_right f-col j_ctr a_ctr" >
-	<div class="team_name">Sahna the Puppy</div>
-	<div class="team_desc">Sahna really likes sleeping and eating. </div>
-	<div class="team_link f-row j_end a_end"><a href="#">MORE</a><i class="small material-icons">open_in_new</i></div>
+	<div class="team_desc f-col nowrap j_ctr a_start truncate">
+	<p><span class="team_name">Sahna the Puppy</span> really enjoys eating and sleeping.</p>
+	</div>
+	<div class="team_link f-row j_end a_end"><a href="bio.html#sahna">MORE</a><i class="small material-icons">open_in_new</i></div>
 	</div>
 	</li>
 </ul>
@@ -1156,9 +1110,9 @@ background:	url(assets/images/png/svg-backup/stripe-pattern.png);
           <div class="fly-submenu f-col wrap j_start a_str">
             <div class="fs_menu f-row nowrap">
               <div class="fs_menu-holder f-row nowrap j_btw a_start">
-                <div><a href="#">Home</a></div>
-                <div><a href="#">Team</a></div>
-                <div><a href="#">Specs</a></div>
+     <div><a href="home.html">Home</a></div>
+                <div><a href="home.html#team_home">Team</a></div>
+                <div><a href="home.html#specs_home">Specs</a></div>
               </div>
               <!--end fs-menu holder -->
             </div>

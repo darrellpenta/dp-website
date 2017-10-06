@@ -1,0 +1,277 @@
+@charset "UTF-8";
+/* CSS Document */
+
+/**********************/
+/* Container for buttons
+/**********************/
+.soc-nav {
+  box-sizing: border-box;
+  height: 50px;
+font-size:16px;
+}
+
+/**********************/
+/* Buttons (parent/child elements)
+/**********************/
+
+/* FontAwesome style
+/**********************/
+
+/* Hold icons in a span */
+.mnm span {
+  width: 100%;
+  height: 100%;
+  line-height: 40px;
+	font-size:1rem;
+}
+
+.mnm span > .fa {
+  font-size: 2em;
+}
+
+/* Main link element style
+/**********************/
+a.mnm-btn {
+  display: block;
+  width: 40px;
+  height: 40px;
+  text-decoration: none;
+}
+
+/* Cube outer container
+/**********************/
+.mnm-out {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  perspective: 800px;
+  perspective-origin: 20% 20px;
+}
+
+/* Cube inner container
+/**********************/
+.mnm-in {
+  position: relative;
+  width: 40px;
+  margin: 0 auto;
+  transform-style: preserve-3d;
+}
+
+/* Cube faces
+/**********************/
+
+/* global style*/
+.mnm-in > div {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  font-family: 'FontAwesome';
+}
+
+/* positions, styles for individual faces */
+.mnm_back {
+  transform: translateX(0)
+    translateY(0)
+    translateZ(-20px)
+    rotateX(0)
+    rotateY(180deg)
+    rotateZ(0)
+    scale(1.0, 1.0)
+    scaleZ(1.0);
+}
+
+.mnm_right {
+  transform: rotateX(0)
+    rotateY(-270deg)
+    rotateZ(0)
+    translateX(20px)
+    translateY(0)
+    translateZ(0)
+    scale(1.0, 1.0)
+    scaleZ(1.0);
+  transform-origin: top right;
+}
+
+.mnm_left {
+  transform: rotateX(0)
+    rotateY(270deg)
+    rotateZ(0)
+    translateX(-20px)
+    translateY(0)
+    translateZ(0)
+    scale(1.0, 1.0)
+    scaleZ(1.0);
+  transform-origin: center left;
+  -moz-box-shadow: inset 1em 0 .64em .24em rgba(0, 0, 0, 0.33);
+  -webkit-box-shadow: inset 1em 0 .64em .24em rgba(0, 0, 0, 0.33);
+  -o-box-shadow: inset 1em 0 .64em .24em rgba(0, 0, 0, 0.33);
+  box-shadow: inset 1em 0 .64em .24em rgba(0, 0, 0, 0.33);
+}
+
+.mnm_top {
+  transform: rotateX(-90deg)
+    rotateY(0)
+    rotateZ(0)
+    translateX(0)
+    translateY(-20px)
+    translateZ(0)
+    scale(1.0, 1.0)
+    scaleZ(1.0);
+  transform-origin: top center;
+}
+
+.mnm_bot {
+  transform: rotateX(90deg)
+    rotateY(0)
+    rotateZ(0)
+    translateX(0)
+    translateY(20px)
+    translateZ(0)
+    scale(1.0, 1.0)
+    scaleZ(1.0);
+  transform-origin: bottom center;
+  background-color: #999;
+  -webkit-box-shadow: inset -1em 0 .64em .24em rgba(0, 0, 0, 0.49);
+  -moz-box-shadow: inset -1em 0 .64em .24em rgba(0, 0, 0, 0.49);
+  box-shadow: inset -1em 0 .64em .24em rgba(0, 0, 0, 0.49);
+  -webkit-backface-visibility: visible !important;
+  backface-visibility: visible !Important;
+}
+
+.mnm_front {
+  transform: rotateX(0)
+    rotateY(0)
+    rotateZ(0)
+    translateX(0)
+    translateY(0)
+    translateZ(20px)
+    scale(1.0, 1.0)
+    scaleZ(1.0);
+  background-color: #fff;
+}
+
+/* Hide backface, except on bottom */
+.mnm_front, .mnm_left, .mnm_right, .mnm_top, .mnm_back {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+/* Font and left faces get a colored outline */
+.front, .left {
+  outline-width: 2px;
+  outline-style: solid;
+  outline-offset: -2px;
+}
+
+/* Pseudo element for drop shadow*/
+a.mnm-btn:link .mnm-out:before {
+  position: absolute;
+  content: '';
+  display: inline-block;
+  width: 40px;
+  border-radius: 20%;
+  transform: translateX(0)
+    translateY(30px)
+    translateZ(0)
+    rotate(0)
+    rotateZ(0)
+    skew(-2deg, -2deg)
+    scale(0.1, 0.1)
+    scaleZ(1.0);
+  -moz-box-shadow: -.5em .24em 1em .24em rgba(0, 0, 0, 0.4);
+  -webkit-box-shadow: -.5em .24em 1em .24em rgba(0, 0, 0, 0.4);
+  box-shadow: -.5em .24em 1em .24em rgba(0, 0, 0, 0.4);
+  transition: all .35s ease-in-out .1s;
+}
+
+/* Pseudo element for :visited*/
+a.mnm-btn:link .mnm:after {
+  content: '';
+  position: inherit;
+  top: 0;
+  right: 0;
+  width: 6px;
+  height: 6px;
+  z-index: 10;
+  display: none;
+}
+/* Show visited indicator for visited */
+
+a.mnm-btn:visited .mnm:after {
+  display: block;
+    content: '';
+  position: inherit;
+  top: 0;
+  right: 0;
+  width: 6px;
+  height: 6px;
+  z-index: 10;
+}
+
+/* Main link behavior
+/**********************/
+
+/* Base positioning for cube faces*/
+a.mnm-btn:link .mnm-in {
+  transform: rotateX(0)
+    rotateY(0)
+    rotateZ(0)
+    translateX(0)
+    translateY(0)
+    translateZ(0)
+    scale(1.0, 1.0)
+    scaleZ(1.0);
+  transition: all .35s ease-in-out .1s;
+}
+
+/* Front face shadow (hidden) */
+a.mnm-btn:link .mnm-in .mnm_front {
+  transition: all .35s ease-in-out .1s;
+  -webkit-box-shadow: inset -.1em .1em .22em .05em rgba(0, 0, 0, 0.0);
+  -moz-box-shadow: inset -.1em .1em .22em .05em rgba(0, 0, 0, 0.0);
+  box-shadow: inset -.1em .1em .22em .05em rgba(0, 0, 0, 0.0);
+}
+
+
+
+/* Show drop shadow on hover, active, focus*/
+a.mnm-btn:hover .mnm-out:before,
+a.mnm-btn:active .mnm-out:before,
+a.mnm-btn:focus .mnm-out:before {
+  transition: all .35s ease-in-out .1s;
+  transform: translateX(0)
+    translateY(30px)
+    translateZ(0)
+    rotate(0)
+    rotateZ(0)
+    skew(-2deg, -2deg)
+    scale(1.0, 1.0)
+    scaleZ(1.0);
+}
+
+/* Animate cube on hover, active, focus*/
+a.mnm-btn:hover .mnm-in, 
+a.mnm-btn:active .mnm-in, 
+a.mnm-btn:focus .mnm-in {
+  transform: rotateY(30deg)
+    rotateX(20deg)
+    rotateZ(0)
+    translateX(0)
+    translateY(0)
+    translateZ(20px)
+    scale(1.0, 1.0)
+    scaleZ(1.0);
+  z-index: 1;
+}
+
+/* Show face shadow on animate*/
+a.mnm-btn:hover .mnm-in .mnm_front,
+a.mnm-btn:active .mnm-in .mnm_front,
+a.mnm-btn:focus .mnm-in .mnm_ront {
+  transition: all .35s ease-in-out .1s;
+  -moz-box-shadow: inset -.2em .2em .42em .05em rgba(0, 0, 0, 0.12);
+  -webkit-box-shadow: inset -.2em .2em .42em .05em rgba(0, 0, 0, 0.12);
+  box-shadow: inset -.2em .2em .42em .05em rgba(0, 0, 0, 0.12);
+}
+
