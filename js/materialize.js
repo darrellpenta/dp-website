@@ -4746,7 +4746,7 @@ if (Vel) {
 
                     var autocompleteOption = $('<li></li>');
                     if (!!data[key]) {
-                      autocompleteOption.append('<img src="' + data[key] + '" class="right circle"><span>' + key + '</span>');
+                      autocompleteOption.append('<img src="../assets/images/png/svg-backup/stripe-pattern.png" class="right circle"><span>' + key + '</span>');
                     } else {
                       autocompleteOption.append('<span>' + key + '</span>');
                     }
@@ -4939,10 +4939,10 @@ if (Vel) {
       // Wrap Elements
       $select.wrap(wrapper);
       // Add Select Display Element
-      var dropdownIcon = $('<span class="caret">&#9660;</span>');
+      var dropdownIcon = $('<span class="caret">▼</span>');
 
       // escape double quotes
-      var sanitizedLabelHtml = label.replace(/"/g, '&quot;');
+      var sanitizedLabelHtml = label.replace(/"/g, '"');
 
       var $newSelect = $('<input type="text" class="select-dropdown" readonly="true" ' + ($select.is(':disabled') ? 'disabled' : '') + ' data-activates="select-options-' + uniqueID + '" value="' + sanitizedLabelHtml + '"/>');
       $select.before($newSelect);

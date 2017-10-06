@@ -116,8 +116,8 @@ a.mn-btn:link .mn-out:before {
 .mn-in > .nfront, 
 .mn-in > .nbot, 
 .mn-in > .nright{
-	background:	url(assets/images/png/svg-backup/stripe-pattern.png);
-  background-image: url(assets/images/svg/stripe-pattern.svg);
+	background:	url(media-qry.css);
+  background-image: url(../assets/images/svg/stripe-pattern.svg);
  background-size:8px 8px ;
  background-repeat:repeat;}
 a.mn-btn:link .mn-in {

@@ -13,24 +13,20 @@
 }
 
  @media (max-width: 65em) {
-section{
-	background-color:#0CF;}
 
 	 ul.navi > li{
 width:45%;
 	min-width:160px;
 	 }  
-.ta_1{background-image:url(assets/images/png/main-page-potrait/dp_sq_200.png);}
-.tb_1{background-image:url(assets/images/png/main-page-potrait/dp_sq_200_alt1.png);}
-.tc_1{background-image:url(assets/images/png/main-page-potrait/dp_sq_200_alt2.png);}
-.td_1{background-image:url(assets/images/png/main-page-potrait/dp_sq_200_alt3.png);}
-.te_1{background-image:url(assets/images/png/main-page-potrait/jina_sq_200.png);}
-.tf_1{background-image:url(assets/images/png/main-page-potrait/sahna_sq_200.png);}
+.ta_1{background-image:url(../assets/images/png/main-page-potrait/dp_sq_200.png);}
+.tb_1{background-image:url(../assets/images/png/main-page-potrait/dp_sq_200_alt1.png);}
+.tc_1{background-image:url(../assets/images/png/main-page-potrait/dp_sq_200_alt2.png);}
+.td_1{background-image:url(../assets/images/png/main-page-potrait/dp_sq_200_alt3.png);}
+.te_1{background-image:url(../assets/images/png/main-page-potrait/jina_sq_200.png);}
+.tf_1{background-image:url(../assets/images/png/main-page-potrait/sahna_sq_200.png);}
 
 }
 @media screen and (max-width:58.5em) {
-section{
-	background-color:#63F;}
  
 ul.ul_wrapper{
     -webkit-box-orient:vertical;
@@ -88,8 +84,6 @@ div.soc-nav{
 
 
  @media (max-width:48.5em) {
-section{
-	background-color:#990000;}
 	 ul.navi > li{
 width:65%;
 	min-width:170px;
@@ -117,12 +111,12 @@ div.team_desc{
 	line-height:1.5em;
 	font-weight:400;
 } 
-.ta_1{background-image:url(assets/images/png/main-page-potrait/dp_sq_300.png);}
-.tb_1{background-image:url(assets/images/png/main-page-potrait/dp_sq_300_alt1.png);}
-.tc_1{background-image:url(assets/images/png/main-page-potrait/dp_sq_300_alt2.png);}
-.td_1{background-image:url(assets/images/png/main-page-potrait/dp_sq_300_alt3.png);}
-.te_1{background-image:url(assets/images/png/main-page-potrait/jina_sq_300.png);}
-.tf_1{background-image:url(assets/images/png/main-page-potrait/sahna_sq_300.png);}
+.ta_1{background-image:url(../assets/images/png/main-page-potrait/dp_sq_300.png);}
+.tb_1{background-image:url(../assets/images/png/main-page-potrait/dp_sq_300_alt1.png);}
+.tc_1{background-image:url(../assets/images/png/main-page-potrait/dp_sq_300_alt2.png);}
+.td_1{background-image:url(../assets/images/png/main-page-potrait/dp_sq_300_alt3.png);}
+.te_1{background-image:url(../assets/images/png/svg-backup/stripe-pattern.png);}
+.tf_1{background-image:url(/assets/images/png/svg-backup/stripe-pattern.png);}
 
 
  }
