@@ -3377,11 +3377,11 @@ button.btn-floating {
 }
 
 .waves-effect.waves-light .waves-ripple {
-  background-color: rgba(255, 255, 255, 0.45);
+  background-color: rgba(220, 0, 9, 0.9);
 }
 
 .waves-effect.waves-red .waves-ripple {
-  background-color: rgba(244, 67, 54, 0.7);
+  background-color: rgba(220, 0, 9, 0.9);
 }
 
 .waves-effect.waves-yellow .waves-ripple {

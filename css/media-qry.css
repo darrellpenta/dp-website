@@ -27,7 +27,7 @@ width:45%;
 
 }
 @media screen and (max-width:58.5em) {
- 
+
 ul.ul_wrapper{
     -webkit-box-orient:vertical;
 -ms-flex-direction:column;
@@ -83,8 +83,28 @@ div.soc-nav{
 }
 
 
- @media (max-width:48.5em) {
-	 ul.navi > li{
+ @media (max-width:48.5em) {	 
+li div.bio_left{
+width:100%;
+max-width:250px;	
+-webkit-flex:0 1 auto;
+flex:0 1 auto;
+margin:0 auto;
+}	
+li div.bio_right, li div.bio_title{
+width:100%;
+-webkit-flex:1 0 auto;
+flex:1 0 auto;
+    text-align: center;
+}
+ li div.bio_title{	
+ -webkit-align-self: center; /* Safari 7.0+ */
+    align-self: center;
+	margin:0 auto;
+}
+	 
+	 	 
+	 ul.navi > li {
 width:65%;
 	min-width:170px;
 	 }  
@@ -111,12 +131,12 @@ div.team_desc{
 	line-height:1.5em;
 	font-weight:400;
 } 
-.ta_1{background-image:url(../assets/images/png/main-page-potrait/dp_sq_300.png);}
-.tb_1{background-image:url(../assets/images/png/main-page-potrait/dp_sq_300_alt1.png);}
-.tc_1{background-image:url(../assets/images/png/main-page-potrait/dp_sq_300_alt2.png);}
-.td_1{background-image:url(../assets/images/png/main-page-potrait/dp_sq_300_alt3.png);}
-.te_1{background-image:url(../assets/images/png/svg-backup/stripe-pattern.png);}
-.tf_1{background-image:url(/assets/images/png/svg-backup/stripe-pattern.png);}
+.ta_1{background-image:url(../assets/images/png/main-page-potrait/dp_sq_200.png);}
+.tb_1{background-image:url(../assets/images/png/main-page-potrait/dp_sq_200_alt1.png);}
+.tc_1{background-image:url(../assets/images/png/main-page-potrait/dp_sq_200_alt2.png);}
+.td_1{background-image:url(../assets/images/png/main-page-potrait/dp_sq_200_alt3.png);}
+.te_1{background-image:url(../assets/images/png/main-page-potrait/jina_sq_200.png);}
+.tf_1{background-image:url(../assets/images/png/main-page-potrait/sahna_sq_200.png);}
 
 
  }

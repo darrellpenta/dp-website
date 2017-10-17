@@ -33,7 +33,6 @@
 <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
 <meta name="theme-color" content="#ffffff">
 <link rel="stylesheet" href="https://use.fontawesome.com/04d82f9725.css">
-<link href="https://fonts.googleapis.com/css?family=Quicksand:400" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Libre+Baskerville:400,700" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Noto+Sans:400,700" rel="stylesheet">
 <script src="https://use.fontawesome.com/42ce42b384.js"></script>
@@ -44,101 +43,73 @@
 <link type="text/css" rel="stylesheet" href="css/materialize.css"  media="screen,projection"/>
 <link rel="stylesheet" href="css/normalize.min.css" type="text/css">
 <link rel="stylesheet" href="css/dp-navigation-style.css" type="text/css">
+<link rel="stylesheet" href="css/global.css" type="text/css">
 <link rel="stylesheet" href="css/media-qry.css" type="text/css">
 <style>
 body {font-family:'Noto Sans', Arial, Helvetica, sans-serif;color:#0C0B30}
-/*=Flexbox shortcuts=*/.f-col,.f-row{-webkit-box-direction:normal}.ctr_dist,.ctr_end,.ctr_mid{align-content:center}.f-row{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-ms-flex-direction:row;flex-direction:row}.f-col{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-ms-flex-direction:column;flex-direction:column}.wrap{-ms-flex-wrap:wrap;flex-wrap:wrap}.nowrap{-ms-flex-wrap:nowrap;flex-wrap:nowrap}.j_start{-webkit-justify-content:flex-start;-ms-flex-pack:start;justify-content:flex-start}.j_end{-webkit-justify-content:flex-end;-ms-flex-pack:end;justify-content:flex-end}.j_ctr{-webkit-box-pack:center;-ms-flex-pack:center;-webkit-justify-content:center;justify-content:center}.j_btw{-webkit-justify-content:space-between;-ms-flex-pack:justify;justify-content:space-between}.j_rnd{-webkit-justify-content:space-around;-ms-flex-pack:distribute;justify-content:space-around}.a_start{-webkit-align-items:flex-start;-ms-flex-align:start;align-items:flex-start}.a_end{-webkit-align-items:flex-end;-ms-flex-align:end;align-items:flex-end}.a_ctr{-webkit-align-items:center;-ms-flex-align:center;align-items:center}.a_str{-webkit-align-items:stretch;-ms-flex-align:stretch;align-items:stretch}.ctr_mid{-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-ms-flex-line-pack:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center}.ctr_dist{-ms-flex-pack:distribute;justify-content:space-around;-ms-flex-line-pack:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center}.ctr_end{-webkit-box-pack:end;-ms-flex-pack:end;justify-content:flex-end;-ms-flex-line-pack:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center}.as_end{-webkit-align-self:flex-end;-ms-flex-item-align:end;align-self:flex-end}.a_base{-webkit-align-items:baseline;-ms-flex-align:baseline;align-items:baseline}.f-irow{display:-ms-inline-flexbox;display:-webkit-inline-flex;display:inline-flex}
+.no_mp{margin:0;padding:0;}
+.no_p{padding:0;}
+.m_auto{margin:0 auto;}
+.b_box{
+	-webkit-box-sizing: border-box; box-sizing: border-box;}
+.full_w{
+	width:100%;}
+.full_h{
+	height:100%;}
+.h_auto{
+	height:auto;}
+.w_h_auto{
+	width:100%;
+	height:auto;}	
+.p_abs{
+	position:absolute;}
+.p_rel{
+	position:relative;}
+.p_fix{
+	position:fixed;}
+.p_inh{
+	position:inherit;}	
+.rnd_bdr{
+	-webkit-border-radius:50%;border-radius:50%;
+	}	
+.noto{
+		font-family:'Noto Sans', Helvetica, Arial, sans-serif;		
+}
+.libre{
+	font-family: 'Libre Baskerville', Baskerville, Georgia, 'Times New Roman', Times, serif;
+}
+ul.type_none{
+	list-style-type:none;}
 
-/*= Load screen transitions=*/@-webkit-keyframes load-out{0%{-webkit-transform:translate3d(0,0,0) perspective(none) rotateX(0) rotateY(0) rotateZ(0) scale(1,1);-moz-transform:translate3d(0,0,0) perspective(none) rotateX(0) rotateY(0) rotateZ(0) scale(1,1);transform:translate3d(0,0,0) perspective(none) rotateX(0) rotateY(0) rotateZ(0) scale(1,1);opacity:1}100%{-webkit-transform:translate3d(0,0,0) perspective(500px) rotateX(0) rotateY(-90deg) rotateZ(20deg) scale(1,1);-moz-transform:translate3d(0,0,0) perspective(500px) rotateX(0) rotateY(-90deg) rotateZ(20deg) scale(1,1);transform:translate3d(0,0,0) perspective(500px) rotateX(0) rotateY(-90deg) rotateZ(20deg) scale(1,1);display:none;opacity:1}}@keyframes load-out{0%{-webkit-transform:translate3d(0,0,0) perspective(none) rotateX(0) rotateY(0) rotateZ(0) scale(1,1);-moz-transform:translate3d(0,0,0) perspective(none) rotateX(0) rotateY(0) rotateZ(0) scale(1,1);transform:translate3d(0,0,0) perspective(none) rotateX(0) rotateY(0) rotateZ(0) scale(1,1);opacity:1}100%{-webkit-transform:translate3d(0,0,0) perspective(500px) rotateX(0) rotateY(-90deg) rotateZ(20deg) scale(1,1);-moz-transform:translate3d(0,0,0) perspective(500px) rotateX(0) rotateY(-90deg) rotateZ(20deg) scale(1,1);transform:translate3d(0,0,0) perspective(500px) rotateX(0) rotateY(-90deg) rotateZ(20deg) scale(1,1);display:none;opacity:1}}@-webkit-keyframes load-in{0%,95%{z-index:-2}100%{z-index:1}}@keyframes load-in{0%,95%{z-index:-2}100%{z-index:2}}
+/*=Flexbox shortcuts=*/.f-col,.f-row{-webkit-box-direction:normal}.ctr_dist,.ctr_end,.ctr_mid{-webkit-align-content:center;-ms-flex-line-pack:center;align-content:center}.f-row{display:-webkit-box;display:-ms-flexbox;display:-webkit-flex;display:flex;-webkit-box-orient:horizontal;-ms-flex-direction:row;-webkit-flex-direction:row;flex-direction:row}.f-col{display:-webkit-box;display:-ms-flexbox;display:-webkit-flex;display:flex;-webkit-box-orient:vertical;-ms-flex-direction:column;-webkit-flex-direction:column;flex-direction:column}.wrap{-ms-flex-wrap:wrap;-webkit-flex-wrap:wrap;flex-wrap:wrap}.nowrap{-ms-flex-wrap:nowrap;-webkit-flex-wrap:nowrap;flex-wrap:nowrap}.j_start{-webkit-justify-content:flex-start;-ms-flex-pack:start;-webkit-box-pack:start;justify-content:flex-start}.j_end{-webkit-justify-content:flex-end;-ms-flex-pack:end;-webkit-box-pack:end;justify-content:flex-end}.j_ctr{-webkit-box-pack:center;-ms-flex-pack:center;-webkit-justify-content:center;justify-content:center}.j_btw{-webkit-justify-content:space-between;-ms-flex-pack:justify;-webkit-box-pack:justify;justify-content:space-between}.j_rnd{-webkit-justify-content:space-around;-ms-flex-pack:distribute;justify-content:space-around}.a_start{-webkit-align-items:flex-start;-ms-flex-align:start;-webkit-box-align:start;align-items:flex-start}.a_end{-webkit-align-items:flex-end;-ms-flex-align:end;-webkit-box-align:end;align-items:flex-end}.a_ctr{-webkit-align-items:center;-ms-flex-align:center;-webkit-box-align:center;align-items:center}.a_str{-webkit-align-items:stretch;-ms-flex-align:stretch;-webkit-box-align:stretch;align-items:stretch}.ctr_mid{-webkit-box-pack:center;-ms-flex-pack:center;-webkit-justify-content:center;justify-content:center;-ms-flex-line-pack:center;-webkit-box-align:center;-ms-flex-align:center;-webkit-align-items:center;align-items:center}.ctr_dist{-ms-flex-pack:distribute;-webkit-justify-content:space-around;justify-content:space-around;-ms-flex-line-pack:center;-webkit-box-align:center;-ms-flex-align:center;-webkit-align-items:center;align-items:center}.ctr_end{-webkit-box-pack:end;-ms-flex-pack:end;-webkit-justify-content:flex-end;justify-content:flex-end;-ms-flex-line-pack:center;-webkit-box-align:center;-ms-flex-align:center;-webkit-align-items:center;align-items:center}.as_end{-webkit-align-self:flex-end;-ms-flex-item-align:end;align-self:flex-end}.a_base{-webkit-align-items:baseline;-ms-flex-align:baseline;-webkit-box-align:baseline;align-items:baseline}.f-irow{display:-ms-inline-flexbox;display:-webkit-inline-flex;display:-webkit-inline-box;display:inline-flex}
+
+/*= Load screen transitions=*/@-webkit-keyframes load-out{0%{-webkit-transform:translate3d(0,0,0) perspective(none) rotateX(0) rotateY(0) rotateZ(0) scale(1,1) translateZ(1000em);transform:translate3d(0,0,0) perspective(none) rotateX(0) rotateY(0) rotateZ(0) scale(1,1) translateZ(1000em);opacity:1;z-index:9999;}100%{-webkit-transform:translate3d(0,0,0) perspective(500px) rotateX(0) rotateY(-90deg) rotateZ(20deg) scale(1,1) translateZ(-1000em);transform:translate3d(0,0,0) perspective(500px) rotateX(0) rotateY(-90deg) rotateZ(20deg) scale(1,1) translateZ(-1000em);z-index:-10000;display:none;opacity:1}}@keyframes load-out{0%{-webkit-transform:translate3d(0,0,0) perspective(none) rotateX(0) rotateY(0) rotateZ(0) scale(1,1) translateZ(1000em);transform:translate3d(0,0,0) perspective(none) rotateX(0) rotateY(0) rotateZ(0) scale(1,1) translateZ(1000em);z-index:1000;opacity:1}100%{-webkit-transform:translate3d(0,0,0) perspective(500px) rotateX(0) rotateY(-90deg) rotateZ(20deg) scale(1,1) translateZ(-1000em);transform:translate3d(0,0,0) perspective(500px) rotateX(0) rotateY(-90deg) rotateZ(20deg) scale(1,1) translateZ(-1000em);display:none;opacity:1; z-index:-1000;}}
+@-webkit-keyframes load-in{0%{z-index:-2;}100%{z-index:0;}}
+@keyframes load-in{0%{z-index:-2;}100%{z-index:0;}}
 /*========================
 Loading/Loaded screen  specs
 ========================*/
-.loaded,.loading{width:100%;height:100%;-webkit-transform-style:preserve-3d;-moz-transform-style:preserve-3d;transform-style:preserve-3d;-webkit-transform:translate3d(0,0,0);-webkit-box-sizing:border-box;box-sizing:border-box;margin:0;padding:0}.loading {z-index:1;-webkit-perspective-origin:top left;-moz-perspective-origin:top left;perspective-origin:top left;position:fixed;top:0;left:0;}
+.loaded,.loading{-webkit-transform-style:preserve-3d;transform-style:preserve-3d;-webkit-transform:translate3d(0,0,0);-webkit-box-sizing:border-box;box-sizing:border-box;}
+.loading {-webkit-perspective-origin:top left;perspective-origin:top left;top:0;left:0;}
 
-.ld-cont {
-	position:absolute;
-	top:0;
-	left:0;
-	-webkit-transform-origin:bottom right;
-	-moz-transform-origin:bottom right;
-	transform-origin:bottom right;
-	-webkit-animation:load-out 1s ease-in 5.4s;/*CHANGED 2 TO 5S*/
-	-moz-animation:load-out 1s ease-in 5.4s;
-	animation:load-out 1s ease-in 5s;
-	-webkit-animation-fill-mode:forwards;
-	-moz-animation-fill-mode:forwards;
-	animation-fill-mode:forwards;
-	-webkit-animation-iteration-count:1;
-	-moz-animation-iteration-count:1;
-	animation-iteration-count:1;
+/*Loading page*/
+.loading-cont {-webkit-transform-origin:bottom right;-ms-transform-origin:bottom right;transform-origin:bottom right;-webkit-animation:load-out 1s ease-in 5s;/*CHANGED 2 TO 5S*/animation:load-out 1s ease-in 5s;-webkit-animation-fill-mode:forwards;animation-fill-mode:forwards;-webkit-animation-iteration-count:1;animation-iteration-count:1;min-height:100%;overflow:hidden;z-index: 1000;
 }
-.load_in {
-	position:inherit;
-	top:50%;
-	left:50%;
-	-webkit-transform:translate(-50%, -50%);
-	-moz-transform:translate(-50%, -50%);
-	transform:translate(-50%, -50%);
-}
-.loaded {
-	position:absolute;
-	height:100%;
-	-webkit-animation:load-in 3s linear 4.44s;
-	-moz-animation:load-in 3s linear 4.44s;
-	animation:load-in 3s linear 4.44s;
-	-webkit-animation-fill-mode:forwards;
-	-moz-animation-fill-mode:forwards;
-	animation-fill-mode:forwards;
-	-webkit-animation-iteration-count:1;
-	-moz-animation-iteration-count:1;
-	animation-iteration-count:1;
-}
+
 /* ========================
 Loading Screen Child specs
 ========================*/
-.ld-cont-left, .ld-cont-right {
-	-webkit-box-flex:1;
-	-ms-flex:1 3 25%;
-	-webkit-flex:1 3 25%;
-	flex:1 3 25%;
-}
-.ld-cont-mid {
-	-webkit-box-flex:3;
-	-ms-flex:3 0 50%;
-	-webkit-flex:3 0 50%;
-	flex:3 0 50%;
-}
-.ld-cont-mid:before, .ld-cont-mid:after {
-	content:'';
-	background-color:#0C0B30;
-	display:block;
-	width:100%;
-	height:50%;
-}
-.ld-cont-mid > div {
-	-webkit-border-radius:50%;
-	border-radius:50%;
-	-webkit-box-sizing:border-box;
-	box-sizing:border-box;
-	-webkit-box-shadow:inset -.05em .05em 0 .2em #a09898, .25em .45em 0 2.4em #DC0009;
-	box-shadow:inset -.05em .05em 0 .2em #a09898, .25em .45em 0 2.4em #DC0009;
-}
-.ld-cont-mid > div:after {
-	content:'';
-	display:block;
-	position:absolute;
-	top:50%;
-	left:50%;
-	-webkit-transform:translate(-50%, -50%);
-	-ms-transform:translate(-50%, -50%);
-	transform:translate(-50%, -50%);
-	width:105%;
-	height:105%;
-	z-index:0;
-	border:50em solid #0C0B30;
-	-webkit-border-radius:50%;
-	border-radius:50%;
-}
+.loading-cont > div{
+-webkit-box-flex:1;-ms-flex:1 0 auto;-webkit-flex:1 0 auto;flex:1 0 100%;min-height:275px;height:100%;max-height:450px;min-width:275px;width:99%;max-width:450px; z-index:1; }
+
+.loading-cont > div:after,.loading-cont >div:before{
+content:''; min-width:100%;min-height:100%;position:absolute;top:50%;left:50%;-webkit-border-radius:50%;border-radius:50%;-webkit-transform:translate(-50%,-50%);-ms-transform:translate(-50%,-50%);transform:translate(-50%,-50%);-webkit-box-sizing:box-sizing;box-sizing:box-sizing;}
+
+.loading-cont > div:after{border:2.75em solid #DC0009;	z-index:2;	-webkit-box-shadow:inset 0 0 0 .7em #a09898;box-shadow:inset 0 0 0 .7em #a09898;}
+.loading-cont > div:before{border:500em solid #0C0B30;	z-index:0;	}
+
+
+
 /* SVG container specs
 ----------------------------------*/
 .dp-portrait {
@@ -174,12 +145,10 @@ Loading Screen Child specs
 	top:50%;
 	left:50%;
 	-webkit-transform:translateX(-50%) translateY(-50%) translateZ(1000em) scale(1.0, 1.0);
-	-moz-transform:translateX(-50%) translateY(-50%) translateZ(1000em) scale(1.0, 1.0);
 	transform:translateX(-50%) translateY(-50%) translateZ(1000em) scale(1.0, 1.0);
 	-webkit-border-radius:50%;
 	border-radius:50%;
 	-webkit-animation:dp-load 1.5s linear 1 forwards;
-	-moz-animation:dp-load 1.5s linear 1 forwards;
 	animation:dp-load 1.5s linear 1 forwards
 }
 .initial-d, .initial-p {
@@ -227,8 +196,10 @@ SITE BACKGROUND
 	height: 100%;
 	z-index: -100;
 	background:	url(assets/images/bg/dp-bg-poster-960x540.png) no-repeat;
-	background-size: cover;
-	object-fit: cover;
+	-webkit-background-size: cover;
+	        background-size: cover;
+	-o-object-fit: cover;
+	   object-fit: cover;
 }
 /* 1. No object-fit support: */
 @media (min-aspect-ratio: 16/9) {
@@ -243,13 +214,14 @@ SITE BACKGROUND
 	left: -100%;
 }
 }
-@supports (object-fit: cover) {
+@supports ((-o-object-fit: cover) or (object-fit: cover)) {
 .video-container > #dp-vid {
 top: 0;
 left: 0;
 width: 100%;
 height: 100%;
-object-fit: cover;
+-o-object-fit: cover;
+   object-fit: cover;
 }
 }
 /*========================
@@ -258,21 +230,27 @@ HEADER Specs
 .ul_wrapper {
 	display: -ms-flexbox;
 	display: -webkit-box;
+	display: -webkit-flex;
 	display: flex;
 	-ms-flex-direction: row;
 	-webkit-box-orient: horizontal;
 	-webkit-box-direction: normal;
-	flex-direction: row;
+	-webkit-flex-direction: row;
+	        flex-direction: row;
 	-ms-flex-wrap: wrap;
-	flex-wrap: wrap;
+	-webkit-flex-wrap: wrap;
+	        flex-wrap: wrap;
 	-ms-flex-pack: justify;
 	-webkit-box-pack: justify;
-	justify-content: space-between;
+	-webkit-justify-content: space-between;
+	        justify-content: space-between;
 	-ms-flex-line-pack: stretch;
-	align-content: stretch;
+	-webkit-align-content: stretch;
+	        align-content: stretch;
 	-ms-flex-align: start;
 	-webkit-box-align: start;
-	align-items: flex-start;
+	-webkit-align-items: flex-start;
+	        align-items: flex-start;
 	width:100%;
 	padding-top:5px;
 	height:auto;
@@ -283,49 +261,20 @@ HEADER Specs
 .ul_wrapper li {
 	display:-webkit-inline-box;
 	display:-ms-inline-flexbox;
+	display:-webkit-inline-flex;
 	display:inline-flex;
 	width:48%;
 	height:auto;
 	-webkit-box-flex:0;
 	-ms-flex:1 1 auto;
-	flex:1 1 auto;
+	-webkit-flex:1 1 auto;
+	        flex:1 1 auto;
 }
 .head-logo {
 	padding:0;
 	padding-left:1.6em;
 }
-.test {
-	width:100%;
-	height:auto;
-	list-style-type:none;
-	padding:0;
-	margin:0 auto;
-}
-.test > li {
-	display:-webkit-inline-box;
-	display:-ms-inline-flexbox;
-	display:inline-flex;
-	width:48%;
-	height:auto;
-	-webkit-box-flex:0;
-	-ms-flex:1 1 auto;
-	flex:1 1 auto;
-}
-.test >.lcol {
-	height:0;
-	padding-bottom:24%;
-	position:relative;
-}
-.test > .lcol div {
-	width:100%;
-	height:100%;
-	position:absolute;
-	top:50%;
-	left:50%;
-	-webkit-transform:translate(-50%, -50%);
-	transform:translate(-50%, -50%);
-	background-color: rgba(12,11,48,1);
-}
+
 /*Logo 
 /*----------------------*/
 
@@ -377,7 +326,9 @@ BODY Specs
 }
 .navi > li {
 	-webkit-flex: 0 0 auto;
-	flex: 0 0 auto;
+	-webkit-box-flex: 0;
+	    -ms-flex: 0 0 auto;
+	        flex: 0 0 auto;
 	width:17%;
 	min-width:220px;
 	height:auto;
@@ -406,6 +357,7 @@ BODY Specs
 	font-weight:400;
 	padding:0;
 	-webkit-transition:all .3s cubic-bezier(.5, .22, .02, .41);
+	-o-transition:all .3s cubic-bezier(.5, .22, .02, .41);
 	transition:all .3s cubic-bezier(.5, .22, .02, .41);
 }
 .navi > li a h1 {
@@ -416,8 +368,10 @@ BODY Specs
 	font-weight:700;
 	padding:0;
 	-webkit-transform:scale(1, 1);
-	transform:scale(1, 1);
+	-ms-transform:scale(1, 1);
+	    transform:scale(1, 1);
 	-webkit-transition:all .3s cubic-bezier(.5, .22, .02, .41);
+	-o-transition:all .3s cubic-bezier(.5, .22, .02, .41);
 	transition:all .3s cubic-bezier(.5, .22, .02, .41);
 }
 .navi > li a:after, .navi > li a:before {
@@ -433,13 +387,16 @@ BODY Specs
 	-webkit-box-sizing:inherit;
 	box-sizing:inherit;
 	background:#fff;
-	background-origin:border-box;
+	-webkit-background-origin:border-box;
+	        background-origin:border-box;
 	-webkit-transform:translate(-45%, -35%);
-	transform:translate(-45%, -35%);
+	-ms-transform:translate(-45%, -35%);
+	    transform:translate(-45%, -35%);
 }
 .navi > li a:after {
 	background-image:url(assets/images/svg/stripe-pattern.svg), url(assets/images/png/svg-backup/stripe-pattern.png);
-	background-size:8px 8px;
+	-webkit-background-size:8px 8px;
+	        background-size:8px 8px;
 	background-repeat:repeat;
 	z-index:-1;
 	border:.15em solid #0C0B30;
@@ -455,210 +412,79 @@ BODY Specs
 	color:#0C0B30;
 	text-decoration:underline;
 	-webkit-transform:scale(1.1, 1.1);
-	transform:scale(1.1, 1.1);
+	-ms-transform:scale(1.1, 1.1);
+	    transform:scale(1.1, 1.1);
 	-webkit-transition:all .3s cubic-bezier(.5, .22, .02, .41);
+	-o-transition:all .3s cubic-bezier(.5, .22, .02, .41);
 	transition:all .3s cubic-bezier(.5, .22, .02, .41);
 }
 .navi li a:hover p, .navi li a:active p {
 	color:#0C0B30;
 	-webkit-transform:translateY(0) translateX(-.5em);
-	transform:tanslateY(0) translateX(-.5em);
+	-ms-transform:tanslateY(0) translateX(-.5em);
+	    transform:tanslateY(0) translateX(-.5em);
 }
 .navi > li, .navi li:after, .navi > li a, .navi > li a p, .navi > li a h1, .navi li a:hover, .navi li a:active, .navi li a:hover h1, .navi li a:active h1, .navi li a:hover p, .navi li a:active p, .navi li:hover:after {
 	-webkit-transition:all .3s cubic-bezier(.5, .22, .02, .41);
+	-o-transition:all .3s cubic-bezier(.5, .22, .02, .41);
 	transition:all .3s cubic-bezier(.5, .22, .02, .41);
 }
+
+
+
+/*Loaded page*/
+
+.loaded {
+-webkit-animation:load-in 3s linear 4.44s;animation:load-in 3s linear 4.44s;-webkit-animation-fill-mode:forwards;animation-fill-mode:forwards;-webkit-animation-iteration-count:1;animation-iteration-count:1;z-index:-1000;}
+.load_in {top:50%;left:50%;-webkit-transform:translate(-50%, -50%);-ms-transform:translate(-50%, -50%);transform:translate(-50%, -50%);}
 /* Section Styles
 ========================*/
 
 /* Section title
 ------------------------------*/
-.section_title {
-	width:90%;
-	height:auto;
-	padding:0;
-	margin:0 auto;
-}
-.section_title > p { line-height:1em; }
-.section_title > p:nth-child(1) {
-	font-family:'Noto Sans', Arial, Helvetica, sans-serif;
-	color:#0C0B30;
-	font-size:2.4em;
-	font-weight:400;
-}
-.section_title > p:nth-child(2) {
-	font-family: 'Libre Baskerville', Baskerville, Georgia, 'Times New Roman', Times, serif;
-	color:#DC0009;
-	font-size:3.8em;
-	font-weight:700;
-}
+
 /* Team Section Style
 ------------------------------*/
-ul.section_team {
-	width:94.5%;
-	height:auto;
-	padding:0;
-	margin:0 auto;
-	list-style-type:none;
-}
-ul.team_stuff {
-	width:90%;
-	height:auto;
-	padding:0;
-	margin:0;
-	list-style-type:none;
-}
-ul.team_stuff > li {
-	width:100%;
-	height:auto;
-}
-.team_cont {
-	width:45.25%;
-	-webkit-flex: 0 1 auto;
-	-ms-flex: 0 1 auto;
-	flex: 0 1 auto;
-	min-height:200px;
-	height:auto;
-	margin:0;
-	margin-bottom:2em;
-	padding:.75em;
-	border-top:.12em solid #0C0B30;
-	background-color:#e4e4e4;
-	-webkit-border-radius:2px;
-	border-radius:2px;
-	-webkit-box-shadow:.12em .12em .4em 0 rgba(0,0,0,0.33);
-	box-shadow:.12em .12em .4em 0 rgba(0,0,0,0.33);
-	font-size:1rem;
+
+.team_cont {width:45.25%;-webkit-flex: 0 1 auto;-ms-flex: 0 1 auto;-webkit-box-flex: 0;flex: 0 1 auto;min-height:200px;height:auto;margin:0;
+margin-bottom:2em;padding:.75em;border:.1em solid #0C0B30;background-color:#f6f6f6;
+-webkit-border-radius:2px;border-radius:2px;-webkit-box-shadow:.12em .12em .4em 0 rgba(0,0,0,0.33);box-shadow:.12em .12em .4em 0 rgba(0,0,0,0.33);font-size:1rem;
 }
 .team_inner {
-	min-height:100%;
-	height:auto;
-	margin:0;
-	padding:0;
-	-webkit-flex: 0 1 auto;
-	-ms-flex: 0 1 auto;
-	flex: 0 1 auto;
+	min-height:100%;height:auto;margin:0;padding:0;-webkit-flex: 0 1 auto;-ms-flex: 0 1 auto;-webkit-box-flex: 0;flex: 0 1 auto;
 }
-.team_title, .ed_title {
-	width:100%;
-	height:auto;
-	font-family:'Noto Sans', Helvetica, Arial, sans-serif;
-	font-size:1.45em;
-	line-height:1.25em;
-	font-weight:700;
-	padding:0 .25em .25em .25em;
-	margin:0;
-}
-.team_photo {
-	width:100%;
-	padding:0;
-	padding-top:100%;
-	height:0;
-	margin:0;
-	position:relative;
-}
+
 .team_photo > div {
-	width:100%;
-	height:100%;
-	position:absolute;
 	top:0;
 	left:0;
-	background-size:cover;
+	-webkit-background-size:cover;
+	        background-size:cover;
 	border:2px solid #0C0B30;
 	-webkit-box-shadow:inset 0 0 1px 1px #0C0B30;
 	box-shadow:inset 0 0 1px 1px #0C0B30;
-	-webkit-box-sizing:border-box;
-	box-sizing:border-box;
 }
 span.team_name {
-	font-family: 'Libre Baskerville', Baskerville, Georgia, 'Times New Roman', Times, serif;
-	color:#DC0009;
 	font-size:1em;
 	line-height:1.25em;
 	width:100%;
 }
 .team_desc {
 	height:75%;
-	font-family:'Noto Sans', Helvetica, Arial, sans-serif;
-	color:#0C0B30;
 	font-size:.9em;
 	line-height:1.25em;
 	font-weight:400;
 }
 .team_desc > p { white-space:normal; }
-.team_link {
-	height:25%;
-	max-height:1.5em;
-	-webkit-align-self: flex-end; /* Safari 7.0+ */
-	align-self: flex-end;
-	padding:0;
-	margin:0;
-}
-
-.team_link > a {
-	font-family:'Noto Sans', Helvetica, Arial, sans-serif;
-	color:#0C0B30;
-	font-size:.75em;
-	font-weight:700;
-	position:relative;
-	width:150px;
-	line-height:1.5em;
-	margin:0;
-	padding:0;
-	text-align:right;}
-
-.team_link > a:after {
-	content:'MORE';
-	position:absolute;
-	width:80%;
-    height:1.5em;
-	top:50%;
-	left:50%;
-	display:block;
-	-webkit-transform:translate(-50%,-50%);
-	transform:translate(-50%,-50%);
-	margin:0;
-	padding:0;
-	padding-right:2.85em;
-	text-decoration:underline;}	
-	
-.team_link > a i{
-	line-height:1.5em;}
-.team_link > a:hover, .team_link > a:hover:after, .team_link > a:hover i,
-.team_link > a:active, .team_link > a:active:after, .team_link > a:active i{
-	text-decoration:none;
-	color:#DC0009;}
-
- .open_new a {
-	font-family:'Noto Sans', Helvetica, Arial, sans-serif;
-	color:#0C0B30;
-	font-size:.75em;
-	line-height:1.5em;
-	font-weight:700;
-	display:block;
-	text-transform:uppercase;
-	text-decoration:none;
-}
-
-
- .open_new a:hover, .open_new a:active {
-	color:#DC0009;
-	text-decoration:none;
-}
-
 
 .team_left { width:33%; }
 .team_right {
-	width:62%;
-	margin:0;
-	padding: 0;
-	-webkit-box-sizing:border-box;
-	box-sizing:border-box;
-}
+	width:62%;}
+	
 .team_right > div {
 	-webkit-flex: 1 1 auto;
 	-ms-flex: 1 1 auto;
-	flex: 1 1 auto;
+	-webkit-box-flex: 1;
+	        flex: 1 1 auto;
 	width:90%;
 	text-align:left;
 }
@@ -668,6 +494,7 @@ span.team_name {
 .td_1 { background-image:url(assets/images/png/main-page-potrait/dp_sq_400_alt3.png); }
 .te_1 { background-image:url(assets/images/png/main-page-potrait/jina_sq_400.png); }
 .tf_1 { background-image:url(assets/images/png/main-page-potrait/sahna_sq_400.png); }
+
 .skills {
 	border:2px solid #0C0B30;
 	width:75%;
@@ -690,14 +517,17 @@ span.team_name {
 	-webkit-box-sizing:inherit;
 	box-sizing:inherit;
 	background:#fff;
-	background-origin:border-box;
+	-webkit-background-origin:border-box;
+	        background-origin:border-box;
 	z-index:-1;
 	-webkit-transform:translate(-47.5%, -47.5%);
-	transform:translate(-47.5%, -47.5%);
+	-ms-transform:translate(-47.5%, -47.5%);
+	    transform:translate(-47.5%, -47.5%);
 }
 .skills:after {
 	background-image:url(assets/images/svg/stripe-pattern.svg), url(assets/images/png/svg-backup/stripe-pattern.png);
-	background-size:8px 8px;
+	-webkit-background-size:8px 8px;
+	        background-size:8px 8px;
 	background-repeat:repeat;
 	-webkit-box-shadow:inset 0.55em 0.55em 0.55em -.2em #000;
 	box-shadow:inset 0.55em 0.55em 0.55em -.2em #000;
@@ -713,43 +543,35 @@ span.team_name {
 	margin:0;
 	margin-top:.25em!important;
 }
-.ed_title >i, .ed_title > div, .open_new a, .open_new i { color:#DC0009; }
-.open_new {
-	width:150px;
-	height:auto;
-	padding:.4em;
-	border:1px solid #DC0009;
-}
+
 
 ul.contact_ul{
-	list-style-type:none;
 	width:50%;
-	height:auto;
-	margin: 0 auto;}
+	}
 	
 ul.contact_ul > li{
 	display:inline-block;
 	height:auto;
 	-webkit-flex: 0 1 auto;
 	-ms-flex: 0 1 auto;
-	flex:0 1 auto;
+	-webkit-box-flex:0;
+	        flex:0 1 auto;
 	}	
 ul.contact_ul > li a,
 ul.contact_ul > li a:hover,
 ul.contact_ul > li a:active{
 	color:#0C0B30;
 	text-decoration:none;}
+
 </style>
 </head>
 <body>
 
 <!-- START LOADING CONTENT -->
-<div class="loading" >
-	<div class="ld-cont f-row nowrap ctr_mid" style="width:100%; height:100%; overflow:hidden; z-index:0;">
-		<div class="ld-cont-left f-col nowrap ctr_mid" style="height:100%; width:100%; margin-left:auto; margin-right:auto;position:relative;background-color:#0C0B30;"> </div>
-		<!-- end left column -->
-		<div class="ld-cont-mid f-col nowrap ctr_mid " style="min-height:275px;height:100%;max-height:450px;min-width:275px;width:100%;max-width:450px; position:relative; z-index:1; background-color:#fff">
-			<div style="width:100%;padding-top:100%;position:inherit; z-index:1; background-color:#fff;margin:0 auto;">
+<div class="loading f-col nowrap j_ctr a_ctr full_w full_h no_mp p_fix b_box"  style="min-height:100%;">
+	<div class="loading-cont f-row nowrap ctr_mid p_rel full_w" style="min-height:100%;">
+			<div class="loading-cont-mid f-col nowrap j_ctr a_ctr p_rel b_box rnd_bdr">
+			<div class="full_w m_auto p_inh b_box rnd_bdr" style="padding-top:100%; z-index:1;background-color:#fff;">
 				<div class="dp-initials">
 					<svg class="letters"  viewBox="0 0 80 80" preserveAspectRatio="xMinYMin meet"> 
 						<!--[if gt IE 8]><!-->
@@ -893,8 +715,6 @@ ul.contact_ul > li a:active{
 			<!--end middle column container--> 
 		</div>
 		<!-- end middle column-->
-		<div class="ld-cont-right f-col nowrap ctr_mid" style="height:100%;background-color:#0C0B30;"></div>
-		<!-- end right column --> 
 	</div>
 	<!-- end ld-cont (inner container for loading window) --> 
 </div>
@@ -904,7 +724,7 @@ ul.contact_ul > li a:active{
 <!-- =====================================  --> 
 
 <!-- START LOADED CONTENT -->
-<div class="loaded" > 
+<div class="loaded full_w full_h no_mp b_box p_abs" > 
 	
 	<!--[if lt IE 9]>		
 			<script>
@@ -920,14 +740,14 @@ ul.contact_ul > li a:active{
 		<!--end video --
 	</div><!-- end video container -->
 	
-	<div class="load_in" style="padding:0; width:100%; height:100%;padding:0;padding-top:20px;"> 
+	<div class="load_in full_w full_h no_p p_abs" style="padding-top:20px;"> 
 		
 		<!-- =====================================  --> 
 		<!-- START HEADER-->
-		<ul class="ul_wrapper">
+		<ul class="ul_wrapper type_none full_w h_auto no_p m_auto">
 			<li class="head-logo f-row" >
-				<div class="f-col wrap" style="width:35%; min-width:386px;padding:0;">
-					<div class="darrell f-row nowrap" style="width:100%;height:3.6em;  padding:0;font-family: 'Libre Baskerville',Georgia, 'Times New Roman', Times, serif;box-sizing:border-box; font-weight:400; ">
+				<div class="f-col wrap no_p" style="width:35%; min-width:386px;">
+					<div class="darrell f-row nowrap full_w no_p libre b_box" style="height:3.6em; font-weight:400; ">
 						<div class="f-col j_start a_ctr dr">
 							<div style="font-size:2.25em; line-height:1.1em;font-variant: small-caps; font-weight:bold; ">dr</div>
 							<div style="font-size:.57em;line-height:1.1em;"> <i class="fa fa-circle" aria-hidden="true"></i> </div>
@@ -943,8 +763,8 @@ ul.contact_ul > li a:active{
 						<div class="darrell-sp">&nbsp;J.</div>
 					</div>
 					<!--end darrell -->
-					<div style="margin:10px 0 0 0; padding:0; width:100%; height:auto;">
-						<div class="svg-name inlinesvg" style="position:relative; height:0; width:100%; padding:0; padding-bottom:24.61%">
+					<div class="full_w h_auto no_p" style="margin:10px 0 0 0;">
+						<div class="svg-name inlinesvg p_rel full_w no_p" style="height:0; padding-bottom:24.61%">
 							<svg  viewBox="0 0 385.8 94.5" preserveAspectRatio="xMinYMin meet">
 								<path class="name-black" stroke-width="2" stroke-miterlimit="10" d="M45.5 39.3l-7 .2v-19H47c6.5 0 8.2 2.1 9 7-1.2-.3-.6 0-2 0h-8.5v11.8zm28-24.6c2.5 4 3.7 9.1 3.7 15.1 0 8.2-2.3 15.5-7 20-4.6 4.5-11.4 5.3-20.1 6.3l-11.9.2-.1 25.4-14.7.1v8.6h21v-26h12.8c8.7 0 15.4-3.1 20-7.7 4.6-4.5 7-11.4 7-19.6 0-8.2-2.3-14.8-7-19.4-1-1-2.3-2.1-3.7-3zm42 43.8h23V41.9h-7.4l-.4 9.7h-22.2v13h7v-6.1zm16.3 13l-.1 9.9-37.2.1v7.9H139v-18h-7.2zm198-30.3l-4.7-13-9.1 24.3h9.5l4.3-11.3zM114.5 28.5h24v-17h-6V21l-24 .1v12.4h6v-5zm232.6-17h-7.4l28 71h-15.9l2.4 7h22.5l-29.6-78zm-52.6 1h-7v10h-17v61h-13v6h20v-60h17v-17zm-55 16h10v-7h-10v7zm-73 54h-14v7h20V41.9l-6-8.9v49.5zm144.2-14l-4.6 14h-11.9l-2.7 7H313l4.6-14h24.2l-2.4-7h-28.7zm-137.3-57l30.1 38.8v-6.4l-25.2-32.4h-4.9zm51.1 70h-17.8l5.5 8h19.3v-79h-7v71z"/>
 								<path class="name-shadow" d="M136.9 28.5l-6.5-6.8 1-.5.3-2.1 6.8 6.7v2.7h-1.6zm1.6-17h-3.6l3.6 3.7v-3.7zm-.2 11l.1-4.2-5.8-5.7.1 4.2 5.6 5.7zm-19.7 36.2l-7-6.9-3.5.7 7 7 3.5-.8zm-10.1 2.1l4.2 4 2.4.1-.1-2-6.5-6.4v4.3zm63.9-1.5l-5.9-5.7v3.8l6 6-.1-4.1zm58.9-19.8l.1-4.2-7.9-7.8.1 3.9 7.7 8.1zm-116.8-8.1l-6.2-6.2-.1 4.1 6.3 5.4v-3.3zm57.9 14.1l-5.9-5.7v3.8l6.1 6-.2-4.1zm0 6.6l-5.9-5.7v3.8l6.1 6-.2-4.1zm0 14.6l-5.9-5.7v3.8l6 6-.1-4.1zm0 7.5l-5.9-5.7v3.8l6 6-.1-4.1zm-.2 7.4l-5.7-5.7v3.8l5.8 6-.1-4.1zM56 27.7l-.8-2.8-2.8-2.7-5.4-1.3 7.7 7.5 1.3-.7zm25.3-2.6l-2.9-5.3-4.4-4.1 1.7 3.3 5.6 6.1zm44.5 3.2l-7-7h-4.2l7 7h4.2zm-7.1.2l-7-7h-4.2l7 7h4.2zM51 28.3l-7-6.8h-4l6.8 6.8H51zm-6 1.2l-6.5-6.1v4.2l6.3 6.1.2-4.2zm93.5 19.1l-7-6.1v4.8l7 6.2v-4.9zm-5-20.3l-7-7h-4.2l7 7h4.2zm-94 7.9l5.2 3.8.5-3-5.8-4.8v4zm98.2 22.3l.2-1.3-6.1-6-3.7.3 7.2 6.9h2.4zm.8-17h-3.6l3.6 3.7v-3.7zm-14 17l-7-7h-4.2l7 7h4.2zm7.2 0l-7-7h-4.2l7 7h4.2zm193.6-5.2l-6.4-6.1-.8 3 3.3 3 3.9.1zm-47.9-24.4l-5.9-5.7V27l5.8 6 .1-4.1zm17.2-14.1l-2.6-2.6h-4.2l7 7-.2-4.4zm-.7 11h.8v-3.4l-7.8-7.8v4.2l7 7zM277.4 44l-5.9-5.7v3.8l5.8 6 .1-4.1zm-.1-7.7l-5.8-5.7v3.8l5.8 6v-4.1zm79.4 16.1l9 8.9-1.5-5.5-10.3-10.5 2.8 7.1zm4 11l9 8.9-1.5-5.5-10.3-10.5 2.8 7.1zm4 11l9 8.9-2.5-6.5-9.3-9.5 2.8 7.1zm-87.4-22.9l-5.8-5.7v3.8l5.9 6-.1-4.1zm50.5-3.4l-7-6.9-1.1 3.1 7 6.9 1.1-3.1zm-.2-15.8l-2.6-2.9-1.6 3.3 3.8 4 .4-4.4zm-96.3-7.7l.1-4.2-7.6-7.5.2 4 7.3 7.7zm98.8 17.3l-7-6.9-1.1 3.1 7 6.9 1.1-3.1zM231.4 43l-7.5-7.4.1 4 7.3 7.6.1-4.2zm-.1 15l-7.7-7.6-.1 3.8 7.8 8V58zm-7.6 18.8l7.6 7.8v-4.2l-7.6-7.5v3.9zm7.6-3.8l-7.6-7.4v3.8l7.7 7.8-.1-4.2zm-7.4-48.5l7.4 7.6.1-4.2-7.6-7.3.1 3.9zm7.4 41.1l-7.6-7.5.1 3.9 7.6 7.8-.1-4.2zM223.5 47l7.7 7.6-.2-4.2-7.5-7.3V47zm53.8 27l-5.8-5.7v3.8l5.9 6-.1-4.1zm0-7.4l-5.8-5.7v3.8l5.9 6-.1-4.1zm-45.8-56.1H224l7.5 5.9v-5.9zm45.8 70.9l-5.8-5.7v3.8l5.8 6v-4.1zm0-22.4l-5.8-5.7v3.8l5.8 6V59zM44.9 56.6l7.9 7.9H57l-7.9-8-4.2.1zm221.4 25.8l7 7h4.2l-7-7h-4.2zm7.6-60.5l7 7h4.2l-7-7h-4.2zm-15 60.6l7 7h4.2l-7-7h-4.2zm-.9 6.8h4.6l-4.6-4.6v4.6zm27.9-67.2h-4.2l7 7h4.2l-7-7zm6.7 64.4l2.2 3 4.2-.2-5.4-5.5-1 2.7zm-68.7-6.7l.1 1.9-1.9.5 7.3 7.3 2.1-.1-.1-2-7.5-7.6zm-15.8 2.4l7.4 7.3h4l-7.2-7.3h-4.2zm7 0l7.4 7.3h4l-7.2-7.3h-4.2zm-28.6-55.4v3.8l18.1 17-.2-4.2-17.9-16.6zm109.4 55.7l7 7h4.2l-7-7h-4.2zM186.7 21.8l-8.3-10.1-5 .1 15.4 13.8-2.1-3.8zm53.5.7v3l3.1 3.1h4.2l-6.2-6.1h-1.1zm2.5-1.7l7 7 .5-3.3-3.3-3.6-4.2-.1zm119 29.5l-1.5-5.5-11.3-11.5 2.9 7.1 9.9 9.9zm-7.5-19.5l-9.9-10.2 2.2 6.4 9.3 9.3-1.6-5.5zm-2 52.3l7 7h4.2l-7-7h-4.2zm-2-64.3l-7.1-7.1-1.7.1-.9 1.2 11.2 11.3-1.5-5.5zm16.9 60.4l-2.1 2.3 8.1 8.1 3.1-1.1-9.1-9.3zm-64.4 2.7l7 7h4.2l-8-8-3.2 1zm56.3.7l7 7h4.2l-8-8-3.2 1zm-51.1-4.1l7.2 7.2.9-3.4-7-6.9-1.1 3.1zm20.4-10.6l7 7h4.2l-7-7h-4.2zm-19.4 4l7.2 7.2.9-3.4-7-6.9-1.1 3.1zm12.7-3.4l7 7h4.2l-7-7h-4.2zm-8-.2l7 7h4.2l-7-7h-4.2zm-238-27.2l6.9 6.8.8-3.3-6.8-6.8-.9 3.3zM38.5 57.5l6.1 7h4.2l-6.9-7.7-3.4.7zm13.9-.7l8.1 7.7 3.6-.5-7.7-7.8-4 .6zM65.9 54l6.5 6.5 2.8-1.5-7.2-7.4-2.1 2.4zm-5.7 1.9l6.5 6.5 3.2-1-6.4-6.5-3.3 1zm12.7-10L80 53l1.1-2.9-6.6-6.7-1.6 2.5zm-3.3 4.3l7.1 7.2 2.1-2.1-7.1-7.1-2.1 2zM31.9 81.5l8.4 8.4h4.3l-8.3-8.4h-4.4zm-8.7 7.3l1.7 1.7h4.3l-5.9-5.9-.1 4.2zm.7-7.3l8.4 8.4h4.3l-8.3-8.4h-4.4zm15.6-1.1l5 5.7v-4.3l-5-5.2v3.8zm0-8l5 5.7v-4.3l-5-5.2v3.8zm5-5.6l-5-5.2v3.8l5 5.7v-4.3zm52.1 15l7.7 7.7h4.2l-7.6-7.6-4.3-.1zm35.3-5.4v4.2l7 7v-4.2l-7-7zm-5.9 5.4l7.7 7.7h4.2l-7.4-7.6-4.5-.1zm8.5-9.7l-2.1.1-.4 1.5 7.9 7.9v-4.2l-5.4-5.3zm20.1 10.5l7 7h4.2l-7-7h-4.2zm-2.3 4.6l2.3 2.3h4.2l-6.1-6.1-.4 3.8zm-33.2-5.4l7.5 7.7h4.2l-7.5-7.5-4.2-.2zm-24.8 4.8l1.6 3.2h5.3l-6.5-6.3-.4 3.1zM76.8 23.2l.4 4.6 6.9 6.7-1.3-5.3-6-6zm34.9 58.7l7.6 7.6h4.2l-7.7-7.7-4.1.1zM77.1 35.2l6.5 6.6.3-3.9-6.4-6.4-.4 3.7zM162 82.6l7 7h4.2l-7-7H162zm-57.5-.8l7.6 7.8h4.2l-7.7-7.7-4.1-.1z"/>
@@ -953,8 +773,8 @@ ul.contact_ul > li a:active{
 							<!-- end in-line svg name --> 
 						</div>
 						<!--end name-svg container-->
-						<div class="fallback-name no-inlinesvg f-row ctr_mid nowrap" style="width:100%;height:7em; line-height:6.5em; padding:0; position:absolute;top:0;left:0; font-family:'Noto Sans','Arial Black', Arial, Helvetica, sans-serif; font-weight:	bolder;color:rgba(255,255,255,0.0);-webkit-text-stroke:4px white;" >
-							<div class="fallback-sp" style="position:relative;width:100%;height:100%;">PENTA</div>
+						<div class="fallback-name no-inlinesvg f-row ctr_mid nowrap full_w no_p p_abs noto" style="height:7em; line-height:6.5em; top:0;left:0; font-weight:	bolder;color:rgba(255,255,255,0.0);-webkit-text-stroke:4px white;" >
+							<div class="fallback-sp p_rel full_w full_h">PENTA</div>
 							<!--end last-name --> 
 						</div>
 						<!--End fallback name--> 
@@ -1027,7 +847,7 @@ ul.contact_ul > li a:active{
 		
 		<section id="nav_section"> 
 			<!-- START BODY-->
-			<div style="width:100%; height:auto;padding:0;margin:1em auto;-webkit-box-sizing: border-box; box-sizing: border-box;display:block;">
+			<div class="no_p b_box full_w h_auto" style="margin:1em auto;display:block;">
 				<ul class="navi f-row wrap j_rnd a_ctr" >
 					<li class="f-row nowrap j_ctr a_ctr"> <a href="#team_intro" class="f-row nowrap j_ctr a_base">
 						<p>the&nbsp;</p>
@@ -1042,6 +862,7 @@ ul.contact_ul > li a:active{
 						<h1>Extras</h1>
 						</a> </li>-->
 					<li class="f-row nowrap j_ctr a_ctr"> <a href="#contact_intro" class="f-row nowrap j_ctr a_ctr">
+					<p>dp:</p>
 						<h1>Contact</h1>
 						</a
 					></li>
@@ -1052,116 +873,120 @@ ul.contact_ul > li a:active{
 		</section>
 		<!-- =====================================  --> 
 		<!-- TEAM-->
-		<section id="team_intro" style="width:100%; height:auto; padding:0; margin:0;  margin-top:1em;">
-			<div class="section_title f-row j_ctr a_base">
-				<p>the&nbsp;</p>
-				<p>Team</p>
+		<section id="team_intro" class="no_mp w_full h_auto">
+			<div class="section_title f-row j_ctr a_ctr no_p m_auto h_auto" style="width:90%;">
+			<p class="noto black_text" style="font-size:2.4em;font-weight:400;">the&nbsp;</p>
+				<p class="libre red_text" style="font-size:3.75em;font-weight:700;">Team</p>
 			</div>
 			<!-- =====================================  -->
 			
-			<ul class="section_team f-row j_rnd a_ctr wrap">
+			<ul class="section_team f-row j_rnd a_ctr wrap p_rel h_auto no_p m_auto type_none" style="width:94.5%; z-index:0;">
 				<li class="team_cont f-row wrap">
-					<div class="team_title" >Behavioral Scientist</div>
-					<div class="team_inner team_left f-col" >
-						<div class="team_photo">
-							<div class="ta_1"></div>
+					<div class="team_title full_w h_auto noto no_m f-row nowrap j_btw a_base" style="font-size:1.45em;line-height:1.25em;font-weight:700;padding:.25em; border-bottom:.1em solid #0C0b30;border-top:.06em solid #0C0b30;margin-bottom:.28em;"><p class="no_mp">Behavioral Scientist</p><p class="no_mp"><i class="fa fa-flask black_text" aria-hidden="true"></i></p></div>
+					<div class="team_inner team_left f-col " >
+						<div class="team_photo full_w no_mp p_rel" style="height:0; padding-top:100%;">
+							<div class="ta_1 full_w full_h p_abs b_box"></div>
 						</div>
 					</div>
-					<div class="team_inner team_right f-col nowrap j_ctr a_ctr" >
-						<div class="team_desc f-col wrap j_ctr a_start truncate">
-							<p> <span class="team_name">Darrell J. Penta</span> has 5+ years of experience designing and conducting experiments to learn more about complex human behaviors. </p>
+					<div class="team_inner team_right f-col nowrap j_ctr a_ctr b_box no_mp" >
+						<div class="team_desc f-col wrap j_ctr a_start truncate noto black_text">
+							<p> <span class="team_name red_text libre">Darrell J. Penta</span> has 5+ years of experience designing and conducting experiments to learn more about complex human behaviors. </p>
 						</div>
-						<div class="team_link f-row j_end a_end"><a href="bio.html#darrell"><i class="small material-icons">open_in_new</i></a></div>
+						<div class="f-row j_end a_end"><a href="bio.html#darrell" class="dp_btn_small f-row nowrap j_btw a_ctr" ><p>MORE</p><p><i class="small material-icons">open_in_new</i></p></a></div>
 					</div>
 				</li>
 				<li class="team_cont f-row wrap">
-					<div class="team_title" >Communications Consultant</div>
+				<div class="team_title full_w h_auto noto no_m f-row nowrap j_btw a_base" style="font-size:1.45em;line-height:1.25em;font-weight:700;padding:.25em; border-bottom:.1em solid #0C0b30;border-top:.06em solid #0C0b30;margin-bottom:.28em;"><p class="no_mp">Communications Consultant</p><p class="no_mp"><i class="fa fa-comments black_text" aria-hidden="true"></i></p></div>
 					<div class="team_inner team_left f-col" >
-						<div class="team_photo">
-							<div class="tb_1"></div>
+						<div class="team_photo full_w no_mp p_rel" style="height:0; padding-top:100%;">
+							<div class="tb_1 full_w full_h p_abs b_box"></div>
 						</div>
 					</div>
-					<div class="team_inner team_right f-col nowrap j_ctr a_ctr" >
-						<div class="team_desc f-col nowrap j_ctr a_start truncate">
-							<p><span class="team_name">Darrell J. Penta</span> combines linguistic theory, data science, and creativity to help individuals and organizations craft effective messages. </p>
+					<div class="team_inner team_right f-col nowrap j_ctr a_ctr b_box no_mp" >
+						<div class="team_desc f-col nowrap j_ctr a_start truncate  noto black_text">
+							<p><span class="team_name red_text libre">Darrell J. Penta</span> combines linguistic theory, data science, and creativity to help individuals and organizations craft effective messages. </p>
 						</div>
-						<div class="team_link f-row j_end a_end"><a href="bio.html#darrell"><i class="small material-icons">open_in_new</i></a></div>
-					</div>
-				</li>
-			</ul>
-			<ul class="section_team f-row j_rnd a_ctr wrap">
-				<li class="team_cont f-row wrap">
-					<div class="team_title" >UX Researcher</div>
-					<div class="team_inner team_left f-col" >
-						<div class="team_photo">
-							<div class="tc_1"></div>
+						<div class="f-row j_end a_end"><a href="bio.html#darrell" class="dp_btn_small f-row nowrap j_btw a_ctr" ><p>MORE</p><p><i class="small material-icons">open_in_new</i></p></a>
 						</div>
-					</div>
-					<div class="team_inner team_right f-col nowrap j_ctr a_ctr" >
-						<div class="team_desc f-col nowrap j_ctr a_start truncate">
-							<p><span class="team_name">Darrell J. Penta</span> conducts research on behalf of start-ups and established business to improve user experiences.</p>
-						</div>
-						<div class="team_link f-row j_end a_end"><a href="bio.html#darrell"><i class="small material-icons">open_in_new</i></a></div>
-					</div>
-				</li>
-				<li class="team_cont f-row wrap">
-					<div class="team_title" >HTML/CSS &amp; Creator </div>
-					<div class="team_inner team_left f-col" >
-						<div class="team_photo">
-							<div class="td_1"></div>
-						</div>
-					</div>
-					<div class="team_inner team_right f-col nowrap j_ctr a_ctr" >
-						<div class="team_desc f-col nowrap j_ctr a_start truncate">
-							<p><span class="team_name">Darrell J. Penta</span> uses HTML and CSS to create cool stuff online. </p>
-						</div>
-						<div class="team_link f-row j_end a_end"><a href="bio.html#darrell"><i class="small material-icons">open_in_new</i></a></div>
 					</div>
 				</li>
 			</ul>
-			<ul class="section_team f-row j_rnd a_ctr wrap">
+				<ul class="section_team f-row j_rnd a_ctr wrap p_rel h_auto no_p m_auto type_none" style="width:94.5%;z-index:0;">
 				<li class="team_cont f-row wrap">
-					<div class="team_title" >Head of Operations, Talent Manager</div>
+						<div class="team_title full_w h_auto noto no_m f-row nowrap j_btw a_base" style="font-size:1.45em;line-height:1.25em;font-weight:700;padding:.25em; border-bottom:.1em solid #0C0b30;border-top:.06em solid #0C0b30;margin-bottom:.28em;"><p class="no_mp">UX Researcher</p><p class="no_mp"><i class="fa fa-users black_text" aria-hidden="true"></i></p></div>
 					<div class="team_inner team_left f-col" >
-						<div class="team_photo">
-							<div class="te_1"></div>
+						<div class="team_photo full_w no_mp p_rel" style="height:0; padding-top:100%;">
+							<div class="tc_1 full_w full_h p_abs b_box"></div>
 						</div>
 					</div>
-					<div class="team_inner team_right f-col nowrap j_ctr a_ctr" >
-						<div class="team_desc  f-col nowrap j_ctr a_start truncate">
-							<p>The magnificent <span class="team_name">Jieun "Jina" Park Penta</span> joined the team in 2009 and manages to keep Darrell Penta running smoothly. </p>
+					<div class="team_inner team_right f-col nowrap j_ctr a_ctr  b_box no_mp" >
+						<div class="team_desc f-col nowrap j_ctr a_start truncate  noto black_text">
+							<p><span class="team_name red_text libre">Darrell J. Penta</span> conducts research on behalf of start-ups and established business to improve user experiences.</p>
 						</div>
-						<div class="team_link f-row j_end a_end"><a href="bio.html#jina"><i class="small material-icons">open_in_new</i></a></div>
+						<div class="f-row j_end a_end"><a href="bio.html#darrell" class="dp_btn_small f-row nowrap j_btw a_ctr" ><p>MORE</p><p><i class="small material-icons">open_in_new</i></p></a></div>
 					</div>
 				</li>
 				<li class="team_cont f-row wrap">
-					<div class="team_title" >Team Mascot</div>
+					<div class="team_title full_w h_auto noto no_m f-row nowrap j_btw a_base" style="font-size:1.45em;line-height:1.25em;font-weight:700;padding:.25em; border-bottom:.1em solid #0C0b30;border-top:.06em solid #0C0b30;margin-bottom:.28em;"><p class="no_mp">HTML/CSS Creator</p><p class="no_mp"><i class="fa fa-code black_text" aria-hidden="true"></i></p></div>
 					<div class="team_inner team_left f-col" >
-						<div class="team_photo">
-							<div class="tf_1"></div>
+						<div class="team_photo full_w no_mp p_rel" style="height:0; padding-top:100%;">
+							<div class="td_1 full_w full_h p_abs b_box"></div>
 						</div>
 					</div>
-					<div class="team_inner team_right f-col j_ctr a_ctr" >
-						<div class="team_desc f-col nowrap j_ctr a_start truncate">
-							<p><span class="team_name">Sahna the Puppy</span> really enjoys eating and sleeping.</p>
+					<div class="team_inner team_right f-col nowrap j_ctr a_ctr  b_box no_mp" >
+						<div class="team_desc f-col nowrap j_ctr a_start truncate  noto black_text">
+							<p><span class="team_name red_text libre">Darrell J. Penta</span> uses HTML and CSS to create cool stuff online. </p>
 						</div>
-						<div class="team_link f-row j_end a_end"><a href="bio.html#sahna"><i class="small material-icons">open_in_new</i></a></div>
+						<div class="f-row j_end a_end"><a href="bio.html#darrell" class="dp_btn_small f-row nowrap j_btw a_ctr" ><p>MORE</p><p><i class="small material-icons">open_in_new</i></p></a></div>
 					</div>
 				</li>
-			</ul>
-		</section>
+				</ul>
+				<ul class="section_team f-row j_rnd a_ctr wrap p_rel h_auto no_p m_auto type_none" style="width:94.5%;z-index:0;">
+					<li class="team_cont f-row wrap">
+						<div class="team_title full_w h_auto noto no_m f-row nowrap j_btw a_base" style="font-size:1.45em;line-height:1.25em;font-weight:700;padding:.25em; border-bottom:.1em solid #0C0b30;border-top:.06em solid #0C0b30;margin-bottom:.28em;"><p class="no_mp">Head of Operations, Talent Manager</p><p class="no_mp"><i class="fa fa-life-ring black_text" aria-hidden="true"></i></p></div>
+					<div class="team_inner team_left f-col" >
+						<div class="team_photo full_w no_mp p_rel" style="height:0; padding-top:100%;">
+							<div class="te_1 full_w full_h p_abs b_box"></div>
+						</div>
+					</div>
+					<div class="team_inner team_right f-col nowrap j_ctr a_ctr  b_box" >
+						<div class="team_desc  f-col nowrap j_ctr a_start truncate  noto black_text">
+							<p>The magnificent <span class="team_name red_text libre">Jieun "Jina" Park Penta</span> joined the team in 2009 and manages to keep Darrell Penta running smoothly. </p>
+						</div>
+						<div class="f-row j_end a_end"><a href="bio.html#jina" class="dp_btn_small f-row nowrap j_btw a_ctr" ><p>MORE</p><p><i class="small material-icons">open_in_new</i></p></a></div>
+					</div>
+				</li>
+					<li class="team_cont f-row wrap">
+					<div class="team_title full_w h_auto noto no_m f-row nowrap j_btw a_base" style="font-size:1.45em;line-height:1.25em;font-weight:700;padding:.25em; border-bottom:.1em solid #0C0b30;border-top:.06em solid #0C0b30;margin-bottom:.28em;"><p class="no_mp">Team Mascot</p><p class="no_mp"><i class="fa fa-paw black_text" aria-hidden="true"></i></p></div>
+					<div class="team_inner team_left f-col" >
+						<div class="team_photo full_w no_mp p_rel" style="height:0; padding-top:100%;">
+							<div class="tf_1 full_w full_h p_abs b_box"></div>
+						</div>
+					</div>
+					<div class="team_inner team_right f-col j_ctr a_ctr  b_box" >
+						<div class="team_desc f-col nowrap j_ctr a_start truncate noto black_text">
+							<p><span class="team_name red_text libre">Sahna the Puppy</span> really enjoys eating and sleeping.</p>
+						</div>
+						<div class="f-row j_end a_end"><a href="bio.html#sahna" class="dp_btn_small f-row nowrap j_btw a_ctr" ><p>MORE</p><p><i class="small material-icons">open_in_new</i></p></a></div>
+					</div>
+				</li>
+				</ul>
+				</section>
 	
 		<!-- =====================================  --> 
 		<!-- =====================================  --> 
 		<!-- SPECS-->
-		<section  id="specs_intro" style="width:100%; height:auto; padding:0; margin:0;  margin-top:1em;">
-			<div class="section_title f-row j_ctr a_base">
-				<p>the&nbsp;</p>
-				<p>Specs</p>
+		<section  id="specs_intro" class="full_w h_auto no_mp" >
+					<div class="section_title f-row j_ctr a_base no_p m_auto h_auto" style="width:90%;">
+				<p class="noto black_text" style="font-size:2.4em;font-weight:400;">the&nbsp;</p>
+				<p class="libre red_text" style="font-size:3.75em;font-weight:700;">Specs</p>
 			</div>
 			<!-- =====================================  -->
 			<div class="skills f-col" >
-				<div class="open_new f-irow nowrap j_ctr a_ctr"><a href="specs.html">See the full specs</a><i class="small material-icons">open_in_new</i></div>
+		<div class="f-row j_start a_ctr full_w m_auto">
+ <a class="dp_btn f-row nowrap j_end a_ctr "  href="specs.html" title="Full Specs" target="_new"><p>SEE FULL SPECS</p><p><i class="small material-icons">open_in_new</i></p> </a>
+
+ </div>
 				<div class="skill_main f-row nowrap a_ctr"><i class="medium material-icons">check</i><strong>Designing and conducting empirical studies to answer complex questions:</strong></div>
 				<div class="f-row wrap" style="width:80%; height:auto; margin:0 auto 0 3.5em;">
 					<div class="chip">Quantitative experiments<i class="close material-icons">close</i></div>
@@ -1207,17 +1032,17 @@ ul.contact_ul > li a:active{
 		<!-- =====================================  --> 
 		<!-- =====================================  --> 
 		<!-- SPECS-->
-		<section  id="contact_intro" style="width:100%; height:auto; padding:0; margin:0;  margin-top:1em;">
-			<div class="section_title f-row j_ctr a_base">
-				<p></p>
-				<p>Contact</p>
+		<section  id="contact_intro" class="full_w h_auto no_mp">
+					<div class="section_title f-row j_ctr a_base no_p m_auto h_auto" style="width:90%;">
+				<p class="noto black_text" style="font-size:2.4em;font-weight:400;">dp:</p>
+				<p class="libre red_text" style="font-size:3.75em;font-weight:700;">Contact</p>
 			</div>
 			<!-- =====================================  -->
-			<ul class="contact_ul f-row j_ctr a_ctr wrap">
+			<ul class="contact_ul f-row j_ctr a_ctr wrap type_none m_auto h_auto">
 			<lI><a href="mailto:darrellpenta@gmail.com"><i class="medium material-icons">mail_outline</i></a></lI>
 			<lI><code>darrellpenta&#64;gmail.com</code></lI>
 			</ul>
-			<ul class="contact_ul f-row j_ctr a_ctr wrap">
+			<ul class="contact_ul f-row j_ctr a_ctr wrap type_none m_auto h_auto">
 			<lI><a href="tel:+16176520034" title="Call" itemtype="http://schema.org/Person" itemprop="telephone" description="Call"><i class="medium material-icons">phone</i></a></lI>
 			<lI><code>1-617-652-0034</code></lI>
 			</ul>
@@ -1230,8 +1055,9 @@ ul.contact_ul > li a:active{
 <!--end LOAD IN-->
 </div>
 <!--end LOADED content-->
-<div class="small-nav-holder" style="position: fixed;bottom: 0;right: 0;margin: 0 2.2em 20px 0;z-index: 1100;-webkit-box-sizing: border-box;box-sizing: border-box;">
+<div class="small-nav-holder">
 	<div class="rad-nav f-row j_ctr a_ctr">
+	<div style="position:absolute; top:0;left:0; z-index:9999;">
 		<input id="logo-check" type="checkbox" class="browser-default">
 		<label class="rad-label f-row j_ctr a_ctr" for="logo-check">
 		<div class="toggler f-row j_ctr a_ctr">
@@ -1298,6 +1124,7 @@ ul.contact_ul > li a:active{
 		</div>
 		<!-- end rad cont-->
 		<div class="tog-back"></div>
+	</div>
 	</div>
 	<!--end rad nav--> 
 	

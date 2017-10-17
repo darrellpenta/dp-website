@@ -33,7 +33,6 @@
 <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
 <meta name="theme-color" content="#ffffff">
 <link rel="stylesheet" href="https://use.fontawesome.com/04d82f9725.css">
-<link href="https://fonts.googleapis.com/css?family=Quicksand:400" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Libre+Baskerville:400,700" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Noto+Sans:400,700" rel="stylesheet">
 
@@ -46,6 +45,7 @@
 
 <link rel="stylesheet" href="css/normalize.min.css" type="text/css">
 <link rel="stylesheet" href="css/dp-navigation-style.css" type="text/css">
+<link rel="stylesheet" href="css/global.css" type="text/css">
 <link rel="stylesheet" href="css/media-qry.css" type="text/css">
 
 <style>
@@ -55,19 +55,21 @@ color:#0C0B30; }
 /*========================
 Flexbox shortcuts
 ========================*/
-.f-col,.f-row{-webkit-box-direction:normal}.ctr_dist,.ctr_end,.ctr_mid{align-content:center}.f-row{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-ms-flex-direction:row;flex-direction:row}.f-col{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-ms-flex-direction:column;flex-direction:column}.wrap{-ms-flex-wrap:wrap;flex-wrap:wrap}.nowrap{-ms-flex-wrap:nowrap;flex-wrap:nowrap}.j_start{-webkit-justify-content:flex-start;-ms-flex-pack:start;justify-content:flex-start}.j_end{-webkit-justify-content:flex-end;-ms-flex-pack:end;justify-content:flex-end}.j_ctr{-webkit-box-pack:center;-ms-flex-pack:center;-webkit-justify-content:center;justify-content:center}.j_btw{-webkit-justify-content:space-between;-ms-flex-pack:justify;justify-content:space-between}.j_rnd{-webkit-justify-content:space-around;-ms-flex-pack:distribute;justify-content:space-around}.a_start{-webkit-align-items:flex-start;-ms-flex-align:start;align-items:flex-start}.a_end{-webkit-align-items:flex-end;-ms-flex-align:end;align-items:flex-end}.a_ctr{-webkit-align-items:center;-ms-flex-align:center;align-items:center}.a_str{-webkit-align-items:stretch;-ms-flex-align:stretch;align-items:stretch}.ctr_mid{-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-ms-flex-line-pack:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center}.ctr_dist{-ms-flex-pack:distribute;justify-content:space-around;-ms-flex-line-pack:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center}.ctr_end{-webkit-box-pack:end;-ms-flex-pack:end;justify-content:flex-end;-ms-flex-line-pack:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center}.as_end{ -webkit-align-self: flex-end;-ms-flex-item-align: end;align-self: flex-end;}
+.f-col,.f-row{-webkit-box-direction:normal}.ctr_dist,.ctr_end,.ctr_mid{-webkit-align-content:center;-ms-flex-line-pack:center;align-content:center}.f-row{display:-webkit-box;display:-ms-flexbox;display:-webkit-flex;display:flex;-webkit-box-orient:horizontal;-ms-flex-direction:row;-webkit-flex-direction:row;flex-direction:row}.f-col{display:-webkit-box;display:-ms-flexbox;display:-webkit-flex;display:flex;-webkit-box-orient:vertical;-ms-flex-direction:column;-webkit-flex-direction:column;flex-direction:column}.wrap{-ms-flex-wrap:wrap;-webkit-flex-wrap:wrap;flex-wrap:wrap}.nowrap{-ms-flex-wrap:nowrap;-webkit-flex-wrap:nowrap;flex-wrap:nowrap}.j_start{-webkit-justify-content:flex-start;-ms-flex-pack:start;-webkit-box-pack:start;justify-content:flex-start}.j_end{-webkit-justify-content:flex-end;-ms-flex-pack:end;-webkit-box-pack:end;justify-content:flex-end}.j_ctr{-webkit-box-pack:center;-ms-flex-pack:center;-webkit-justify-content:center;justify-content:center}.j_btw{-webkit-justify-content:space-between;-ms-flex-pack:justify;-webkit-box-pack:justify;justify-content:space-between}.j_rnd{-webkit-justify-content:space-around;-ms-flex-pack:distribute;justify-content:space-around}.a_start{-webkit-align-items:flex-start;-ms-flex-align:start;-webkit-box-align:start;align-items:flex-start}.a_end{-webkit-align-items:flex-end;-ms-flex-align:end;-webkit-box-align:end;align-items:flex-end}.a_ctr{-webkit-align-items:center;-ms-flex-align:center;-webkit-box-align:center;align-items:center}.a_str{-webkit-align-items:stretch;-ms-flex-align:stretch;-webkit-box-align:stretch;align-items:stretch}.ctr_mid{-webkit-box-pack:center;-ms-flex-pack:center;-webkit-justify-content:center;justify-content:center;-ms-flex-line-pack:center;-webkit-box-align:center;-ms-flex-align:center;-webkit-align-items:center;align-items:center}.ctr_dist{-ms-flex-pack:distribute;-webkit-justify-content:space-around;justify-content:space-around;-ms-flex-line-pack:center;-webkit-box-align:center;-ms-flex-align:center;-webkit-align-items:center;align-items:center}.ctr_end{-webkit-box-pack:end;-ms-flex-pack:end;-webkit-justify-content:flex-end;justify-content:flex-end;-ms-flex-line-pack:center;-webkit-box-align:center;-ms-flex-align:center;-webkit-align-items:center;align-items:center}.as_end{ -webkit-align-self: flex-end;-ms-flex-item-align: end;align-self: flex-end;}
 .a_base{-webkit-align-items: baseline;
     -ms-flex-align: baseline;
-    align-items: baseline;}
+    -webkit-box-align: baseline;
+        align-items: baseline;}
 .f-irow{   display: -ms-inline-flexbox;
     display: -webkit-inline-flex;
+    display: -webkit-inline-box;
     display: inline-flex;}	
 
 /*========================
 Load screen transitions
 ========================*/
-@-webkit-keyframes "load-out"{0%{-webkit-transform:translate3d(0, 0, 0) perspective(none) rotateX(0) rotateY(0) rotateZ(0) scale(1.0, 1.0);-moz-transform:translate3d(0, 0, 0) perspective(none) rotateX(0) rotateY(0) rotateZ(0) scale(1.0, 1.0);transform:translate3d(0, 0, 0) perspective(none) rotateX(0) rotateY(0) rotateZ(0) scale(1.0, 1.0);opacity:1.0;}100%{-webkit-transform:translate3d(0, 0, 0) perspective(500px) rotateX(0) rotateY(-90deg) rotateZ(20deg) scale(1.0, 1.0);-moz-transform:translate3d(0, 0, 0) perspective(500px) rotateX(0) rotateY(-90deg) rotateZ(20deg) scale(1.0, 1.0);transform:translate3d(0, 0, 0) perspective(500px) rotateX(0) rotateY(-90deg) rotateZ(20deg) scale(1.0, 1.0);display:none;opacity:1.0;}}
-@keyframes "load-out"{0%{-webkit-transform:translate3d(0, 0, 0) perspective(none) rotateX(0) rotateY(0) rotateZ(0) scale(1.0, 1.0);-moz-transform:translate3d(0, 0, 0) perspective(none) rotateX(0) rotateY(0) rotateZ(0) scale(1.0, 1.0);transform:translate3d(0, 0, 0) perspective(none) rotateX(0) rotateY(0) rotateZ(0) scale(1.0, 1.0);opacity:1.0;}100%{-webkit-transform:translate3d(0, 0, 0) perspective(500px) rotateX(0) rotateY(-90deg) rotateZ(20deg) scale(1.0, 1.0);-moz-transform:translate3d(0, 0, 0) perspective(500px) rotateX(0) rotateY(-90deg) rotateZ(20deg) scale(1.0, 1.0);transform:translate3d(0, 0, 0) perspective(500px) rotateX(0) rotateY(-90deg) rotateZ(20deg) scale(1.0, 1.0);display:none;opacity:1.0;}}
+@-webkit-keyframes "load-out"{0%{-webkit-transform:translate3d(0, 0, 0) perspective(none) rotateX(0) rotateY(0) rotateZ(0) scale(1.0, 1.0);transform:translate3d(0, 0, 0) perspective(none) rotateX(0) rotateY(0) rotateZ(0) scale(1.0, 1.0);opacity:1.0;}100%{-webkit-transform:translate3d(0, 0, 0) perspective(500px) rotateX(0) rotateY(-90deg) rotateZ(20deg) scale(1.0, 1.0);transform:translate3d(0, 0, 0) perspective(500px) rotateX(0) rotateY(-90deg) rotateZ(20deg) scale(1.0, 1.0);display:none;opacity:1.0;}}
+@keyframes "load-out"{0%{-webkit-transform:translate3d(0, 0, 0) perspective(none) rotateX(0) rotateY(0) rotateZ(0) scale(1.0, 1.0);transform:translate3d(0, 0, 0) perspective(none) rotateX(0) rotateY(0) rotateZ(0) scale(1.0, 1.0);opacity:1.0;}100%{-webkit-transform:translate3d(0, 0, 0) perspective(500px) rotateX(0) rotateY(-90deg) rotateZ(20deg) scale(1.0, 1.0);transform:translate3d(0, 0, 0) perspective(500px) rotateX(0) rotateY(-90deg) rotateZ(20deg) scale(1.0, 1.0);display:none;opacity:1.0;}}
 @-webkit-keyframes "load-in"{0%{z-index:-2;}95%{z-index:-2;}100%{z-index:1;}}
 @keyframes "load-in"{0%{z-index:-2;}95%{z-index:-2;}100%{z-index:2;}}
 
@@ -79,11 +81,11 @@ SITE BACKGROUND
 
 .video-container {position: fixed;top: 0;right: 0;bottom: 0;left: 0;overflow: hidden;}
 
-.video-container > #dp-vid {position: absolute;top: 0;left: 0;width: 100%;height: 100%;z-index: -100;background:	url(assets/images/bg/dp-bg-poster-960x540.png) no-repeat;background-size: cover;object-fit: cover;}
+.video-container > #dp-vid {position: absolute;top: 0;left: 0;width: 100%;height: 100%;z-index: -100;background:	url(assets/images/bg/dp-bg-poster-960x540.png) no-repeat;-webkit-background-size: cover;background-size: cover;-o-object-fit: cover;object-fit: cover;}
 /* 1. No object-fit support: */
 @media (min-aspect-ratio: 16/9) {.video-container > #dp-vid {height:600%;top: -100%;}}
 @media (max-aspect-ratio: 16/9) {.video-container > #dp-vid {width: 600%; left: -100%;}}
-@supports (object-fit: cover) {.video-container > #dp-vid {top: 0;left: 0;width: 100%;height: 100%;object-fit: cover;}}
+@supports ((-o-object-fit: cover) or (object-fit: cover)) {.video-container > #dp-vid {top: 0;left: 0;width: 100%;height: 100%;-o-object-fit: cover;object-fit: cover;}}
 
 
 
@@ -93,20 +95,26 @@ HEADER Specs
 .ul_wrapper {
   display: -ms-flexbox;
     display: -webkit-box;
+    display: -webkit-flex;
     display: flex;
     -ms-flex-direction: row;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
+            -webkit-flex-direction: row;
             flex-direction: row;
     -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
+            flex-wrap: wrap;
     -ms-flex-pack: justify;
     -webkit-box-pack: justify;
+            -webkit-justify-content: space-between;
             justify-content: space-between;
     -ms-flex-line-pack: stretch;
-    align-content: stretch;
+    -webkit-align-content: stretch;
+            align-content: stretch;
     -ms-flex-align: start;
     -webkit-box-align: start;
+            -webkit-align-items: flex-start;
             align-items: flex-start;
   width:100%;
   padding-top:5px;
@@ -119,11 +127,13 @@ HEADER Specs
 .ul_wrapper li{
  display:-webkit-inline-box;
  display:-ms-inline-flexbox;
+ display:-webkit-inline-flex;
  display:inline-flex;
  width:48%;
  height:auto;
   -webkit-box-flex:0;
       -ms-flex:1 1 auto;
+          -webkit-flex:1 1 auto;
           flex:1 1 auto;
 }
 .head-logo {
@@ -140,11 +150,13 @@ margin:0 auto;	}
 .test > li{
  display:-webkit-inline-box;
  display:-ms-inline-flexbox;
+ display:-webkit-inline-flex;
  display:inline-flex;
  width:48%;
  height:auto;
   -webkit-box-flex:0;
       -ms-flex:1 1 auto;
+          -webkit-flex:1 1 auto;
           flex:1 1 auto;
 	}
 .test >.lcol{
@@ -160,7 +172,8 @@ margin:0 auto;	}
 	top:50%;
 	left:50%;
 	-webkit-transform:translate(-50%,-50%);
-	transform:translate(-50%,-50%);
+	-ms-transform:translate(-50%,-50%);
+	    transform:translate(-50%,-50%);
 	background-color: rgba(12,11,48,1);}	
 
 
@@ -202,7 +215,9 @@ box-sizing:border-box;
 
 .navi > li {
 	-webkit-flex: 0 0 auto;
-	flex: 0 0 auto;
+	-webkit-box-flex: 0;
+	    -ms-flex: 0 0 auto;
+	        flex: 0 0 auto;
 	width:17%;
 	min-width:220px;
 	height:auto; 
@@ -234,6 +249,7 @@ box-sizing:border-box;
 	   font-weight:400;
 	   padding:0;
     -webkit-transition:all .3s cubic-bezier(.5,.22,.02,.41);
+		   -o-transition:all .3s cubic-bezier(.5,.22,.02,.41);
 		   transition:all .3s cubic-bezier(.5,.22,.02,.41);
 	  } 
 .navi > li a h1{
@@ -244,8 +260,10 @@ box-sizing:border-box;
 	 font-weight:700;
 	 padding:0;
 	     -webkit-transform:scale(1,1);
-  transform:scale(1,1);
+  -ms-transform:scale(1,1);
+      transform:scale(1,1);
 	  -webkit-transition:all .3s cubic-bezier(.5,.22,.02,.41);
+		   -o-transition:all .3s cubic-bezier(.5,.22,.02,.41);
 		   transition:all .3s cubic-bezier(.5,.22,.02,.41);
 	 }
 
@@ -262,14 +280,17 @@ box-sizing:border-box;
 	-webkit-box-sizing:inherit;
 	box-sizing:inherit;
 	background:#fff; 
-	background-origin:border-box;
+	-webkit-background-origin:border-box; 
+	        background-origin:border-box;
    -webkit-transform:translate(-45%,-35%);
-  transform:translate(-45%,-35%);
+  -ms-transform:translate(-45%,-35%);
+      transform:translate(-45%,-35%);
  }
 
 .navi > li a:after{ 
   background-image: url(assets/images/svg/stripe-pattern.svg),url(assets/images/png/svg-backup/stripe-pattern.png);
-  	background-size:8px 8px; 
+  	-webkit-background-size:8px 8px;
+  	        background-size:8px 8px; 
  background-repeat:repeat;	
   z-index:-1;
   border:.15em solid #0C0B30;}
@@ -288,17 +309,21 @@ box-sizing:border-box;
   color:#0C0B30;
   text-decoration:underline;
     -webkit-transform:scale(1.1,1.1);
-  transform:scale(1.1,1.1);
+  -ms-transform:scale(1.1,1.1);
+      transform:scale(1.1,1.1);
    -webkit-transition:all .3s cubic-bezier(.5,.22,.02,.41);
+		   -o-transition:all .3s cubic-bezier(.5,.22,.02,.41);
 		   transition:all .3s cubic-bezier(.5,.22,.02,.41);} 
   .navi li a:hover p, .navi li a:active p{ 
   color:#0C0B30;
       -webkit-transform:translateY(0) translateX(-.5em) ;
-  transform:tanslateY(0) translateX(-.5em);}
+  -ms-transform:tanslateY(0) translateX(-.5em);
+      transform:tanslateY(0) translateX(-.5em);}
 
   
        .navi > li ,.navi li:after, .navi > li a	,  .navi > li a p,.navi > li a h1, .navi li a:hover, .navi li a:active,.navi li a:hover h1, .navi li a:active h1,.navi li a:hover p, .navi li a:active p, .navi li:hover:after{
 		   -webkit-transition:all .3s cubic-bezier(.5,.22,.02,.41);
+		   -o-transition:all .3s cubic-bezier(.5,.22,.02,.41);
 		   transition:all .3s cubic-bezier(.5,.22,.02,.41);} 
 /* Section Styles
 ========================*/
@@ -344,7 +369,8 @@ ul.bio_stuff > li{
 	width:85%;
 	 -webkit-flex: 0 1 auto;
     -ms-flex: 0 1 auto;
-    flex: 0 1 auto;
+    -webkit-box-flex: 0;
+	         flex: 0 1 auto;
 	min-height:200px;
 	height:auto;
 	margin:0;
@@ -359,13 +385,14 @@ margin:0;
 padding:0;
  -webkit-flex: 0 1 auto;
     -ms-flex: 0 1 auto;
-    flex: 0 1 auto;}	
+    -webkit-box-flex: 0;
+         flex: 0 1 auto;}	
 .bio_title{width:100%;height:auto;font-family:'Noto Sans',Helvetica, Arial, sans-serif; font-size:1.45em;line-height:1.25em;font-weight:700;padding:0 .25em .25em .25em;margin:0;}
 
 .bio_photo{
 	width:100%;padding:0;padding-top:100%;height:0;margin:0;position:relative;}
 .bio_photo > div{
-width:100%; height:100%;position:absolute; top:0;left:0;background-size:cover; border:2px solid #0C0B30; -webkit-box-shadow:inset 0 0 1px 1px #0C0B30; box-shadow:inset 0 0 1px 1px #0C0B30;-webkit-box-sizing:border-box;box-sizing:border-box;}
+width:100%; height:100%;position:absolute; top:0;left:0;-webkit-background-size:cover;background-size:cover; border:2px solid #0C0B30; -webkit-box-shadow:inset 0 0 1px 1px #0C0B30; box-shadow:inset 0 0 1px 1px #0C0B30;-webkit-box-sizing:border-box;box-sizing:border-box;}
 
 .bio_desc{
 	height:auto;
@@ -392,24 +419,25 @@ box-sizing:border-box;	}
 .bio_right > div{
 	 -webkit-flex: 1 1 auto;
     -ms-flex: 1 1 auto;
-    flex: 1 1 auto;	
+    -webkit-box-flex: 1;
+	         flex: 1 1 auto;	
 	width:90%;
 	text-align:left;}
-		
-.bio_desc a{
+	
+.bio_desc > p{
+	line-height:1.65em;}		
+.bio_desc > p a{
 color:#000;
 display:inline-block;
 text-decoration:underline;
-border:.01em solid #fff;
 padding:0 .11em;	
 }
 
-.bio_desc a:hover,
-.bio_desc a:active{
-border:.01em solid #000;
+.bio_desc > p a:hover,
+.bio_desc >p  a:active{
 text-decoration:none;
-padding:0 .11em;	
-text-decoration:none;}
+background-color:#dc0009;
+color:#fff;}
 
 		
 .bio_1{background-image:url(assets/images/png/main-page-potrait/dp_sq_200.png);}
@@ -418,6 +446,18 @@ text-decoration:none;}
 
 .bio_3{background-image:url(assets/images/png/main-page-potrait/sahna_sq_200.png);}
 
+.collapsible-body p{
+	line-height:1.65em;}
+.collapsible-body a{
+	color:#DC0009;
+	text-decoration:underline;}
+.collapsible-body a:hover, .collapsible-body a:active{
+	text-decoration:none;
+	background-color:#dc0009;
+	color:#fff;}	
+ul.blurb-list > li{margin:1em 0;line-height:1.65em;}
+p.ind{
+	text-indent:2em;}	
 </style>
 
 </head>
@@ -570,30 +610,58 @@ text-decoration:none;}
 				</div>
 	</div>
 	<div class="bio_inner bio_right f-col nowrap j_ctr a_ctr" >
-	<div class="bio_desc f-col wrap j_start a_start"><p> Hi! I'm Darrell. Thanks for checking out my website.</p>
+	<div class="bio_desc f-col wrap j_start a_start"><p class="drop_cap">HELLO, and thanks for visiting my website. Below, you'll find information about members of the Darrell Penta team. If you have any questions or comments, please <a href="home.html#contact_home" title="dp:Contact" target="_blank">send them</a> along!</p>
 	
-	<p>Below is my <a href="https://www.linkedin.com/in/darrellpenta/">LinkedIn</a> blurb. I'll be updating my site soon with the rest of the story, which is way more interesting: </p>
-	
-	<p style="padding-left:1em; font-weight:500;">Dynamic and enterprising behavioral scientist with 6+ years of professional experience in quantitative and qualitative research/data analysis, lab and project management, and creative communications and marketing solutions. Ph.D. in Psychology, Master's Degrees in Psychology and Applied Linguistics.</p>
+	<ul class="collapsible" data-collapsible="accordion" style="width:100%;">
+    <li>
+      <div class="collapsible-header"><i class="fa fa-linkedin" aria-hidden="true"></i>LinkedIn Blurb  (short read)</div>
+      <div class="collapsible-body">
+	<p style="padding-left:1em; font-weight:400;" class="drop_cap">Dynamic and enterprising behavioral scientist with 6+ years of professional experience in quantitative and qualitative research/data analysis, lab and project management, and creative communications and marketing solutions. Ph.D. in Psychology, Master's Degrees in Psychology and Applied Linguistics.</p>
 
-<p style="padding-left:1em; font-weight:500;">Demonstrated ability to assume leading or supporting roles in UX and public-facing communications projects. Collaborates effectively with other researchers, project managers, designers, and engineers at all stages of project development (inception to completion). Passionate about creating inclusive and inspiring user/consumer experiences, and committed to increasing accessibility for under-represented populations. Core competencies include:</p>
-<ul class="browser-default" style="padding-left:2em;list-style-type:square;font-weight:bold;">
+<p class="ind" style="padding-left:1em; font-weight:400;">Demonstrated ability to assume leading or supporting roles in UX and public-facing communications projects. Collaborates effectively with other researchers, project managers, designers, and engineers at all stages of project development (inception to completion). Passionate about creating inclusive and inspiring user/consumer experiences, and committed to increasing accessibility for under-represented populations. Core competencies include:</p>
+<ul class="blurb-list browser-default" style="padding-left:2em;list-style-type:square;font-weight:bold;">
 <li>Facility designing and conducting research (including experiments with human factors, large online surveys, interviews) to investigate complex questions
 <li>Excellent data analysis, data management, and data visualization skills (including statistical testing and predictive multivariate modelling)
 <li>Practical experience creating digital content for educational and commercial purposes, with a strong foundation in web design, graphic design, and some computer programming
 <li>Exceptional communication and interpersonal skills
 </ul>
 
-<p style="padding-left:1em; font-weight:500;">Research interests include language processing, reasoning, and decision making; human-to-human/-computer communication, product/service usability and functionality. Broader interests include collaborative digital technologies for educational and social advancement, open access and data sharing, product design and development, and applications of technology for community-building.</p>
+<p class="ind" style="padding-left:1em; font-weight:400;">Research interests include language processing, reasoning, and decision making; human-to-human/-computer communication, product/service usability and functionality. Broader interests include collaborative digital technologies for educational and social advancement, open access and data sharing, product design and development, and applications of technology for community-building.</p>
 
-<p style="padding-left:1em; font-weight:500;">When I'm not working, I'm probably building stuff out of wood and metal, brushing up on my Korean language skills, or walking my Jindo dog.</p>
+<p class="ind" style="padding-left:1em; font-weight:400;">When I'm not working, I'm probably building stuff out of wood and metal, brushing up on my Korean language skills, or walking my Jindo dog.</p></div>
+    </li>
+    <li>
+      <div class="collapsible-header"><i class="material-icons">import_contacts</i>Bio (loooong read)</div>
+      <div class="collapsible-body">
+	<p class="drop_cap">WHEN I was an undergraduate at <a href="http://www.neu.edu" target="Northeastern University">Northeastern University</a> in Boston, I took a business class taught by Thomas Lera, a veteran of the U.S. war in Vietnam who talked with extraordinary personal conviction about overcoming the fears we may face in life and in business. I was inspired by Professor Lera to face my own fears about starting a business that I had been contemplating for several months, and at the end of that semester, I formally withdrew from my undergraduate studies. Yep...I dropped out of college.
+	<p class="ind">Less than two years later, with money I had saved from working in the Boston Globe's <a href="https://nieonline.com/bostonglobe/" title="NIE @ Boston Globe" target="_blank">Newspapers in Education</a> program, I moved to <a href="https://en.wikipedia.org/wiki/Martha%27s_Vineyard" title="Martha's Vineyard Wiki Entry" target="_blank">Martha's Vineyard</a> and opened a retail store called Hemp Haven (in the town of Vineyard Haven), where I sold clothing and bodycare products made from sustainable and environmentally-friendly resources (e.g., hemp, organic cotton, bamboo). Every day in my shop was an opportunity for me to learn something new, to promote environmental conscientiousness,  and to meet interesting people. Some of my clients were local farmers; others were Hollywood A-listers. The generous Patel family, who owned a <a href="https://www.yelp.com/biz/its-me-vineyard-haven-2" title="It'sMe @ Yelp" target="_blank">small T-shirt shop</a> located next door to my shop would invite me next door for dinner once or twice a week and patiently answer my questions about running a small business (the Patel's went on to open several more retail stores and, eventually, even a hotel). In the off-season winter months, I worked as a commercial fisherman under <a href="https://vineyardgazette.com/obituaries/2010/03/18/tom-osmers-always-had-oysters-and-pearls-wisdom-share" title="Captain Tom Osmers @ Vineyard Gazette" target="_blank">Capt. Tom Osmers</a>, one of about 2 dozen "<a href="http://www.theabta.com/harpoon/" title="American Bluefin Tuna Association" target="_blank">artisanal</a>" fisherman in New England who used the highly sustainable harpoon method for catching bluefin tuna. Year round, I was putting in about 70-80 hours of work a week, but it felt more like a working vacation. </p>
+	<p class="ind">My first year in business was, by all measures, quite successful: I had generated considerably more revenue than anyone (including me) had predicted.  I had introduced hundreds of people to "green" products, registered scores of voters through voter registration drives, and became a well-regarded advocate for suistainability at town-hall meetings. But a slumping U.S. economy translated into fewer seasonal visitors to the island, and both the local residents and summer tourists had increasingly less money to spend on non-essentials. By the end of my third year in business, it had become clear that the most practical option for me was to close my shop, which I reluctantly did. I returned to the Boston area and began working as a waiter at a restaurant in the<a href="http://www.charleshotel.com/" title="Charles Hotel Website" target="_blank"> Charles Hotel</a> in <a href="https://en.wikipedia.org/wiki/Harvard_Square" title="Harvard Square Wiki Entry" target="_blank">Harvard Square, Cambridge</a>. I had little clear sense of what to do next, and I had no real idea of how to channel my passions and my energy.</p>
+	<p class="ind">About six months after returning to Boston, I turned on the radio and caught a news story about the passing of a local poet, <a href="https://www.poetryfoundation.org/poets/john-wieners" title="John Weiners Bio @ Poetry.org" target="_blank">John Wieners.</a> The story was brief, but it included a clip of Wieners reading his short poem, "Supplication," in which the poet succinctly contrasts the ephemeral power and beauty of poetry with the painful, enduring darkness of his own mental illness. I was moved to tears. It was the first time I had ever really "heard" a poem, and it shattered my assumptions about what poetry was, and who poetry was meant to be written for. Up to this point, I hadn't given much thought to returning to school. In fact, I considered myself to be a mediocre student, at best. But I found myself wanting to learn more about poetry.</p>
+	<p class="ind">To test the waters, I took a single American literature class at the<a href="http://www.umb.edu" target="_blank"> University of Massachusetts Boston</a> without any intention of becoming a full-time student. But I loved the class, and I resolved to learn as much as possible about language, communication, and human behavior. I subsequently enrolled as an undergraduate and pursued my education with fervor. By the end of my first full semester, I was a declared English major, with concentrations in both creative writing and literary analysis, and a combined Psychology&ndash;Sociology major. By the time I finished my degree, I had maintained a near-perfect GPA, and had won several scholarships and departmental awards in addition to a two national awards for original poetry.</p> 
+	<p>Throughout my undergraduate studies, I also worked full time at <a href="http:://www.wumb.org" title="WUMB Website" target="_blank">WUMB-FM</a>, an NPR-affiliated public radio station housed at the University. I started as an assistant the General Manager, Pat Monteith, who contstantly challenged me to take on new responsibilities, and who ultimately gave me the opportunity to produce and co-host a drive-time morning show and my own program, "Extreme Folk," in which I focused on articulating the connections between traditional folk artists (<a href="https://www.sonnyochs.com/philbio.html" title="Phil Ochs @ SonnyOchs.com" target="_blank">Phil Ochs</a>, <a href="https://www.RichieHavens.com" title="Richie Havens Website" target="_blank">Richie Havens</a>) and their contemporary incarnations  (<a href="https://www.righteousbabe.com/" title="Ani DiFranco @ Righteous Babe Records" target="_blank">Ani DiFranco</a>, <a href="https://www.krs-one.com/" title="KRS-ONE Website" target="_blank">KRS-One</a>). In these capacities, I had the luxury of interviewing scores of internationally reknowned musicians, authors, and social and poltical figures. (Today, when people ask me why I don't have a "Boston accent," I explain that, as (arguably!) delightful as the Boston accent might sound in person, I had to train myself out of it because sounds pretty awful on the air.) </p>
+	<p class="drop_cap">As an undergraduate, I had the great fortune of taking several courses with English professor<a href="https://www.umb.edu/academics/cla/faculty/neal_bruss" title="Neal Bruss @ UMB" target="_blank">Dr. Neal Bruss</a>, who gave me two pieces of advice that proved to be transformative for me: First, he suggested that I learn some basic computer programming (which, he argued, was an <em>employable skill</em>). With some help from an awesome computer science teacher&mdash;my twin brother (and now Prof.) <a href="https://www.necc.mass.edu/blog/2013/01/10/michael-penta/" title="Mike Penta @ NECC" target="_blank">Mike Penta</a>&mdash; I discovered that I loved working with HTML and CSS.  I began collaborating with my brother and with the immensely talented photographer/writer <a href="http://www.healyourgutcookbook.com/Mary/" title="Mary Brackett @ Cookbook" target="_blank">Mary Brackett</a> to design and build websites and marketing materials for several companies, using the income we generated to help offset the cost of my education. 
+	Second, Dr. Bruss suggested that my particular interests in language were well-matched with topics in Applied Linguistics, and he arranged for me to take some graduate courses in this field through the University's MA program. After officially enrolling in the graduate program, I started working on the<a href="http://www.ucl.ac.uk/english-usage/projects/ice.htm" title="ICE" target="_blank"> Internal Corpus of English</a> research project under the guidance of <a href="https://www.cs.umb.edu/~meyer/" title="Charles Meyer @ UMB" target="_blank">Dr. Charles Meyer</a>, and I continued to collaborate with Dr. Meyer on the project for many years after graduating. In my MA thesis, for which I earned the Department's highest award for original scholarship, I indentified key points of convergence between <a href="https://en.wikipedia.org/wiki/Ray_Jackendoff" title="Ray Jackendoff's Wiki Entry" target="_blank">Ray Jackendoff's</a> psycholinguistic theory of language (e.g., Jackendoff, R. (2002)<em><a href="https://www.amazon.com/Foundations-Language-Meaning-Grammar-Evolution/dp/0199264376" title="Jackendoff (2002) @ Amazon" target="_blank">Foundations of Language</a></em>) and <a href="https://en.wikipedia.org/wiki/James_Paul_Gee" title="Jim Gee's Wiki Entry" target="_blank"> James Gee's</a> sociolinguistic theory of literacy development (e.g., Gee, J. P. (2007) <em><a href="https://www.amazon.com/Video-Learning-Literacies-Digital-Epistemologies/dp/0820497037/ref=sr_1_22?s=books&ie=UTF8&qid=1508247913&sr=1-22&keywords=James+Paul+Gee" title="Gee @ Amazon" target="_blank">Good Video Games and Good Learning</a></em>), and I used this combined framework to reevaluate evidence from studies of second-language acquisition.   </p>
+	<p class="ind">Through my graduate work, I was exposed to ethnographic research and teaching, both of which would factor prominently in shaping my professional development. Before completing graduate school, I started working at the Boston Academy of English, teaching grammar and communication skills to international students. By far, this had the most profound influence on shaping me into the person I am today. Through teaching, I grew adept at thinking on my feet, speaking in public, and conveying complex information in a useful and meaningful way. More importantly, teaching gave me real-world practice in creating inclusive experiences for individuals from varied social and cultural backgrounds.</p>
+	<!--<p class="drop_cap">  As a grammar teacher, I knew there was great value in the content I was trying to deliver (…after all, if you want to learn any language, you have to know at least something about the grammar). I was deeply committed to helping my students learn as much as possible, and I of course had obligation to my employer to be the best teacher possible. But I was faced with a host of seemingly insurmountable challenges: My classes were incredibly diverse. Students came from 17 different countries and ranged in age from 15 to 67. My students also had different reasons for studying English, different levels of proficiency, and different expectations for the class and for themselves.  Moreover, I had relatively little time to work with students, given that classes met once a day for 75 minutes and that most students enrolled in the program for a month, on average. Worst of all, most of my students had previously had very uninspiring experiences studying English. Over time, I arrived at several insights that I feel allowed me to excel at teaching and that serve as the underpinnings of my general philosophy about research and design:
+<p><strong>Everything starts with sincere respect and genuine empathy.</strong> I believe I'm a naturally respectful and empathetic person, but I also believe you really need above-average quantities of tolerance, understaning, and humility to be an exceptional teacher. Cultivating these qualities requires conscious effort. Years after I began teaching, I taught a business communications class to a group of graduate students from China.  </p>
+<p><strong>When it comes to asking for feedback & be transparent and specific.</strong> I'm a big believer that soliciting feedback&mdash;and being open to criticism&mdash;is one of the fastest ways to improve on whatever is your trying to do.   This was more difficult to do than I thought it would be in the context of my teaching experience. For example, I learned that in many cultures, questioning or criticizing a teacher is simply unacceptable. My students were often worried that there would be negative repercussions if they expressed disatisfaction with something in class. My solution to this problem was to reframe the the process as a collaborative design effort; I stopped asking students to criticize  
+I also found that it helps buy asking for narrow feedback rather than brought feedback. I found that won't work best was being transparent and direct. Every time I tried something new I would let my students know & this is what I'm trying. This is why am trying it. And I would ask & did you find it helpful well what did you like Or what didn't you like about ask 
+		•-Inspiration comes from empowerment. One of the most defeating experience as a person can have is trying to learn a language as an adult. I won't going to the science & but there's really no comparison between learning your first language as child and learning your second or third or fourth I'm just mental. Difficult does not mean impossible & in the human mind is certainly capable I'm mastering another language.  Students love using digital technology & but educational approaches to teaching grammar haven't changed in a hundred years. 
+		•-Intuitions are good; data are (often) better. Is there a difference between "I'll do that" and "I'm gonna do that?" A person can use their intuitions to provide a reasonably satisfying answer & but if you want to students with information that they  & you have to use data. 
+	
+    </p>-->
+	<p>To be continued...</p>
+	
+	</div>
+	
+    </li>
+  
+  </ul>
+	
+	
 
 
-<!--	<p>When I was an undergraduate at Northeastern University in Boston, I took a business class  taught by Thomas Lera, a veteran of the U.S. war in Vietnam who talked with extraordinary personal conviction about overcoming fear in life and and in business. I was inpsired by Professor Lera to face my own fears about starting the business that I had been contemplating for several months, and at the end of that semester, I formally withdrew from my undergraduate studies. 
-	<p>Less than two years later, with money I had saved from working in the Boston Globe's Newspapers in Education program, I moved to Martha's Vineyard and opened a retail store called Hemp Haven (in the town of Vineyard Haven), where I sold clothing and bodycare products made from sustainable and environmentally-friendly resources (e.g., hemp, organic cotton, bamboo). Every day in my shop was an opportunity for me to learn something new and to meet interesting people. Some of my clients were local farmers; others were Hollywood A-listers. The generous Patel family, who started a small t-shirt shop located next door to my shop before going on to open several more retail stores and, eventually, even a hotel, would invite me over for dinner once or twice a week and would patiently answer my questions about business. In the off-season winter months, I worked as a commercial fisherman under Capt. Tom Osmers. Year round, I was putting in about 70-80 hours of work a week, but it felt more like a working vacation. </p>
-	<p>Although my first year in business was, by all measures, quite successful, a slump in the U.S. economy corresponded to fewer seasonal visitors to the island, and both the local residents and summer tourists had increasingly less money to spend on non-essentials. By the end of my third year in business, it had become clear that the most practical option for me was to close shop, which I reluctantly did. I returned to the Boston area and began working as a waiter at a restaurant in the Charles Hotel in Havard Square, Cambridge. I had little clear sense of what to do next, and I had no real idea of how to channel my passions and energy.</p>
-	<p>About six months after returning to Boston, I turned on the radio and caught a news story about the passing of a local poet, John Weiners. The story was brief, but it included a clip of Weiners reading his short poem, "Supplication," in which the poet succintly contrasts the emphemeral power and beauty of poetry with painful, enduring darkness of his own mental illness. I was moved to tears. It was the first time I had ever really "heard" a poem, and it shattered my assumptions about what poetry was, and who poetry was meant to be written for. Although, up to this point, I hadn't given much thought to returning to school. In fact, I considered myself to be a mediocre student at best. But I found myself wanting to learn more about poetry.</p>
-	<p>To test the waters, I took a single American literature class at the University of Massachusetts Boston without any intention of becoming a full-time student. But I loved the class, and I resolved to learn as much as possible about human behavior and communication. I enrolled as an undergraduate, and I began my first full semester as a double-major (English, Psychology&ndash;Sociology). I regularly loaded my schedule with six classes each term, and by the time I finished my degree, I had maintained a near-perfect GPA and had won several scholarships and awards for my original poetry. Throughout my undergraduate studies, I also worked full time at WUMB-FM, an NPR-affiliated public radio station housed at the University. I started as an assistant to the General Manager, Pat Monteith, who gave me the opportunity to produce and host my own program, "Extreme Folk"&mdash; a show focused on making connections between more traditional folk artists (Phil Ochs, Richie Havens) and their contempory incarnations  (Ani DiFranco, WuTang Clan). </p>-->
+<!--	-->
 	</div>
 	</div>
 	</li>
@@ -607,7 +675,7 @@ text-decoration:none;}
 				</div>
 	</div>
 	<div class="bio_inner bio_right f-col nowrap j_ctr a_ctr" >
-	<div class="bio_desc f-col wrap j_start a_start"><p> The wonderful Jina Park Penta is the secret behind Darrell Penta's seemingly limitless positivity and high energy.  She's the smartest, kindest, and most talented member of the Darrell Penta team. She's also an insanely good cook and a wicked good gardener.</p></div>
+	<div class="bio_desc f-col wrap j_start a_start"><p class="drop_cap"> THE wonderful Jina Park Penta is the secret behind Darrell Penta's seemingly limitless positivity and high energy.  She's the smartest, kindest, and most talented member of the Darrell Penta team. She's also an insanely good cook and a wicked good gardener.</p></div>
 
 	</div>
 	</li>
@@ -621,7 +689,7 @@ text-decoration:none;}
 				</div>
 	</div>
 	<div class="bio_inner bio_right f-col nowrap j_ctr a_ctr" >
-	<div class="bio_desc f-col wrap j_start a_start"><p>Sahna is a mixed- breed puppy (75% Jindo, 25% Pungsan) who makes everyone smile. She's named after the Buddhist temple in South Korea where she was born.  </p></div>
+	<div class="bio_desc f-col wrap j_start a_start"><p class="drop_cap">SAHNA is a mixed- breed puppy (75% Jindo, 25% Pungsan) who makes everyone smile. She's named after the Buddhist temple in South Korea where she was born.  </p></div>
 
 	</div>
 	</li>
@@ -634,27 +702,28 @@ text-decoration:none;}
 
 </div>
 </div>	<!--  END  BODY DIV -->
-	<div class="small-nav-holder" style="position: fixed;bottom: 0;right: 0;margin: 0 2.2em 20px 0;z-index: 1100;-webkit-box-sizing: border-box;box-sizing: border-box;">
-  <div class="rad-nav f-row j_ctr a_ctr">
-    <input id="logo-check" type="checkbox" class="browser-default">
-    <label class="rad-label f-row j_ctr a_ctr" for="logo-check">
-      <div class="toggler f-row j_ctr a_ctr">
-        <div class="tbar f-row"><i class="small material-icons">menu</i></div>
-    <div class=" tbar f-row"><i class="small material-icons">close</i></div>
-    </div><!-- end rad-tog-->
-    
-</label>
-   
-    <div class="rad-cont f-row j_ctr a_ctr">
-      <div class="rad-inside f-row j_ctr a_ctr">
-        <svg viewBox="0 0 78 78" preserveAspectRatio="xMinYMin meet" class="sn_dp">
-<path class="sn_letter-p" stroke-miterlimit="10" d="M44.8,77.5v-28H45c0.7,1,1.6,2.7,2.6,3.6 s2.2,1.9,3.4,2.5c1.2,0.6,2.5,1.1,3.8,1.4c1.3,0.3,2.6,0.5,3.9,0.5c2.6,0,5-0.4,7.3-1.3c2.2-0.9,4.1-2.1,5.7-3.7
+	<div class="small-nav-holder">
+	<div class="rad-nav f-row j_ctr a_ctr">
+	<div style="position:absolute; top:0;left:0; z-index:9999;">
+		<input id="logo-check" type="checkbox" class="browser-default">
+		<label class="rad-label f-row j_ctr a_ctr" for="logo-check">
+		<div class="toggler f-row j_ctr a_ctr">
+			<div class="tbar f-row"><i class="small material-icons">menu</i></div>
+			<div class=" tbar f-row"><i class="small material-icons">close</i></div>
+		</div>
+		<!-- end rad-tog-->
+		
+		</label>
+		<div class="rad-cont f-row j_ctr a_ctr">
+			<div class="rad-inside f-row j_ctr a_ctr">
+				<svg viewBox="0 0 78 78" preserveAspectRatio="xMinYMin meet" class="sn_dp">
+					<path class="sn_letter-p" stroke-miterlimit="10" d="M44.8,77.5v-28H45c0.7,1,1.6,2.7,2.6,3.6 s2.2,1.9,3.4,2.5c1.2,0.6,2.5,1.1,3.8,1.4c1.3,0.3,2.6,0.5,3.9,0.5c2.6,0,5-0.4,7.3-1.3c2.2-0.9,4.1-2.1,5.7-3.7
 	c1.6-1.6,2.8-3.5,3.7-5.7s1.4-4.6,1.4-7.2c0-2.6-0.5-5-1.4-7.2s-2.1-4.1-3.7-5.7c-1.6-1.6-3.5-2.8-5.7-3.7c-2.2-0.9-4.6-1.3-7.3-1.3
 	c-1.3,0-2.6,0.1-3.9,0.4c-1.3,0.3-2.6,0.7-3.8,1.3c-1.2,0.6-2.3,0.8-3.4,1.7s-1.9,1.6-2.6,2.6h-0.2v-6h-4v56H44.8z M45.5,34
 	c0.7-1.7,1.8-3.2,3-4.4c1.3-1.3,2.8-2.3,4.5-3c1.7-0.7,3.6-1.1,5.6-1.1c2.1,0,3.9,0.4,5.6,1.1c1.7,0.7,3.1,1.7,4.3,3
 	c1.2,1.3,2.1,2.7,2.7,4.4c0.6,1.7,0.9,3.5,0.9,5.4s-0.3,3.7-0.9,5.4c-0.6,1.7-1.5,3.2-2.7,4.4c-1.2,1.3-2.6,2.3-4.3,3
 	s-3.6,1.1-5.6,1.1c-2,0-3.9-0.4-5.6-1.1s-3.2-1.7-4.5-3c-1.3-1.3-2.3-2.7-3-4.4c-0.7-1.7-1.1-3.5-1.1-5.4S44.8,35.7,45.5,34z"/>
-<path class="sn_letter-d" stroke-miterlimit="10" d="M32.8,0.5v28H33c-0.7-1-1.6-2.6-2.6-3.4
+					<path class="sn_letter-d" stroke-miterlimit="10" d="M32.8,0.5v28H33c-0.7-1-1.6-2.6-2.6-3.4
 	c-1-0.9-2.2-1.8-3.4-2.4c-1.2-0.6-2.5-1-3.8-1.3c-1.3-0.3-2.6-0.4-3.9-0.4c-2.6,0-5,0.4-7.3,1.3c-2.2,0.9-4.1,2.1-5.7,3.7
 	c-1.6,1.6-2.8,3.5-3.7,5.7c-0.9,2.2-1.4,4.6-1.4,7.2c0,2.6,0.5,5,1.4,7.2s2.1,4.1,3.7,5.7c1.6,1.6,3.5,2.8,5.7,3.7
 	c2.2,0.9,4.6,1.3,7.3,1.3c1.3,0,2.6-0.1,3.9-0.4c1.3-0.3,2.6-0.7,3.8-1.3c1.2-0.6,2.3-1,3.4-1.9s1.9-1.8,2.6-2.8h-0.2v6h4v-56H32.8z
@@ -662,19 +731,17 @@ text-decoration:none;}
 	c-1.7-0.7-3.1-1.7-4.3-3c-1.2-1.3-2.1-2.7-2.7-4.4c-0.6-1.7-0.9-3.5-0.9-5.4s0.3-3.7,0.9-5.4c0.6-1.7,1.5-3.2,2.7-4.4
 	c1.2-1.3,2.6-2.3,4.3-3c1.7-0.7,3.6-1.1,5.6-1.1c2,0,3.9,0.4,5.6,1.1c1.7,0.7,3.2,1.7,4.5,3c1.3,1.3,2.3,2.7,3,4.4
 	c0.7,1.7,1.1,3.5,1.1,5.4S33.2,42.6,32.5,44.3z"/>
-</svg>
-
-       <div class="fly-out f-row nowrap j_rnd a_ctr">
-          <a class="rad-circ dp-home f-row j_ctr a_ctr" href="home.html" title="dp: Home" target="_blank">
-            <div class="flyout-dp f-row j_ctr a_ctr">
-                   <svg viewBox="0 0 78 78" preserveAspectRatio="xMinYMin meet" class="sn_sm_dp">
-<path class="sn_sm-p" stroke-miterlimit="10" d="M44.8,77.5v-28H45c0.7,1,1.6,2.7,2.6,3.6 s2.2,1.9,3.4,2.5c1.2,0.6,2.5,1.1,3.8,1.4c1.3,0.3,2.6,0.5,3.9,0.5c2.6,0,5-0.4,7.3-1.3c2.2-0.9,4.1-2.1,5.7-3.7
+				</svg>
+				<div class="fly-out f-row nowrap j_rnd a_ctr"> <a class="rad-circ dp-home f-row j_ctr a_ctr" href="home.html" title="dp: Home" target="_blank">
+					<div class="flyout-dp f-row j_ctr a_ctr">
+						<svg viewBox="0 0 78 78" preserveAspectRatio="xMinYMin meet" class="sn_sm_dp">
+							<path class="sn_sm-p" stroke-miterlimit="10" d="M44.8,77.5v-28H45c0.7,1,1.6,2.7,2.6,3.6 s2.2,1.9,3.4,2.5c1.2,0.6,2.5,1.1,3.8,1.4c1.3,0.3,2.6,0.5,3.9,0.5c2.6,0,5-0.4,7.3-1.3c2.2-0.9,4.1-2.1,5.7-3.7
 	c1.6-1.6,2.8-3.5,3.7-5.7s1.4-4.6,1.4-7.2c0-2.6-0.5-5-1.4-7.2s-2.1-4.1-3.7-5.7c-1.6-1.6-3.5-2.8-5.7-3.7c-2.2-0.9-4.6-1.3-7.3-1.3
 	c-1.3,0-2.6,0.1-3.9,0.4c-1.3,0.3-2.6,0.7-3.8,1.3c-1.2,0.6-2.3,0.8-3.4,1.7s-1.9,1.6-2.6,2.6h-0.2v-6h-4v56H44.8z M45.5,34
 	c0.7-1.7,1.8-3.2,3-4.4c1.3-1.3,2.8-2.3,4.5-3c1.7-0.7,3.6-1.1,5.6-1.1c2.1,0,3.9,0.4,5.6,1.1c1.7,0.7,3.1,1.7,4.3,3
 	c1.2,1.3,2.1,2.7,2.7,4.4c0.6,1.7,0.9,3.5,0.9,5.4s-0.3,3.7-0.9,5.4c-0.6,1.7-1.5,3.2-2.7,4.4c-1.2,1.3-2.6,2.3-4.3,3
 	s-3.6,1.1-5.6,1.1c-2,0-3.9-0.4-5.6-1.1s-3.2-1.7-4.5-3c-1.3-1.3-2.3-2.7-3-4.4c-0.7-1.7-1.1-3.5-1.1-5.4S44.8,35.7,45.5,34z"/>
-<path class="sn_sm-d" stroke-miterlimit="10" d="M32.8,0.5v28H33c-0.7-1-1.6-2.6-2.6-3.4
+							<path class="sn_sm-d" stroke-miterlimit="10" d="M32.8,0.5v28H33c-0.7-1-1.6-2.6-2.6-3.4
 	c-1-0.9-2.2-1.8-3.4-2.4c-1.2-0.6-2.5-1-3.8-1.3c-1.3-0.3-2.6-0.4-3.9-0.4c-2.6,0-5,0.4-7.3,1.3c-2.2,0.9-4.1,2.1-5.7,3.7
 	c-1.6,1.6-2.8,3.5-3.7,5.7c-0.9,2.2-1.4,4.6-1.4,7.2c0,2.6,0.5,5,1.4,7.2s2.1,4.1,3.7,5.7c1.6,1.6,3.5,2.8,5.7,3.7
 	c2.2,0.9,4.6,1.3,7.3,1.3c1.3,0,2.6-0.1,3.9-0.4c1.3-0.3,2.6-0.7,3.8-1.3c1.2-0.6,2.3-1,3.4-1.9s1.9-1.8,2.6-2.8h-0.2v6h4v-56H32.8z
@@ -682,34 +749,35 @@ text-decoration:none;}
 	c-1.7-0.7-3.1-1.7-4.3-3c-1.2-1.3-2.1-2.7-2.7-4.4c-0.6-1.7-0.9-3.5-0.9-5.4s0.3-3.7,0.9-5.4c0.6-1.7,1.5-3.2,2.7-4.4
 	c1.2-1.3,2.6-2.3,4.3-3c1.7-0.7,3.6-1.1,5.6-1.1c2,0,3.9,0.4,5.6,1.1c1.7,0.7,3.2,1.7,4.5,3c1.3,1.3,2.3,2.7,3,4.4
 	c0.7,1.7,1.1,3.5,1.1,5.4S33.2,42.6,32.5,44.3z"/>
-</svg>
-            </div>
-          </a>
-          <a class="rad-circ f-row j_ctr a_ctr" href="mailto:darrellpenta@gmail.com" title="Email" target="_blank">
-            <span class="ispan"><i class="small material-icons">mail_outline</i></span>
-          </a>
-          <a href="tel:+16176520034" title="Call" itemtype="http://schema.org/Person" itemprop="telephone" class="rad-circ f-row j_ctr a_ctr" description="Call" style="margin-right:30px;">
-            <span class="ispan"><i class="small material-icons">phone</i></span></a>
-          <div class="fly-submenu f-col wrap j_start a_str">
-            <div class="fs_menu f-row nowrap">
-              <div class="fs_menu-holder f-row nowrap j_btw a_start">
-                <div><a href="home.html">Home</a></div>
-                <div><a href="home.html#team_home">Team</a></div>
-                <div><a href="home.html#specs_home">Specs</a></div>
-              </div>
-              <!--end fs-menu holder -->
-            </div>
-            <!-- end fs-menu-->
-          </div><!--end flyout submenut-->
-        </div><!--end flyout-->
-      </div><!--end rad-inside-->
-    </div><!-- end rad cont-->
+						</svg>
+					</div>
+					</a> <a class="rad-circ f-row j_ctr a_ctr" href="mailto:darrellpenta@gmail.com" title="Email" target="_blank"> <span class="ispan"><i class="small material-icons">mail_outline</i></span> </a> <a href="tel:+16176520034" title="Call" itemtype="http://schema.org/Person" itemprop="telephone" class="rad-circ f-row j_ctr a_ctr" description="Call" style="margin-right:30px;"> <span class="ispan"><i class="small material-icons">phone</i></span></a>
+					<div class="fly-submenu f-col wrap j_start a_str">
+						<div class="fs_menu f-row nowrap">
+							<div class="fs_menu-holder f-row nowrap j_btw a_start">
+								<div><a href="home.html">Home</a></div>
+								<div><a href="home.html#team_home">Team</a></div>
+								<div><a href="home.html#specs_home">Specs</a></div>
+							</div>
+							<!--end fs-menu holder --> 
+						</div>
+						<!-- end fs-menu--> 
+					</div>
+					<!--end flyout submenut--> 
+				</div>
+				<!--end flyout--> 
+			</div>
+			<!--end rad-inside--> 
+		</div>
+		<!-- end rad cont-->
 		<div class="tog-back"></div>
-  </div><!--end rad nav-->
-  
 	</div>
+	</div>
+	<!--end rad nav--> 
 	
-<!--end  small nav holder-->
+</div>
+
+<!--end  small nav holder--> 
    <!--Import jQuery before materialize.js-->
       <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
       <script type="text/javascript" src="js/materialize.js"></script>
